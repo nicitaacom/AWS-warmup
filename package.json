@@ -1,0 +1,8 @@
+{
+   "devDependencies": {
+      "@types/node": "^22.7.4"
+   },
+   "dependencies": {
+      "resend": "^3.5.0"
+   }
+}

@@ -1,0 +1,85 @@
+import { Resend } from "resend"
+
+// CommonJS modules can always be imported via the default export (to prevent errors)
+import autodetailingEmailTemplatesModule from './dist/const/autodetailing.js';
+const { autodetailingEmailTemplates } = autodetailingEmailTemplatesModule;
+
+
+// render email using this function because you need each time render email async on client (on server .tsx not avaiable)
+// DO NOT INSERT NEW LINES HERE - it may casuse unexpected output (its better to don't change this function - you may do it but do some backup before)
+function renderedEmailString(body) {
+  return `
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <p style="white-space: pre-wrap; word-break: break-word; margin: 0 0 8px 0;">${body.trim()}</p>
+      </td>
+    </tr>
+  </tbody>
+</table>`;
+}
+
+
+
+
+export const handler = async (event) => {
+
+  const { emailFrom, resendSecret } = event;
+
+
+
+  if (!process.env.SEND_EMAILS_TO) {
+      return {
+        statusCode: 400,
+      body: JSON.stringify({ error: `no SEND_EMAILS_TO - check your envs in AWS Lambda receiveEmails Configuration Environment variables` }),
+      };
+  }
+  if (!resendSecret) {
+      return {
+        statusCode: 400,
+      body: JSON.stringify({ error: `no resendSecret - check your payload in recurring schedule` }),
+      };
+    }
+  if (!emailFrom) {
+      return {
+        statusCode: 400,
+        body: JSON.stringify({ error: `no EMAIL_FROM - check your payload in recurring schedule` }),
+      };
+    }
+
+
+  
+
+    
+    // 1. Create resend SDK
+    const resend = new Resend(resendSecret);
+    
+    // Choose a random email template
+    const randomTemplate = autodetailingEmailTemplates[Math.floor(Math.random() * autodetailingEmailTemplates.length)];
+
+    // Construct the email
+    const email = {
+        from: emailFrom,
+        to: process.env.SEND_EMAILS_TO,
+        subject: randomTemplate.subject,
+        html: renderedEmailString(randomTemplate.body),
+    };
+
+    const { error } = await resend.emails.send(email);
+
+    if (error) {
+      return {
+          statusCode: 400,
+          body: JSON.stringify({ error: `error sending email - ${error.message || JSON.stringify(error)}` }),
+      };
+    }
+      
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ message: `Email sent for warm up` }),
+    };
+
+};
