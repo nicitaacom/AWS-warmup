@@ -1,8 +1,11 @@
 import { Resend } from "resend"
 
 // CommonJS modules can always be imported via the default export (to prevent errors)
-import autodetailingEmailTemplatesModule from './dist/const/autodetailing.js';
-const { autodetailingEmailTemplates } = autodetailingEmailTemplatesModule;
+// import autodetailingEmailTemplatesModule from './dist/const/autodetailing.js';
+// const { autodetailingEmailTemplates } = autodetailingEmailTemplatesModule;
+
+import roofingEmailTemplatesModule from './dist/const/roofing.js';
+const { roofingEmailTemplates } = roofingEmailTemplatesModule;
 
 
 // render email using this function because you need each time render email async on client (on server .tsx not avaiable)
@@ -57,14 +60,14 @@ export const handler = async (event) => {
     const resend = new Resend(resendSecret);
     
     // Choose a random email template
-    const randomTemplate = autodetailingEmailTemplates[Math.floor(Math.random() * autodetailingEmailTemplates.length)];
+    const randomTemplate = roofingEmailTemplates[Math.floor(Math.random() * roofingEmailTemplates``.length)];
 
     // Construct the email
     const email = {
         from: emailFrom,
         to: process.env.SEND_EMAILS_TO,
         subject: randomTemplate.subject,
-        html: renderedEmailString(randomTemplate.body),
+        html: renderedEmailString(randomTemplate.body)
     };
 
     const { error } = await resend.emails.send(email);
