@@ -60,7 +60,7 @@ export const handler = async (event) => {
     const resend = new Resend(resendSecret);
     
     // Choose a random email template
-    const randomTemplate = roofingEmailTemplates[Math.floor(Math.random() * roofingEmailTemplates``.length)];
+    const randomTemplate = roofingEmailTemplates[Math.floor(Math.random() * roofingEmailTemplates.length)];
 
     // Construct the email
     const email = {
