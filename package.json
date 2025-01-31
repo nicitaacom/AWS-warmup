@@ -3,6 +3,8 @@
       "@types/node": "^22.7.4"
    },
    "dependencies": {
+      "@aws-sdk/client-scheduler": "^3.734.0",
+      "moment-timezone": "^0.5.46",
       "resend": "^3.5.0"
    }
 }

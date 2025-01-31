@@ -1,4 +1,4 @@
-export const roofingEmailTemplates = [
+export const emails = [
     { "subject": "Protect Your Home with a Strong Roof", "body": "Hi! Is your roof ready to face the elements? Let us provide you with top-notch roofing services to ensure your home stays safe and sound." },
     { "subject": "Time for a Roofing Upgrade?", "body": "Hello! Don’t wait for leaks to appear. Reach out today for a professional roof inspection and upgrade services." },
     { "subject": "We’re Here for Your Roofing Needs", "body": "Hi! Whether it’s a repair or a full replacement, our roofing experts are here to help you secure your home." },
