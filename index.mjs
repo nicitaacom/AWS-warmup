@@ -1,4 +1,5 @@
 import { Resend } from "resend"
+import { Redis } from "ioredis"
 import moment from "moment-timezone";
 import { SchedulerClient,UpdateScheduleCommand,GetScheduleCommand } from "@aws-sdk/client-scheduler";
 
@@ -47,14 +48,13 @@ const sendTelegramError = async (errorMessage) => {
   }
 };
 
-
 function parseCronExpression(cronExpression) {
   const [minutes, hours, dayOfMonth, month, dayOfWeek, year] = cronExpression.split(" ");
   return { minutes, hours, dayOfMonth, month, dayOfWeek, year };
 }
 
 function calculateCronExpression(executionsPerDay) {
-  const interval = Math.floor(1440 / executionsPerDay); // Minutes in a day divided by executions
+  const interval = Math.floor(1440 / executionsPerDay); // Minutes per day divided by executions
   return `*/${interval} * * * *`; // Generate cron for interval-based execution
 }
 
@@ -63,13 +63,24 @@ function shouldUpdateSchedule(cronParts, daysDifference, emailCount) {
     throw new Error("Invalid schedule: sendEmailsTo.length must be >= 2");
   }
 
+  let newCronExpression;
   let emailsPerDay;
+
   switch (true) {
-    case daysDifference >= 100:
+    case daysDifference >= 150:
+      newCronExpression = "0 12 * * 1"; // Send 1 email per week on Monday at 12:00 PM
+      break;
+    case daysDifference >= 120:
+      emailsPerDay = 100;
+      break;
+    case daysDifference >= 90:
       emailsPerDay = 80;
       break;
-    case daysDifference >= 50:
+    case daysDifference >= 60:
       emailsPerDay = 50;
+      break;
+    case daysDifference >= 42:
+      emailsPerDay = 30;
       break;
     case daysDifference >= 28:
       emailsPerDay = 20;
@@ -78,14 +89,18 @@ function shouldUpdateSchedule(cronParts, daysDifference, emailCount) {
       emailsPerDay = 10;
       break;
     default:
-      return false; // No update required
+      return { isShouldUpdate: false }; // No update required
   }
 
-  const executionsPerDay = Math.ceil(emailsPerDay / emailCount);
-  const newCronExpression = calculateCronExpression(executionsPerDay);
-  const newCronParts = parseCronExpression(newCronExpression);
+  if (!newCronExpression) {
+    const executionsPerDay = Math.ceil(emailsPerDay / emailCount);
+    newCronExpression = calculateCronExpression(executionsPerDay);
+  }
 
-  return JSON.stringify(cronParts) !== JSON.stringify(newCronParts); // Check if cron parts differ
+  const newCronParts = parseCronExpression(newCronExpression);
+  const isShouldUpdate = JSON.stringify(cronParts) !== JSON.stringify(newCronParts);
+
+  return { isShouldUpdate, newCronExpression: isShouldUpdate ? newCronExpression : undefined };
 }
 
 async function updateSchedule(schedulerClient, scheduleName, createdAt, sendEmailsTo, userTimezone, cronParts) {
@@ -93,43 +108,58 @@ async function updateSchedule(schedulerClient, scheduleName, createdAt, sendEmai
   const now = moment().tz(userTimezone);
   const daysDifference = now.diff(createdAtMoment, "days");
 
-  if (!shouldUpdateSchedule(createdAt, userTimezone, cronParts, daysDifference, sendEmailsTo.length)) {
-    console.log(80,"No update required: Schedule already matches expected values");
+  const { isShouldUpdate, newCronExpression } = shouldUpdateSchedule(cronParts, daysDifference, sendEmailsTo.length);
+
+  if (!isShouldUpdate) {
+    console.log(80, "No update required: Schedule already matches expected values");
     return;
   }
 
-  const existingSchedule = await schedulerClient.send(
-    new GetScheduleCommand({ Name: scheduleName })
-  );
-
-  const executionsPerDay = Math.ceil((daysDifference >= 100 ? 100 : daysDifference >= 50 ? 50 : daysDifference >= 28 ? 20 : 10) / sendEmailsTo.length);
-  const newCronExpression = calculateCronExpression(executionsPerDay);
-
-  console.log(88,"Updating schedule:", {
-    scheduleName,
-    daysDifference,
-    emailsPerDay: executionsPerDay * sendEmailsTo.length,
-    executionsPerDay,
-    cronExpression: newCronExpression,
-  });
-
-  const updateScheduleCommand = new UpdateScheduleCommand({
-    Name: scheduleName,
-    GroupName: "warmup-group",
-    FlexibleTimeWindow: { Mode: "OFF" },
-    ScheduleExpression: newCronExpression,
-    ScheduleExpressionTimezone: existingSchedule.ScheduleExpressionTimezone,
-    Target: existingSchedule.Target,
-  });
-
   try {
+    const existingSchedule = await schedulerClient.send(
+      new GetScheduleCommand({ Name: scheduleName })
+    );
+
+   // 1. Parse existing Target JSON
+    let target = JSON.parse(JSON.stringify(existingSchedule.Target)); // Deep copy
+    const newCronParts = parseCronExpression(newCronExpression); // Convert cron string to object
+
+    // 2. Update only cronParts fields
+    target.cronParts.minutes = newCronParts.minutes;
+    target.cronParts.hours = newCronParts.hours;
+    target.cronParts.dayOfMonth = newCronParts.dayOfMonth;
+    target.cronParts.month = newCronParts.month;
+    target.cronParts.dayOfWeek = newCronParts.dayOfWeek;
+    target.cronParts.year = newCronParts.year || "*"; // Default year if undefined
+
+    // 3. Update Redis so UI reflects changes
+    const redis = new Redis(process.env.UPSTASH_REDIS_URL);
+    await redis.set(process.env.WARMUP_KEY, JSON.stringify(target));
+
+    console.log(88, "Updating schedule:", {
+      scheduleName,
+      daysDifference,
+      newCronExpression,
+    });
+
+    // 4. Update EventBridge schedule (EB) so Lambda sees the change
+    const updateScheduleCommand = new UpdateScheduleCommand({
+      Name: scheduleName,
+      GroupName: "warmup-group",
+      FlexibleTimeWindow: { Mode: "OFF" },
+      ScheduleExpression: newCronExpression,
+      ScheduleExpressionTimezone: existingSchedule.ScheduleExpressionTimezone,
+      Target: target,
+    });
+    
     const result = await schedulerClient.send(updateScheduleCommand);
     console.log(118, "Schedule updated successfully:", result);
   } catch (error) {
     console.error(120, "Error updating schedule:", error);
-    return error.message
+    return error.message;
   }
 }
+
 
 
 
@@ -181,7 +211,8 @@ export const handler = async (event) => {
     { key: process.env.REGION, name: "REGION", env: true },
     { key: process.env.ACCESS_KEY_ID, name: "ACCESS_KEY_ID", env: true },
     { key: process.env.SECRET_ACCESS_KEY, name: "SECRET_ACCESS_KEY", env: true },
-    { key: process.env.SEND_EMAILS_TO, name: "SEND_EMAILS_TO", env: true },
+    { key: process.env.UPSTASH_REDIS_URL, name: "UPSTASH_REDIS_URL", env: true },
+    { key: process.env.WARMUP_KEY, name: "WARMUP_KEY", env: true },
   ];
 
   const ctaEnvs = `Check your envs in AWS Lambda warmup -> Configuration -> Environment variables`;

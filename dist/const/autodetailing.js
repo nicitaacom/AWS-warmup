@@ -995,5 +995,5 @@ exports.emails = [
 
         Let’s make it efficient and book a quick 5-10 minute meeting: http://nicitaa.com/appointment
         `
-    }
+    },
 ];
