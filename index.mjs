@@ -11,11 +11,6 @@ import decryptResendModule from './dist/utils/decryptResend.js';
 const { decryptResend } = decryptResendModule;
 
 
-import notificationsModule from './dist/utils/notifications.js';
-const { sendErrorNotifications } = notificationsModule;
-
-
-
 // render email using this function because you need each time render email async on client (on server .tsx not avaiable)
 // DO NOT INSERT NEW LINES HERE - it may casuse unexpected output (its better to don't change this function - you may do it but do some backup before)
 function renderedEmailString(body) {
