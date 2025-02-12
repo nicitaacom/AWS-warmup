@@ -304,35 +304,7 @@ export const handler = async (event) => {
   // WARNING! - event - DEPENDS ON IWarmUp outreach-tool
 
 
-  // --- Validate notification group --- //
-  // DEPENDS ON VM-receiveEmails VM-resetRedisStatsToday VM-sendScheduledEmail
-  const notificationGroups = [
-    { name: 'Telegram', required: ['TELEGRAM_BOT_TOKEN', 'TELEGRAM_CHAT_ID'] },
-    { name: 'Resend', required: ['UPSTASH_REDIS_URL', 'SEND_EMAILS_TO', 'DOMAIN'] },
-    { name: 'Discord', required: ['DISCORD_WEBHOOK_URL'] },
-    { name: 'Twilio SMS', required: ['TWILIO_ACCOUNT_SID', 'TWILIO_AUTH_TOKEN', 'TWILIO_PHONE_NUMBER'] },
-  ];
-
-  const enabledNotificationGroups = notificationGroups.filter(group =>
-    group.required.every(envVar => Boolean(process.env[envVar]))
-  );
-
-  if (enabledNotificationGroups.length === 0) {
-    const errorMsg =
-      "No notification group provided. Make sure you added it in lambda - Configuration - Environment variables, " +
-      "Please set at least one of the following environment variables: " +
-      "Telegram (TELEGRAM_BOT_TOKEN & TELEGRAM_CHAT_ID), Resend (UPSTASH_REDIS_URL & SEND_EMAILS_TO & DOMAIN), " +
-      "Discord (DISCORD_WEBHOOK_URL), or " +
-      "Twilio SMS (TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN & TWILIO_PHONE_NUMBER).";
-    const cleanErrorMessage = errorMsg
-    .replace(/\\n/g, "\n") // Replace \\n with newline character
-    .replace(/\\/g, '') // Remove backslashes
-    .trim(); // Remove leading and trailing whitespace
-    return {
-      statusCode: 400,
-      body: cleanErrorMessage
-    }
-  }
+ 
 
 
  
@@ -361,6 +333,7 @@ export const handler = async (event) => {
     { key: cronParts, name: "cronParts" },
     { key: encryptedResend, name: "encryptedResend" },
     { key: userTimezone, name: "userTimezone" },
+    { key: process.env.LINK, name: "LINK", env: true },
     { key: process.env.REGION, name: "REGION", env: true },
     { key: process.env.ACCESS_KEY_ID, name: "ACCESS_KEY_ID", env: true },
     { key: process.env.SECRET_ACCESS_KEY, name: "SECRET_ACCESS_KEY", env: true },
@@ -379,6 +352,8 @@ export const handler = async (event) => {
       throw Error(errorMsg)
     }
   }
+
+  if (!process.env.LINK.startsWith("https")) throw Error("should be https://your-appointment-booking.link (make sure it's https)")
 
 
 
@@ -425,18 +400,24 @@ export const handler = async (event) => {
 
   // 3. Send email for warmup 
   const emailTemplates = await import(`./dist/const/${niche}.js`).then(module => module.default);
+  const randomNames = await import(`./dist/const/randomNames.js`).then(module => module.default);
+  
 
   const emailTemplatesArray = Object.values(emailTemplates).flat();
 
   const randomTemplate = emailTemplatesArray[Math.floor(Math.random() * emailTemplatesArray.length)];
-  let sendError = null;
+  const randomName = randomNames[Math.floor(Math.random() * randomNames.length)];
+  randomTemplate.body = randomTemplate.body
+  .replace("$[NAME]", randomName)
+  .replace("$[LINK]", process.env.LINK);
 
+  let sendError = null;
   const currentTime = moment().tz(userTimezone);
   const checkEmailTime = {
     startTime: currentTime.clone().startOf("day").add(9, "hours").add(59, "minutes"),
     endTime: currentTime.clone().startOf("day").add(11, "hours"),
   };
-
+  
   // Send email to checkEmail within times from 9:59 till 11 (userTimezone)
   if (currentTime.isBetween(checkEmailTime.startTime, checkEmailTime.endTime)) {
     const sendEmailResp = await sendEmail(resend, emailFrom, checkEmail, randomTemplate.subject, renderedEmailString(randomTemplate.body)) 
@@ -476,7 +457,6 @@ export const handler = async (event) => {
     .trim(); // Remove leading and trailing whitespace
 
 
-  const channels = await sendErrorNotifications(cleanErrorMessage, error.stack)
   
  
     return {
