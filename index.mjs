@@ -11,6 +11,11 @@ import decryptResendModule from './dist/utils/decryptResend.js';
 const { decryptResend } = decryptResendModule;
 
 
+import notificationsModule from './dist/utils/notifications.js';
+const { sendErrorNotifications } = notificationsModule;
+
+
+
 // render email using this function because you need each time render email async on client (on server .tsx not avaiable)
 // DO NOT INSERT NEW LINES HERE - it may casuse unexpected output (its better to don't change this function - you may do it but do some backup before)
 function renderedEmailString(body) {
@@ -20,144 +25,11 @@ function renderedEmailString(body) {
   <tbody>
     <tr>
       <td>
-        <p style="white-space: pre-wrap; word-break: break-word; margin: 0 0 8px 0;">${body.trim()}</p>
+        ${body.trim()}
       </td>
     </tr>
   </tbody>
 </table>`;
-}
-
-
-const sendTelegramError = async (errorMessage) => {
-  try {
-    const response = await fetch(URI_API, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        chat_id: CHAT_ID,
-        parse_mode: "html",
-        text: errorMessage,
-      }),
-    });
-
-    if (!response.ok) {
-      console.error(`Failed to send Telegram message: ${response.statusText}`);
-    }
-  } catch (error) {
-    console.error("Error sending Telegram message:", error);
-  }
-};
-
-function parseCronExpression(cronExpression) {
-  const [minutes, hours, dayOfMonth, month, dayOfWeek, year] = cronExpression.split(" ");
-  return { minutes, hours, dayOfMonth, month, dayOfWeek, year };
-}
-
-function calculateCronExpression(executionsPerDay) {
-  const interval = Math.floor(1440 / executionsPerDay); // Minutes per day divided by executions
-  return `*/${interval} * * * *`; // Generate cron for interval-based execution
-}
-
-function shouldUpdateSchedule(cronParts, daysDifference, emailCount) {
-  if (emailCount < 2) {
-    throw new Error("Invalid schedule: sendEmailsTo.length must be >= 2");
-  }
-
-  let newCronExpression;
-  let emailsPerDay;
-
-  switch (true) {
-    case daysDifference >= 150:
-      newCronExpression = "0 12 * * 1"; // Send 1 email per week on Monday at 12:00 PM
-      break;
-    case daysDifference >= 120:
-      emailsPerDay = 100;
-      break;
-    case daysDifference >= 90:
-      emailsPerDay = 80;
-      break;
-    case daysDifference >= 60:
-      emailsPerDay = 50;
-      break;
-    case daysDifference >= 42:
-      emailsPerDay = 30;
-      break;
-    case daysDifference >= 28:
-      emailsPerDay = 20;
-      break;
-    case daysDifference >= 14:
-      emailsPerDay = 10;
-      break;
-    default:
-      return { isShouldUpdate: false }; // No update required
-  }
-
-  if (!newCronExpression) {
-    const executionsPerDay = Math.ceil(emailsPerDay / emailCount);
-    newCronExpression = calculateCronExpression(executionsPerDay);
-  }
-
-  const newCronParts = parseCronExpression(newCronExpression);
-  const isShouldUpdate = JSON.stringify(cronParts) !== JSON.stringify(newCronParts);
-
-  return { isShouldUpdate, newCronExpression: isShouldUpdate ? newCronExpression : undefined };
-}
-
-async function updateSchedule(schedulerClient, scheduleName, createdAt, sendEmailsTo, userTimezone, cronParts) {
-  const createdAtMoment = moment(createdAt).tz(userTimezone);
-  const now = moment().tz(userTimezone);
-  const daysDifference = now.diff(createdAtMoment, "days");
-
-  const { isShouldUpdate, newCronExpression } = shouldUpdateSchedule(cronParts, daysDifference, sendEmailsTo.length);
-
-  if (!isShouldUpdate) {
-    console.log(80, "No update required: Schedule already matches expected values");
-    return;
-  }
-
-  try {
-    const existingSchedule = await schedulerClient.send(
-      new GetScheduleCommand({ Name: scheduleName })
-    );
-
-   // 1. Parse existing Target JSON
-    let target = JSON.parse(JSON.stringify(existingSchedule.Target)); // Deep copy
-    const newCronParts = parseCronExpression(newCronExpression); // Convert cron string to object
-
-    // 2. Update only cronParts fields
-    target.cronParts.minutes = newCronParts.minutes;
-    target.cronParts.hours = newCronParts.hours;
-    target.cronParts.dayOfMonth = newCronParts.dayOfMonth;
-    target.cronParts.month = newCronParts.month;
-    target.cronParts.dayOfWeek = newCronParts.dayOfWeek;
-    target.cronParts.year = newCronParts.year || "*"; // Default year if undefined
-
-    // 3. Update Redis so UI reflects changes
-    const redis = new Redis(process.env.UPSTASH_REDIS_URL);
-    await redis.set(process.env.WARMUP_KEY, JSON.stringify(target));
-
-    console.log(88, "Updating schedule:", {
-      scheduleName,
-      daysDifference,
-      newCronExpression,
-    });
-
-    // 4. Update EventBridge schedule (EB) so Lambda sees the change
-    const updateScheduleCommand = new UpdateScheduleCommand({
-      Name: scheduleName,
-      GroupName: "warmup-group",
-      FlexibleTimeWindow: { Mode: "OFF" },
-      ScheduleExpression: newCronExpression,
-      ScheduleExpressionTimezone: existingSchedule.ScheduleExpressionTimezone,
-      Target: target,
-    });
-    
-    const result = await schedulerClient.send(updateScheduleCommand);
-    console.log(118, "Schedule updated successfully:", result);
-  } catch (error) {
-    console.error(120, "Error updating schedule:", error);
-    return error.message;
-  }
 }
 
 
@@ -172,41 +44,322 @@ async function sendEmail(resend,emailFrom,emailTo,subject,html) {
     }
 
   const { error } = await resend.emails.send(email);
-  console.log(125,'email sent')
   if (error) return error.message
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// -------------------------
+// 2.1. scaleSendingVolume
+// Updates warmup.cronParts based on warmupState to scale sending volume by a quarter
+// -------------------------
+export function scaleSendingVolume(warmupState, warmup, userTimezone) {
+  let factor;
+  switch (warmupState) {
+    case "enabling-1/4": factor = 1 / 4; break;
+    case "enabling-2/4": factor = 2 / 4; break;
+    case "enabling-3/4": factor = 3 / 4; break;
+    case "enabled":      factor = 1;     break;
+    case "disabling-1/4": factor = 3 / 4; break;
+    case "disabling-2/4": factor = 2 / 4; break;
+    case "disabling-3/4": factor = 1 / 4; break;
+    case "disabled":     factor = 0;     break;
+    default:             factor = 1;     break;
+  }
+  // Use warmup.emailsPerDay if exists; otherwise assume 100 as baseline
+  const baseline = warmup.emailsPerDay || 100;
+  const newEmailsPerDay = Math.floor(baseline * factor);
+  // Update cronParts based on newEmailsPerDay
+  const newCronExpression = calculateCronExpression(newEmailsPerDay);
+  warmup.cronParts = parseCronExpression(newCronExpression);
+  warmup.emailsPerDay = newEmailsPerDay;
+  warmup.updated_at = moment().tz(userTimezone).toISOString();
+  return warmup;
+}
+
+// -------------------------
+// Helper: updateEBSchedule
+// Sends updated warmup (from Redis) to EventBridge schedule
+// -------------------------
+async function updateEBSchedule(schedulerClient, scheduleName, warmup) {
+  // Get existing schedule to retain timezone info
+  const existingSchedule = await schedulerClient.send(
+    new GetScheduleCommand({ Name: scheduleName, GroupName: "warmup-group" })
+  );
+  await schedulerClient.send(
+    new UpdateScheduleCommand({
+      Name: scheduleName,
+      GroupName: "warmup-group",
+      FlexibleTimeWindow: { Mode: "OFF" },
+      ScheduleExpression: calculateCronExpression(warmup.emailsPerDay),
+      ScheduleExpressionTimezone: existingSchedule.ScheduleExpressionTimezone,
+      Target: { ...existingSchedule.Target, Input: JSON.stringify(warmup) },
+    })
+  );
+}
+
+
+
+
+function parseCronExpression(cronExpression) {
+  const [minutes, hours, dayOfMonth, month, dayOfWeek, year] = cronExpression.split(" ");
+  return { minutes, hours, dayOfMonth, month, dayOfWeek, year };
+}
+
+function calculateCronExpression(executionsPerDay) {
+  const interval = Math.floor(1440 / executionsPerDay); // Minutes per day divided by executions
+  return `*/${interval} * * * *`; // Generate cron for interval-based execution
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// -------------------------
+// Helper: getWarmupSendingSettings
+// Returns newEmailsPerDay and newCronExpression based on daysDifference and recipient count.
+// Recommended warmup period is 30 days. Before 30 days, ramp-up occurs gradually.
+// -------------------------
+function getWarmupSendingSettings(daysDifference, sendEmailsCount) {
+  let newEmailsPerDay;
+  switch (true) {
+    // Early phase: Day 0-3 
+    // send from 10 to 15 emails per day
+    case (daysDifference <= 3):
+      newEmailsPerDay = Math.floor(Math.random() * (15 - 10 + 1)) + 10;
+      break;
+    // Early phase: Day 4-7 
+    // send from 20 to 30 emails per day
+    case (daysDifference <= 7):
+      newEmailsPerDay = Math.floor(Math.random() * (30 - 20 + 1)) + 20;
+      break;
+    // Early phase: Day 8-13 
+    // send from 30 to 50 emails per day
+    case (daysDifference < 14):
+      newEmailsPerDay = Math.floor(Math.random() * (50 - 30 + 1)) + 30;
+      break;
+    // Mid phase: Day 14-21 
+    // send from 50 to 80 emails per day
+    case (daysDifference < 22):
+      newEmailsPerDay = Math.floor(Math.random() * (80 - 50 + 1)) + 50;
+      break;
+    // Late phase: Day 22-29 
+    // send from 80 to 100 emails per day
+    case (daysDifference < 30):
+      newEmailsPerDay = Math.floor(Math.random() * (100 - 80 + 1)) + 80;
+      break;
+    // Warmup period ended (Day 30+)
+    // transition to production: baseline between 100 and 120 emails per day
+    case (daysDifference >= 30):
+      newEmailsPerDay = Math.floor(Math.random() * (120 - 100 + 1)) + 100;
+      break;
+    default:
+      newEmailsPerDay = 0;
+  }
+  const executionsPerDay = Math.ceil(newEmailsPerDay / sendEmailsCount);
+  const newCronExpression = calculateCronExpression(executionsPerDay);
+  return { newEmailsPerDay, newCronExpression };
+}
+// -------------------------
+// Updated shouldUpdateSchedule function
+// Slowly increases sending volume by adjusting emails per day and cronParts based on warmupToEnable.emailsPerDay.
+// Uses switch-case for period-based logic and sets warmup state to "disabled-1/4" if warmup period (30 days) has ended.
+// -------------------------
+function shouldUpdateSchedule(cronParts, daysDifference, sendEmailsCount, currentWarmupState) {
+  const { newEmailsPerDay, newCronExpression } = getWarmupSendingSettings(daysDifference, sendEmailsCount);
+  const newCronParts = parseCronExpression(newCronExpression);
+  const isShouldUpdate = JSON.stringify(cronParts) !== JSON.stringify(newCronParts);
+  
+  // If warmup period is ended and state is not yet updated, force update (caller should set state to "disabled-1/4")
+  if (daysDifference >= 30 && currentWarmupState !== "disabled-1/4") {
+    return { isShouldUpdate: true, newCronExpression, newEmailsPerDay };
+  }
+  
+  return { isShouldUpdate, newCronExpression: isShouldUpdate ? newCronExpression : undefined, newEmailsPerDay };
+}
+
+
+
+
+
+
+
+// -------------------------
+// 4. Main updateSchedule function
+// -------------------------
+export async function updateSchedule(
+  redis,
+  schedulerClient,
+  createdAt,
+  scheduleName,
+  warmupState,
+  sendEmailsTo,
+  cronParts,
+  userTimezone
+) {
+  // 1. Get warmup from Redis and parse it
+  const warmupString = await redis.get(process.env.WARMUP_KEY);
+  if (!warmupString) return console.log("Warmup not found in Redis.");
+  let warmup = JSON.parse(warmupString);
+
+  // 2. Calculate days difference using userTimezone
+  const daysDifference = moment().tz(userTimezone).diff(
+    moment(createdAt).tz(userTimezone),
+    "days"
+  );
+
+  // 3. If state is transitional, scale sending volume and update EB, then return
+  if (warmupState.startsWith("enabling") || warmupState.startsWith("disabling")) {
+    warmup = scaleSendingVolume(warmupState, warmup, userTimezone);
+    await redis.set(process.env.WARMUP_KEY, JSON.stringify(warmup));
+    await updateEBSchedule(schedulerClient, scheduleName, warmup);
+    return;
+  }
+
+ // 4. Otherwise, check if sending volume should be increased based on daysDifference
+  const { isShouldUpdate, newCronExpression, newEmailsPerDay } = shouldUpdateSchedule(
+    cronParts,
+    daysDifference,
+    sendEmailsTo.length,
+    warmupState
+  );
+  if (!isShouldUpdate) return console.log("No update required: Schedule already matches expected values.");
+
+  // 5. Update warmup's cronParts and emailsPerDay with newEmailsPerDay value returned by shouldUpdateSchedule
+  const newCronParts = parseCronExpression(newCronExpression);
+  warmup.cronParts = newCronParts;
+  warmup.emailsPerDay = newEmailsPerDay;
+
+  // 6. If warmup period is over (daysDifference >= 30), update warmupState to "disabled-1/4"
+  if (daysDifference >= 30) {
+    warmup.warmupState = "disabled-1/4";
+  }
+  
+  // 7. Update Redis with the new warmup configuration
+  await redis.set(process.env.WARMUP_KEY, JSON.stringify(warmup));
+
+  // 8. Update EventBridge schedule with new cron expression and target data from updated warmup
+  await updateEBSchedule(schedulerClient, scheduleName, warmup);
+}
+
+
+
 
 
 export const handler = async (event) => {
 
   // created_at - it's ISO - to detect how much days smb warming up and to scale from 10 to 20 ... to 100 emails per day 
+  // warmupState - e.g "enabling-1/4" or "disabled" or "disabling-3/4" - explanation - https://i.imgur.com/WwEXEPE.png - https://i.imgur.com/Ex0SVqc.png
   // domain - to select schedule name to update warmup in EventBridge because - https://i.imgur.com/eD4ssVz.png
   // emailFrom - for resend so I send emails from email that needs to be warmed up
-  // encryptedResend - so I can initialize resend SDK to send warm up emails (ChatGPT recommends 50-100 per day so consider resend limits)
-  // cronParts - to update them for `warmup-${domain}` in EB event to show later on UI on OT AND to check should update EB or not
+  // niche - to send more realistic warmup emails
   // sendEmailsTo - to send warmup emails to someone (e.g myself)
   // checkEmail - to check if I'm in SPAM box or not (DO NOT user "Not spam" button on checkEmail)
-  // niche - to send more realistic warmup emails
+  // cronParts - to update them for `warmup-${domain}` in EB event to show later on UI on OT AND to check should update EB or not
+  // encryptedResend - so I can initialize resend SDK to send warm up emails (ChatGPT recommends 50-100 per day so consider resend limits)
   // userTimezone - to send check email within timezone e.g 10:00 - so user understand whether CE on SPAM or not
-  const { created_at, domain, emailFrom, encryptedResend, cronParts, sendEmailsTo, checkEmail, niche, userTimezone } = event;
+  const { created_at, warmupState, domain, emailFrom, niche, sendEmailsTo, checkEmail, cronParts, encryptedResend, userTimezone } = event;
+  // WARNING! - event - DEPENDS ON IWarmUp outreach-tool
 
 
+  // --- Validate notification group --- //
+  // DEPENDS ON VM-receiveEmails VM-resetRedisStatsToday VM-sendScheduledEmail
+  const notificationGroups = [
+    { name: 'Telegram', required: ['TELEGRAM_BOT_TOKEN', 'TELEGRAM_CHAT_ID'] },
+    { name: 'Resend', required: ['UPSTASH_REDIS_URL', 'SEND_EMAILS_TO', 'DOMAIN'] },
+    { name: 'Discord', required: ['DISCORD_WEBHOOK_URL'] },
+    { name: 'Twilio SMS', required: ['TWILIO_ACCOUNT_SID', 'TWILIO_AUTH_TOKEN', 'TWILIO_PHONE_NUMBER'] },
+  ];
 
+  const enabledNotificationGroups = notificationGroups.filter(group =>
+    group.required.every(envVar => Boolean(process.env[envVar]))
+  );
+
+  if (enabledNotificationGroups.length === 0) {
+    const errorMsg =
+      "No notification group provided. Make sure you added it in lambda - Configuration - Environment variables, " +
+      "Please set at least one of the following environment variables: " +
+      "Telegram (TELEGRAM_BOT_TOKEN & TELEGRAM_CHAT_ID), Resend (UPSTASH_REDIS_URL & SEND_EMAILS_TO & DOMAIN), " +
+      "Discord (DISCORD_WEBHOOK_URL), or " +
+      "Twilio SMS (TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN & TWILIO_PHONE_NUMBER).";
+    const cleanErrorMessage = errorMsg
+    .replace(/\\n/g, "\n") // Replace \\n with newline character
+    .replace(/\\/g, '') // Remove backslashes
+    .trim(); // Remove leading and trailing whitespace
+    return {
+      statusCode: 400,
+      body: cleanErrorMessage
+    }
+  }
+
+
+ 
+ 
   
 
+
+
+
+
+  try {
+
+
+
  
- 
-   
+  // --- IN TRY CATCH: Validate envs and variables from event --- //
 
   const requiredFields = [
     { key: created_at, name: "created_at" },
-    { key: encryptedResend, name: "encryptedResend" },
-    { key: emailFrom, name: "emailFrom" },
+    { key: warmupState, name: "warmupState" },
     { key: domain, name: "domain" },
-    { key: cronParts, name: "cronParts" },
+    { key: emailFrom, name: "emailFrom" },
+    { key: niche, name: "niche" },
     { key: sendEmailsTo, name: "sendEmailsTo" },
     { key: checkEmail, name: "checkEmail" },
-    { key: niche, name: "niche" },
+    { key: cronParts, name: "cronParts" },
+    { key: encryptedResend, name: "encryptedResend" },
     { key: userTimezone, name: "userTimezone" },
     { key: process.env.REGION, name: "REGION", env: true },
     { key: process.env.ACCESS_KEY_ID, name: "ACCESS_KEY_ID", env: true },
@@ -223,12 +376,7 @@ export const handler = async (event) => {
       const cta = env ? ctaEnvs : ctaEvent;
       const errorMsg = `${name} missing - ${cta}`;
       console.log(194, errorMsg);
-      // Send Telegram notification and return error response
-      await sendTelegramError(errorMsg);
-      return {
-        statusCode: 400,
-        body: JSON.stringify({ error: errorMsg }),
-      };
+      throw Error(errorMsg)
     }
   }
 
@@ -237,7 +385,9 @@ export const handler = async (event) => {
 
 
 
-  try {
+
+
+
    const decypredResend = await decryptResend(encryptedResend)
     
     // 1. Create SDKs
@@ -249,7 +399,7 @@ export const handler = async (event) => {
       secretAccessKey: process.env.SECRET_ACCESS_KEY,
     },
   });
-
+  const redis = new Redis(process.env.UPSTASH_REDIS_URL);
 
 
 
@@ -259,9 +409,9 @@ export const handler = async (event) => {
 
 
   
-  // 2. Check do I need to scale volume of warming up
+  // 2. Check do I need to up/down scale volume of warming up
   const scheduleName = `warmup-${domain}`
-  const updScheduleResp = await updateSchedule(schedulerClient,scheduleName, created_at, sendEmailsTo, userTimezone, cronParts)
+  const updScheduleResp = await updateSchedule(redis, schedulerClient, created_at, scheduleName, warmupState, sendEmailsTo, cronParts, userTimezone)
   if (typeof updScheduleResp === 'string') throw Error(updScheduleResp,{cause:"updScheduleResp"})
 
 
@@ -319,11 +469,22 @@ export const handler = async (event) => {
     }
     
   } catch (error) {
-    const errorMesage = 'Error in warmup lambda function - ' + error.message 
-    console.log(292,errorMesage)
+  // THIS DEPENDS ON VM-resetRedisStatsToday VM-receiveEmails VM-sendScheduledEmail
+  const cleanErrorMessage = error.message
+    .replace(/\\n/g, "\n") // Replace \\n with newline character
+    .replace(/\\/g, '') // Remove backslashes
+    .trim(); // Remove leading and trailing whitespace
+
+
+  const channels = await sendErrorNotifications(cleanErrorMessage, error.stack)
+  
+ 
     return {
-      statusCode:400,
-      error:errorMesage
+      statusCode: 400,
+      body: JSON.stringify({
+        error: `Failed to send warmup email - ${cleanErrorMessage}${error.cause ? `(${error.cause})` : ""}`,
+        notifications: channels
+      })
     } 
   }
 
