@@ -20,7 +20,7 @@ function renderedEmailString(body) {
   <tbody>
     <tr>
       <td>
-        ${body.trim()}
+        ${body.trim().replace(/\\n/g, '\n').replace(/\n/g, '<br>')}
       </td>
     </tr>
   </tbody>
@@ -329,6 +329,8 @@ export const handler = async (event) => {
     { key: encryptedResend, name: "encryptedResend" },
     { key: userTimezone, name: "userTimezone" },
     { key: process.env.LINK, name: "LINK", env: true },
+    { key: process.env.OWNER_NAME, name: "OWNER_NAME", env: true },
+    { key: process.env.COMPANY_NAME, name: "COMPANY_NAME", env: true },
     { key: process.env.REGION, name: "REGION", env: true },
     { key: process.env.ACCESS_KEY_ID, name: "ACCESS_KEY_ID", env: true },
     { key: process.env.SECRET_ACCESS_KEY, name: "SECRET_ACCESS_KEY", env: true },
@@ -395,16 +397,29 @@ export const handler = async (event) => {
 
   // 3. Send email for warmup 
   const emailTemplates = await import(`./dist/const/${niche}.js`).then(module => module.default);
-  const randomNames = await import(`./dist/const/randomNames.js`).then(module => module.default);
-  
+  const { randomNames } = await import(`./dist/const/randomNames.js`); // using export const, then your import should be like this
+  const { randomMemes } = await import(`./dist/const/randomMemes.js`); // using export const, then your import should be like this
 
   const emailTemplatesArray = Object.values(emailTemplates).flat();
 
   const randomTemplate = emailTemplatesArray[Math.floor(Math.random() * emailTemplatesArray.length)];
   const randomName = randomNames[Math.floor(Math.random() * randomNames.length)];
+  const randomMeme = randomMemes[Math.floor(Math.random() * randomMemes.length)];
+  
   randomTemplate.body = randomTemplate.body
-  .replace("$[NAME]", randomName)
-  .replace("$[LINK]", process.env.LINK);
+    .replace("$[NAME]", randomName)
+    .replace("$[LINK]", process.env.LINK)
+    .replace("$[OWNER_NAME]", process.env.OWNER_NAME)
+    .replace("$[COMPANY_NAME]", process.env.COMPANY_NAME)
+    .replace("$[MEME-URL]", randomMeme);
+   
+  randomTemplate.subject = randomTemplate.subject
+    .replace("$[NAME]", randomName)
+    .replace("$[LINK]", process.env.LINK)
+    .replace("$[OWNER_NAME]", process.env.OWNER_NAME)
+    .replace("$[COMPANY_NAME]", process.env.COMPANY_NAME);
+
+
 
   let sendError = null;
   const currentTime = moment().tz(userTimezone);
@@ -415,6 +430,7 @@ export const handler = async (event) => {
   
   // Send email to checkEmail within times from 9:59 till 11 (userTimezone)
   if (currentTime.isBetween(checkEmailTime.startTime, checkEmailTime.endTime)) {
+    // TODO - send email stats e.g emailsPerDay - cron expression - warmupState
     const sendEmailResp = await sendEmail(resend, emailFrom, checkEmail, randomTemplate.subject, renderedEmailString(randomTemplate.body)) 
     if (typeof sendEmailResp === 'string') throw Error(sendEmailResp,{cause:"sendEmailResp"})
   }
@@ -445,20 +461,17 @@ export const handler = async (event) => {
     }
     
   } catch (error) {
-  // THIS DEPENDS ON VM-resetRedisStatsToday VM-receiveEmails VM-sendScheduledEmail
   const cleanErrorMessage = error.message
     .replace(/\\n/g, "\n") // Replace \\n with newline character
     .replace(/\\/g, '') // Remove backslashes
     .trim(); // Remove leading and trailing whitespace
-
-
   
  
     return {
       statusCode: 400,
       body: JSON.stringify({
         error: `Failed to send warmup email - ${cleanErrorMessage}${error.cause ? `(${error.cause})` : ""}`,
-        notifications: channels
+    
       })
     } 
   }
