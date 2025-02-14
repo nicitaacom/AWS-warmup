@@ -170,714 +170,6 @@ P.S. We love helping out roofs! 💪
 Ready to set it up? Here’s the link - $[LINK]`
     },
         {
-        "subject": "time for a roof check!",
-        "body": `Hello $[NAME]! Hope you're having a great week!  Just a reminder to check your roof.  Keeping it in good shape protects your home. We’re your roof helpers! Click here to book - $[LINK]`
-    },
-    {
-        "subject": "roof thoughts?",
-        "body": `Hello $[NAME]! Checking in about your roof. Maintenance is key!  Reach out, we inspect, you relax! We're here to help keep your home protected! Schedule now: $[LINK]`
-    },
-    {
-        "subject": "roof check-up?",
-        "body": `Hello $[NAME]!  Is it time for a roof check? Email us, we'll assess, and you'll enjoy peace of mind.  Keeping your roof in shape is our priority. Book here: $[LINK]`
-    },
-    {
-        "subject": "roof health",
-        "body": `Hello $[NAME]! Let’s maintain your roof! Contact us, we'll assess, you relax! A healthy roof protects your home! Protecting your home is our duty. Schedule: $[LINK]`
-    },
-    {
-        "subject": "check your roof",
-        "body": `Hello $[NAME]!  Friendly reminder to check your roof. Regular maintenance is important! Call, we'll examine, you relax! We're here for you. Set up inspection: $[LINK]`
-    },
-    {
-        "subject": "is your roof ready?",
-        "body": `Hello $[NAME]! Is your roof prepared for the season? Contact us, we will examine, and you can sit back! Our priority is to keep you protected! Click here to schedule: $[LINK]`
-    },
-    {
-        "subject": "protect home!",
-        "body": `Hello $[NAME]! Protecting your home starts with your roof. Reach out, we inspect, you relax. We will ensure it's secure. Your home's shield! Assess with us: $[LINK]`
-    },
-    {
-        "subject": "roof peace",
-        "body": `Hello $[NAME]! Peace of mind comes from roof maintenance. Call, we assess, you relax. Protect and maintain your home. Peace of mind with rooftop protection! Visit today: $[LINK]`
-    },
-    {
-        "subject": "easy maintenance",
-        "body": `Hello $[NAME]! We make roof maintenance easy.  Reach us, we review, you kick back! Your roof will look great! Reach out for our help! Check here: $[LINK]`
-    },
-    {
-        "subject": "roof safety",
-        "body": `Hello $[NAME]! Let's talk roof safety. Just reach out, we look, we check! With our help, we'll make it great! Protecting roofs is our thing! Click here: $[LINK]`
-    },
-    {
-        "subject": "great roof!",
-        "body": `Hello $[NAME]! Want a great roof? Maintenance is key! Schedule a visit. We give great check ups! Make plans together! Our goals are to help! See More: $[LINK]`
-    },
-    {
-        "subject": "time for a check?",
-        "body": `Hello $[NAME]! Is your roof calling for a check? Check out our team, see what we're about, message to schedule! If you make your family secure, you secure a better tomorrow. Details: $[LINK]`
-    },
-    {
-        "subject": "home experts",
-        "body": `Hello $[NAME]! Experts ready to help.  Contact us, speak with experts, schedule a date! Want the best roof so you may enjoy your home.  Get Here: $[LINK]`
-    },
-    {
-        "subject": "count on us",
-        "body": `Hello $[NAME]! You can depend on us.  Schedule a visit.  We make you happy and get everything right for you. Home wellness is what we bring. Get Scheduled: $[LINK]`
-    },
-    {
-        "subject": "roof assistance?",
-        "body": `Hello $[NAME]! Want assistance from people who know and care? Tell us what you need, let's check it out, and rest assured. Passionate about care. Check Prices: $[LINK]`
-    },
-    {
-        "subject": "quality team",
-        "body": `Hello $[NAME]!  Our experts can come by today! Speak, see, chat to schedule today! Get in contact now to schedule. Check: $[LINK]`
-    },
-    {
-        "subject": "home safety",
-        "body": `Hello $[NAME]! High safety standards are important. Our experts can assist. We check for safety risks.  Home is the safest place. Contact: $[LINK]`
-    },
-    {
-        "subject": "quality staff",
-        "body": `Hello $[NAME]! Get everything done with high quality staff! Message, call, get questions answered! Get a free estimate and consultation. Our Information: $[LINK]`
-    },
-    {
-        "subject": "roof wellness",
-        "body": `Hello $[NAME]! Chat today to keep your roof at maximum effectiveness. Message, speak, and allow us to take care of it. Your peace of mind is our goal. Reach Us At: $[LINK]`
-    },
-    {
-        "subject": "secure investment",
-        "body": `Hello $[NAME]!  Long Term Security is a Great Investment, and your roof is the first defense Schedule a time to chat, choose a plan, feel great about your family protection. Talk Here: $[LINK]`
-    },
-        {
-        "subject": "time for a roof inspection!",
-        "body": "Hello $[NAME]!\nDon't forget your roof!\nRegular checks can save you money down the line.\nSchedule your inspection today!\nClick here to book: $[LINK]"
-    },
-    {
-        "subject": "is your roof leaking?",
-        "body": "Hello $[NAME]!\nNoticed any leaks?\nContact us today to get it checked out!\nProtect your home from water damage.\nReach out here: $[LINK]"
-    },
-    {
-        "subject": "roof maintenance reminder",
-        "body": "Hello $[NAME]!\nJust a friendly reminder that roof maintenance is essential!\nGive us a call to schedule your check-up.\nYour home deserves the best!\nBook now: $[LINK]"
-    },
-    {
-        "subject": "seasonal roof check!",
-        "body": "Hello $[NAME]!\nAs the seasons change, so should your roof care!\nLet us help you prepare.\nContact us for an assessment.\nGet started here: $[LINK]"
-    },
-    {
-        "subject": "protect your investment!",
-        "body": "Hello $[NAME]!\nYour roof is an important investment.\nKeep it in top shape!\nSchedule a maintenance check with us.\nClick to schedule: $[LINK]"
-    },
-    {
-        "subject": "how's your roof holding up?",
-        "body": "Hello $[NAME]!\nWorried about your roof's condition?\nReach out for an inspection any time!\nWe'll take care of the rest.\nBook here: $[LINK]"
-    },
-    {
-        "subject": "time for a roofing update?",
-        "body": "Hello $[NAME]!\nIs it time to upgrade your roof?\nLet us assess your current condition!\nWe provide quality service you can trust.\nContact us now: $[LINK]"
-    },
-    {
-        "subject": "keeping your roof safe",
-        "body": "Hello $[NAME]!\nSafety should never be compromised!\nLet’s check your roof for potential issues.\nWe’re just a call away!\nSchedule your visit here: $[LINK]"
-    },
-    {
-        "subject": "let's talk roof health!",
-        "body": "Hello $[NAME]!\nHow's your roof's health?\nGet a free consultation today!\nKeeping a healthy roof means protecting your home.\nContact us here: $[LINK]"
-    },
-    {
-        "subject": "roof care essentials",
-        "body": "Hello $[NAME]!\nRoof care is essential for longevity!\nSchedule a maintenance check with our experts.\nYour home will thank you!\nGet started: $[LINK]"
-    },
-    {
-        "subject": "flat roof concerns?",
-        "body": "Hello $[NAME]!\nFlat roofs need special attention!\nContact us to check yours for potential issues.\nWe ensure your flat roof is reliable.\nClick to reach us: $[LINK]"
-    },
-    {
-        "subject": "time for winter preparations?",
-        "body": "Hello $[NAME]!\nIs your roof ready for winter?\nNow is the time to prepare!\nBook a check-up with our team today.\nSchedule here: $[LINK]"
-    },
-    {
-        "subject": "get your roof inspected!",
-        "body": "Hello $[NAME]!\nRegular inspections prevent costly repairs!\nLet us help you keep your roof in top shape.\nReach out to us today!\nClick to book: $[LINK]"
-    },
-    {
-        "subject": "urgent roof repairs needed?",
-        "body": "Hello $[NAME]!\nNoticed any issues?\nDon't wait until it's too late!\nContact us for immediate repairs.\nGet in touch: $[LINK]"
-    },
-    {
-        "subject": "roof inspection benefits",
-        "body": "Hello $[NAME]!\nWondering about the benefits of a roof inspection?\nLet us explain how it can save you money.\nContact us for more info!\nLearn more here: $[LINK]"
-    },
-    {
-        "subject": "schedule your roof assessment",
-        "body": "Hello $[NAME]!\nIt’s time to schedule your roof assessment!\nWe’ll inspect and provide solutions.\nProtect your home today!\nBook now: $[LINK]"
-    },
-    {
-        "subject": "roof maintenance checklist",
-        "body": "Hello $[NAME]!\nHave you checked off your roof maintenance tasks?\nWe provide a checklist to help you remember!\nContact us for assistance.\nGet it here: $[LINK]"
-    },
-    {
-        "subject": "stay ahead of roof damage!",
-        "body": "Hello $[NAME]!\nDon’t wait for roof damage to happen!\nBe proactive and schedule your inspection today.\nWe’re here to help!\nClick to book: $[LINK]"
-    },
-    {
-        "subject": "your roof deserves some love!",
-        "body": "Hello $[NAME]!\nTime to show your roof some love!\nSchedule a maintenance check today and ensure its longevity.\nContact us now: $[LINK]"
-    },
-    {
-        "subject": "let’s keep your roof strong!",
-        "body": "Hello $[NAME]!\nA strong roof equals a strong home!\nLet us inspect and maintain it for you!\nBook your appointment today.\nClick here: $[LINK]"
-    },
-        {
-        "subject": "spring roof readiness check!",
-        "body": "Hello $[NAME]!\nSpring is here—time to inspect your roof!\nLet us help you prepare for the rainy season.\nSchedule your readiness check now!\nBook here: $[LINK]"
-    },
-    {
-        "subject": "protect your attic from leaks!",
-        "body": "Hello $[NAME]!\nDon’t let leaks ruin your attic!\nContact us today for a thorough inspection.\nYour home’s protection is our priority.\nReach out here: $[LINK]"
-    },
-    {
-        "subject": "is your roof storm-ready?",
-        "body": "Hello $[NAME]!\nWith storms on the horizon, is your roof ready?\nSchedule a check-up to prevent damage.\nStay safe and secure!\nBook now: $[LINK]"
-    },
-    {
-        "subject": "roof moss buildup concerns?",
-        "body": "Hello $[NAME]!\nMoss buildup can damage your roof!\nLet us inspect and advise you on maintenance.\nPreserve your roof’s integrity!\nContact us here: $[LINK]"
-    },
-    {
-        "subject": "your roof's age matters!",
-        "body": "Hello $[NAME]!\nIs your roof approaching its retirement age?\nIt's time to consider an inspection.\nWe can guide you on your options.\nSchedule here: $[LINK]"
-    },
-    {
-        "subject": "prevent roof damage today!",
-        "body": "Hello $[NAME]!\nAct now to prevent roof damage later!\nLet’s check for early signs of wear.\nWe’re here to help keep your home safe!\nContact us: $[LINK]"
-    },
-    {
-        "subject": "need a roof makeover?",
-        "body": "Hello $[NAME]!\nThinking about a roof makeover?\nLet us assess your current roof and discuss options!\nTransform your home with us today!\nBook your consultation: $[LINK]"
-    },
-    {
-        "subject": "check your gutters!",
-        "body": "Hello $[NAME]!\nClogged gutters can affect your roof!\nSchedule a maintenance check to ensure smooth flow.\nProtect your home from water damage!\nContact us here: $[LINK]"
-    },
-    {
-        "subject": "ensure your roof is energy-efficient!",
-        "body": "Hello $[NAME]!\nIs your roof maximizing energy efficiency?\nLet us evaluate and provide solutions to save you money.\nReach out today!\nGet in touch: $[LINK]"
-    },
-    {
-        "subject": "safety first: roof inspection!",
-        "body": "Hello $[NAME]!\nSafety should always come first!\nSchedule your roof inspection with us today.\nWe’ll help keep your home secure.\nClick here to book: $[LINK]"
-    },
-    {
-        "subject": "time to clean your roof?",
-        "body": "Hello $[NAME]!\nIs it time for a roof cleaning?\nWe can help remove debris and ensure your roof lasts!\nSchedule your cleaning today.\nContact us: $[LINK]"
-    },
-    {
-        "subject": "roof upgrades available!",
-        "body": "Hello $[NAME]!\nThinking about roof upgrades?\nMeet with our experts to learn your options!\nEnhance your home’s value and safety.\nBook now: $[LINK]"
-    },
-    {
-        "subject": "prepare for winter storms!",
-        "body": "Hello $[NAME]!\nAre you prepared for winter storms?\nLet us inspect your roof for vulnerabilities.\nPreventive action today, peace of mind tomorrow!\nContact us here: $[LINK]"
-    },
-    {
-        "subject": "don't neglect roof ventilation!",
-        "body": "Hello $[NAME]!\nProper ventilation is crucial for your roof’s health!\nLet’s assess your ventilation system together.\nKeep your home comfortable and efficient!\nReach out: $[LINK]"
-    },
-    {
-        "subject": "fall roof prep!",
-        "body": "Hello $[NAME]!\nGet your roof ready for the fall season!\nSchedule a maintenance check to prevent issues.\nContact us today!\nBook here: $[LINK]"
-    },
-    {
-        "subject": "is your roof ready for heavy rains?",
-        "body": "Hello $[NAME]!\nWith heavy rains approaching, is your roof ready?\nSchedule a quick inspection with us to be proactive.\nProtect your home from leaks!\nGet started: $[LINK]"
-    },
-    {
-        "subject": "keep your roof in top shape!",
-        "body": "Hello $[NAME]!\nRegular care keeps your roof in top shape!\nSchedule a maintenance check to ensure it lasts.\nWe’re here to help!\nContact us here: $[LINK]"
-    },
-    {
-        "subject": "is your roof compliant with codes?",
-        "body": "Hello $[NAME]!\nIs your roof compliant with local codes?\nLet us perform an inspection to make sure!\nStay on the safe side!\nReach out today: $[LINK]"
-    },
-    {
-        "subject": "time to replace your roof?",
-        "body": "Hello $[NAME]!\nWondering if it’s time to replace your roof?\nLet us evaluate its condition and discuss options.\nSchedule your assessment now!\nBook here: $[LINK]"
-    },
-    {
-        "subject": "get ready for spring storms!",
-        "body": "Hello $[NAME]!\nSpring storms can be fierce!\nEnsure your roof is prepared with a quick check-up.\nContact us to schedule!\nClick to book: $[LINK]"
-    },
-        {
-        "subject": "Welcome to $[COMPANY_NAME]!",
-        "body": "Dear $[NAME],\nWelcome aboard! We are thrilled to have you on our mailing list.\nAt $[COMPANY_NAME], we’re committed to providing you with the best roofing solutions.\nIf you have any questions or need assistance, feel free to reach out!\nThanks for joining us,\n$[OWNER_NAME]"
-    },
-    {
-        "subject": "Exclusive Offer Just for You!",
-        "body": "Hello $[NAME],\nWe’re excited to offer you an exclusive discount of [X dollars or percentage off] on your next roofing repair!\nThis offer is valid for a limited time, so don’t miss out!\nBook your appointment today and save money!\nBest,\n$[OWNER_NAME]"
-    },
-    {
-        "subject": "A Quick Check-In",
-        "body": "Hi $[NAME],\nIt’s been a while since we've connected!\nWe just want to remind you about the importance of regular roof inspections.\nIf you have any concerns or need assistance, we’re here for you!\nWarm regards,\n$[OWNER_NAME]"
-    },
-    {
-        "subject": "Thank You for Choosing Us!",
-        "body": "Dear $[NAME],\nThank you for trusting $[COMPANY_NAME] with your roofing needs!\nWe’re here to provide top-notch service anytime you need us.\nFeel free to reach out if you have any questions!\nBest wishes,\n$[OWNER_NAME]"
-    },
-    {
-        "subject": "Spring Into Action: Special Discount!",
-        "body": "Hello $[NAME],\nSpring is here, and so is our limited-time offer!\nGet [X dollars or percentage off] on our maintenance services this month!\nDon’t let small issues become big problems!\nContact us soon,\n$[OWNER_NAME]"
-    },
-    {
-        "subject": "How Can We Assist You Today?",
-        "body": "Hey $[NAME],\nJust popping in to see how you’re doing!\nIf you've noticed any roof issues or have questions, we're just a message away.\nMaintaining your roof is crucial, and we're here to help!\nBest,\n$[OWNER_NAME]"
-    },
-    {
-        "subject": "Is Your Roof Ready for Winter?",
-        "body": "Hello $[NAME],\nWith winter approaching, it’s time to prepare your roof!\nSchedule an inspection for peace of mind and safety this season.\nWe’re here to assist you,\n$[OWNER_NAME]"
-    },
-    {
-        "subject": "Fall Roof Maintenance Reminder",
-        "body": "Hi $[NAME],\nFall is the perfect time for a roof check-up!\nLet us help you ensure everything is in top shape before winter.\nContact us to schedule your maintenance today!\nBest regards,\n$[OWNER_NAME]"
-    },
-    {
-        "subject": "A Friendly Reminder: Your Roof's Health Matters",
-        "body": "Dear $[NAME],\nJust a friendly reminder that regular maintenance prevents costly repairs.\nIf we can assist in checking your roof, please let us know!\nWe value your business,\n$[OWNER_NAME]"
-    },
-    {
-        "subject": "Limited-Time Roof Repair Savings!",
-        "body": "Hey $[NAME],\nDon’t miss out on our exclusive offer!\nSave [X dollars or percentage off] on roofing repairs when booked by [date].\nContact us to take advantage!\nWarm regards,\n$[OWNER_NAME]"
-    },
-    {
-        "subject": "You've Got Questions, We've Got Answers!",
-        "body": "Hello $[NAME],\nWe want to ensure you have all the information you need about your roof.\nWhether it's maintenance tips or repair advice, we’re here to help!\nFeel free to reach out anytime!\nBest,\n$[OWNER_NAME]"
-    },
-    {
-        "subject": "Don't Let Small Problems Become Big Ones!",
-        "body": "Hi $[NAME],\nSmall roof issues can quickly escalate!\nLet us help you identify and resolve them with a professional inspection.\nContact us today to schedule!\nBest wishes,\n$[OWNER_NAME]"
-    },
-    {
-        "subject": "Your Satisfaction is Our Priority!",
-        "body": "Dear $[NAME],\nAt $[COMPANY_NAME], your satisfaction is our top priority.\nIf you need assistance or have feedback, we’re all ears!\nThank you for choosing us for your roofing needs,\n$[OWNER_NAME]"
-    },
-        {
-        "subject": "Winter is Coming: Prepare Your Roof!",
-        "body": "Hello $[NAME],\nWith winter fast approaching, now is the perfect time for a roof inspection!\nLet’s ensure your home is ready for the colder months ahead.\nContact us to schedule your appointment,\n$[OWNER_NAME]"
-    },
-    {
-        "subject": "Maximize Your Roof's Lifespan!",
-        "body": "Hi $[NAME],\nRegular maintenance can significantly extend your roof's lifespan!\nWe’re here to help you with thorough inspections and quality repairs.\nReach out to us whenever you need,\n$[OWNER_NAME]"
-    },
-    {
-        "subject": "Your Opinion Matters to Us!",
-        "body": "Dear $[NAME],\nWe appreciate your trust in $[COMPANY_NAME]!\nIf you have feedback or questions, please don’t hesitate to share.\nYour opinion helps us improve!\nThank you,\n$[OWNER_NAME]"
-    },
-    {
-        "subject": "Ready for a Roof Refresh?",
-        "body": "Hello $[NAME],\nThinking about refreshing your roof? We can help!\nLet’s discuss your options and get a consultation scheduled!\nLooking forward to it,\n$[OWNER_NAME]"
-    },
-    {
-        "subject": "Don't Forget to Inspect Your Roof!",
-        "body": "Hi $[NAME],\nAs the seasons change, don't forget the importance of roof inspections!\nReach out to schedule yours today and ensure everything is secure.\nBest regards,\n$[OWNER_NAME]"
-    },
-    {
-        "subject": "Thank You for Your Loyalty!",
-        "body": "Hello $[NAME],\nThank you for being a valued customer!\nWe appreciate your trust in our services and are here to assist you with any future roofing needs.\nBest wishes,\n$[OWNER_NAME]"
-    },
-        {
-        "subject": "more roofing leads for $[NAME]?",
-        "body": "Hi $[NAME],\n\nNoticed your quality work around town. We're generating more leads than our current partners can handle. Interested in picking up extra projects? Quick intro call?\n$[LINK]"
-    },
-    {
-        "subject": "roofing projects available - $[CITY]",
-        "body": "Hey $[NAME],\n\nGot a surge of roofing jobs coming in for $[CITY]. Looking for reliable contractors like you to partner with. See if it's a fit.\n$[LINK]"
-    },
-    {
-        "subject": "qualified roofing leads - ready to go",
-        "body": "Hello $[NAME],\n\nTired of chasing leads that go nowhere? We're sending out qualified roofing leads to quality companies. Check out the opportunities available and let's get started.\n$[LINK]"
-    },
-    {
-        "subject": "roofing job pipeline - ready when you are",
-        "body": "Hi $[NAME],\n\nIs your crew ready for more work? We've got a consistent stream of roofing projects and are looking for a dependable team like yours. Review the potential workload. \n$[LINK]"
-    },
-    {
-        "subject": "partnership opportunity: expand your roofing business",
-        "body": "Hey $[NAME],\n\nWant to grow your roofing business without the marketing hassle? We generate leads; you focus on what you do best. Let's chat about a partnership.\n$[LINK]"
-    },
-    {
-        "subject": "urgent: roofing jobs available in $[CITY] area",
-        "body": "Hello $[NAME],\n\nWe have an immediate need for roofing contractors in the $[CITY] area due to increased demand. See if our lead flow aligns with your service area.\n$[LINK]"
-    },
-    {
-        "subject": "roofing leads tailored for $[COMPANY_SIZE] businesses",
-        "body": "Hi $[NAME],\n\nWe specialize in generating leads for roofing companies of your size, $[COMPANY_SIZE]. We offer a chance to explore a mutually beneficial partnership. Find out more about our unique value proposition.\n$[LINK]"
-    },
-    {
-        "subject": "stop paying for leads - get exclusive projects",
-        "body": "Hey $[NAME],\n\nInstead of paying for shared leads, how about getting exclusive roofing projects? Let's setup a quick call, and delve into the specifics of how we can help each other.\n$[LINK]"
-    },
-    {
-        "subject": "roofing contractors needed: $[SERVICE_AREA]",
-        "body": "Hello $[NAME],\n\nWe need contractors specializing in $[ROOF_TYPE] roofs in $[SERVICE_AREA]. We're looking for contractors with experience in your field. Eager to engage in a call and find out more about us?\n$[LINK]"
-    },
-    {
-        "subject": "increase your roofing revenue - simple solution",
-        "body": "Hi $[NAME],\n\nWe work to bring more revenue to roofing companies, and this is how. Let's dive into how we can elevate your sales and revenue generation strategy.\n$[LINK]"
-    },
-   {
-        "subject": "unlock more roofing jobs in $[CITY] today",
-        "body": "Hello $[NAME],\n\nLet's unlock the full potential of your roofing business in $[CITY]. Let's connect today, and find out how we can help grow your business.\n$[LINK]"
-    },
-    {
-        "subject": "partnership: more roofing projects",
-        "body": "Hello $[NAME],\n\nLet's build something amazing together. Let's connect today, and find out how we can help grow your business.\n$[LINK]"
-    },
-   {
-        "subject": "roofing jobs are waiting",
-        "body": "Hello $[NAME],\n\nLooking for more roofing work? I'm sending this to help you find more potential jobs. Let's connect today, and find out how we can help grow your business.\n$[LINK]"
-    },
-   {
-        "subject": "need contractors in $[CITY]",
-        "body": "Hello $[NAME],\n\nLooking for contractors to help with our roofing project. Let's connect today, and find out how we can help grow your business.\n$[LINK]"
-    },
-   {
-        "subject": "roofing contractors wanted",
-        "body": "Hello $[NAME],\n\nUrgent! Let's connect today, and find out how we can help grow your business.\n$[LINK]"
-    },
-   {
-        "subject": "new project alerts",
-        "body": "Hello $[NAME],\n\nI'm here to bring you new project alerts. Let's connect today, and find out how we can help grow your business.\n$[LINK]"
-    },
-   {
-        "subject": "your future",
-        "body": "Hello $[NAME],\n\nThe future awaits. Let's connect today, and find out how we can help grow your business.\n$[LINK]"
-    },
-   {
-        "subject": "are you able?",
-        "body": "Hello $[NAME],\n\nLet's put your business to the test. Let's connect today, and find out how we can help grow your business.\n$[LINK]"
-    },
-   {
-        "subject": "more projects on their way",
-        "body": "Hello $[NAME],\n\nMore projects are on their way. Let's connect today, and find out how we can help grow your business.\n$[LINK]"
-    },
-   {
-        "subject": "roofing projects that are hot",
-        "body": "Hello $[NAME],\n\nHot new projects. Let's connect today, and find out how we can help grow your business.\n$[LINK]"
-    },
-        {
-        "subject": "roofing jobs update",
-        "body": "hi $[NAME],\n\nchecking in with the latest roofing opportunities. interested?\n$[LINK]"
-    },
-    {
-        "subject": "new roofing positions available",
-        "body": "hello $[NAME],\n\nexciting new roofing positions just opened up! let's talk.\n$[LINK]"
-    },
-    {
-        "subject": "upcoming roofing projects",
-        "body": "hey $[NAME],\n\ngot some fresh roofing projects in the pipeline. want in?\n$[LINK]"
-    },
-    {
-        "subject": "roofing work opportunities",
-        "body": "hi $[NAME],\n\nlooking for roofing work? we've got options!\n$[LINK]"
-    },
-    {
-        "subject": "more roofing jobs for you",
-        "body": "hello $[NAME],\n\nmore roofing gigs available. check them out!\n$[LINK]"
-    },
-    {
-        "subject": "roofing projects now open",
-        "body": "hi $[NAME],\n\nroofing projects are ready for bidding. see details here.\n$[LINK]"
-    },
-    {
-        "subject": "job openings: roofing edition",
-        "body": "hey $[NAME],\n\njob openings specifically for roofing experts. apply now!\n$[LINK]"
-    },
-    {
-        "subject": "roofing work - immediate start",
-        "body": "hello $[NAME],\n\nroofing work starting ASAP! are you available?\n$[LINK]"
-    },
-    {
-        "subject": "available roofing contracts",
-        "body": "hi $[NAME],\n\nnew roofing contracts are now up for grabs!\n$[LINK]"
-    },
-    {
-        "subject": "your next roofing job?",
-        "body": "hello $[NAME],\n\ncould this be your next roofing job? find out now!\n$[LINK]"
-    },
-    {
-        "subject": "roofing crew needed",
-        "body": "hi $[NAME],\n\nwe need a roofing crew for an upcoming project. interested?\n$[LINK]"
-    },
-    {
-        "subject": "roofing positions",
-        "body": "hello $[NAME],\n\nwe have positions for you and your crew, come and see!\n$[LINK]"
-    },
-    {
-        "subject": "find roofing work now",
-        "body": "hey $[NAME],\n\nFind roofing work easily with us.\n$[LINK]"
-    },
-    {
-        "subject": "your roofing expertise",
-        "body": "hi $[NAME],\n\nlet us provide projects for your expertise\n$[LINK]"
-    },
-    {
-        "subject": "upcoming roofing job",
-        "body": "hello $[NAME],\n\nwe have a new project in mind, would you be interested\n$[LINK]"
-    },
-        {
-        "subject": "roofing jobs",
-        "body": "hello $[NAME],\n\nwe have several jobs for the season\n$[LINK]"
-    },
-        {
-        "subject": "roofers needed!",
-        "body": "hello $[NAME],\n\nneed roofers asap, we have a job for you!\n$[LINK]"
-    },
-        {
-        "subject": "your services wanted",
-        "body": "hello $[NAME],\n\nlooking for professionals, can we contact you?\n$[LINK]"
-    },
-        {
-        "subject": "roofing time",
-        "body": "hello $[NAME],\n\ntime to make some money! are you available?\n$[LINK]"
-    },
-        {
-        "subject": "we need you",
-        "body": "hello $[NAME],\n\nour projects need you now! contact us here!\n$[LINK]"
-    },
-        {
-        "subject": "quick roofing job inquiry",
-        "body": "hey $[NAME],\n\nwe've got a small roofing job that might interest you. It's a quick turnaround and good pay.\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "roofing positions open",
-        "body": "hey $[NAME],\n\nnew roofing positions are available on our platform. Flexible hours and competitive rates.\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "upcoming roofing projects",
-        "body": "hey $[NAME],\n\nwe have several upcoming roofing projects in your area. Could be a great opportunity.\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "roofing work available",
-        "body": "hey $[NAME],\n\nwe're offering some roofing work and thought of you. Decent pay and good conditions.\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "more roofing gigs",
-        "body": "hey $[NAME],\n\nwe've got more roofing gigs popping up. Thought you might be interested in another one.\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "roofing project opportunity",
-        "body": "hey $[NAME],\n\nwe've got a roofing project we think would suit your skills. Good location and fair price.\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "roofing job openings",
-        "body": "hey $[NAME],\n\nthere are new roofing job openings you may want to consider. Check it out at the link.\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "roofing work starting soon",
-        "body": "hey $[NAME],\n\nwe've got roofing work starting pretty soon and need someone reliable. Could this be you?\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "roofing contracts",
-        "body": "hey $[NAME],\n\nnew roofing contracts are now available for bidding. A good fit for experienced roofers.\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "a potential project for you",
-        "body": "hey $[NAME],\n\nwe have a potential project that might be up your alley. Let's discuss the specifics.\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "roofing job available",
-        "body": "hey $[NAME],\n\nwe have roofing jobs that are available right now, come and see the options!\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "roofing crew openings",
-        "body": "hey $[NAME],\n\nwe have openings for roofing crews in the area, would you like to know more?\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "roofing work now?",
-        "body": "hey $[NAME],\n\nwant roofing work now? we have some current opportunities for you!\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "need experts",
-        "body": "hey $[NAME],\n\nneed roofing experts in the area, is that something you or your team would like to be a part of?\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "roofing jobs",
-        "body": "hey $[NAME],\n\nroofing jobs are now available, come and see the options!\n\nyou open to talk it?\n$[LINK]"
-    },
-        {
-        "subject": "we are hiring",
-        "body": "hey $[NAME],\n\nroofers needed now, good pay!\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "need you",
-        "body": "hey $[NAME],\n\nneed roofers for big project!\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "call needed",
-        "body": "hey $[NAME],\n\ngive us a call to discuss options!\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "lets talk",
-        "body": "hey $[NAME],\n\nlets talk roofing and project opportunities\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "we are looking",
-        "body": "hey $[NAME],\n\nwe are looking for you and your services\n\nyou open to talk it?\n$[LINK]"
-    },
-        {
-        "subject": "have you seen this roofing opportunity?",
-        "body": "hey $[NAME],\n\nwe've got a roofing job that might just be perfect for you. Quick pay and great team.\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "what do you think about this roofing offer?",
-        "body": "hey $[NAME],\n\nthere's a unique roofing position that just opened up. Could be a great match.\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "a roofing project you won't want to miss",
-        "body": "hey $[NAME],\n\nwe have an exciting roofing project coming up that I think you'd love. Let’s chat about it.\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "could this roofing work be for you?",
-        "body": "hey $[NAME],\n\nwe're offering some interesting roofing work that may fit your skills. Worth a look.\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "ever considered this roofing gig?",
-        "body": "hey $[NAME],\n\nthere’s a roofing gig on the table that could be just your style. Curious to learn more?\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "this could be your next roofing opportunity",
-        "body": "hey $[NAME],\n\nwe've identified a roofing opportunity that seems perfect for your talents. Interested?\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "looking for something different in roofing?",
-        "body": "hey $[NAME],\n\nwe have some unique roofing positions that might just resonate with you. Can we discuss?\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "do you want to learn about new roofing projects?",
-        "body": "hey $[NAME],\n\nnew roofing projects are coming up, and I think one might catch your interest. Let’s talk.\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "take a look at this roofing opportunity",
-        "body": "hey $[NAME],\n\nthere's a exciting roofing opportunity available, and I thought you might want to hear about it.\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "a surprising roofing job could be waiting",
-        "body": "hey $[NAME],\n\nthere's a roofing job that I think could surprise you in the best way. Let’s explore it.\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "have you checked out these roofing positions?",
-        "body": "hey $[NAME],\n\nnew roofing positions that might intrigue you have just become available. Want in?\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "is this roofing gig what you've been seeking?",
-        "body": "hey $[NAME],\n\nwe found a roofing gig that has the flexibility you might be looking for. Sound interesting?\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "this roofing project could spark your interest",
-        "body": "hey $[NAME],\n\nwe have an upcoming roofing project that seems like a great fit for what you do. Can we chat?\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "is this the roofing job you've been waiting for?",
-        "body": "hey $[NAME],\n\nthere's a roofing job that just opened up, and it might be just what you need. Let's discuss.\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "exploring new roofing jobs?",
-        "body": "hey $[NAME],\n\nwe've got some promising roofing jobs available that might be right up your alley. Want to learn more?\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "are you ready for a new roofing challenge?",
-        "body": "hey $[NAME],\n\nwe have a challenging roofing opportunity that may be exactly what you're looking for. Interested?\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "your skills are needed for this roofing project",
-        "body": "hey $[NAME],\n\nwe have a roofing project that specifically needs your expertise. Can we discuss details?\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "discover this unique roofing opportunity",
-        "body": "hey $[NAME],\n\nthere’s a unique roofing opportunity waiting for you that you may not want to miss. Let’s chat.\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "is this roofing gig your next step?",
-        "body": "hey $[NAME],\n\nwe found a roofing gig that aligns well with your experience. Think you could be interested?\n\nyou open to talk it?\n$[LINK]"
-    },
-        {
-        "subject": "can you take on new roofing jobs?",
-        "body": "hey $[NAME],\n\nwe have new roofing jobs available that could suit your skills. Let’s find out which projects fit you best.\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "are you looking for more roofing work?",
-        "body": "hey $[NAME],\n\nmore roofing jobs are opening up, and we’d love to connect you with them. Let's discuss the possibilities.\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "want to explore new roofing opportunities?",
-        "body": "hey $[NAME],\n\nwe're offering several new roofing projects that might be a fit for you. Let’s explore them together.\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "do you know about our current roofing jobs?",
-        "body": "hey $[NAME],\n\nwe have current roofing jobs that are in need of experienced hands. Let’s see how we can connect you with these opportunities.\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "could you take on some roofing projects?",
-        "body": "hey $[NAME],\n\nwe have a few roofing projects available right now that could benefit from your expertise. Want to discuss?\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "are you open to new roofing leads?",
-        "body": "hey $[NAME],\n\nwe have new roofing leads available that align with your skills. Let’s talk about what’s out there for you.\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "do you want more roofing jobs this season?",
-        "body": "hey $[NAME],\n\nmore roofing jobs are available this season, and I believe they’d suit your expertise well. How about we talk?\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "have you seen the available roofing projects?",
-        "body": "hey $[NAME],\n\nthere are several roofing projects available that could use your skills. Let’s explore the options together.\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "could you benefit from these roofing jobs?",
-        "body": "hey $[NAME],\n\nwe have roofing jobs that might benefit your business and skill set. Would you be open to a conversation?\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "are new roofing projects of interest to you?",
-        "body": "hey $[NAME],\n\nnew roofing projects are available that could match your expertise. Let's review them when you have time.\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "would more roofing leads help you?",
-        "body": "hey $[NAME],\n\nwe have more roofing leads available that could help you expand your workload. Can we talk about this?\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "can we discuss your roofing options?",
-        "body": "hey $[NAME],\n\nlet’s discuss the roofing options we have that might suit your skills better. I think it could be beneficial.\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "need more roofing work this month?",
-        "body": "hey $[NAME],\n\nif you need more roofing work this month, we have several projects available that might interest you.\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "do you want to expand your roofing projects?",
-        "body": "hey $[NAME],\n\nwe can help expand your roofing projects with new leads and clients. Let’s talk when you’re available.\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "how about taking on more roofing jobs?",
-        "body": "hey $[NAME],\n\nhow about taking on more roofing jobs that are currently available? Let’s discuss the details soon.\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "interested in new roofing work options?",
-        "body": "hey $[NAME],\n\nwe have new roofing work options that might appeal to you. Let's explore what's available.\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "do you have time for roofing projects?",
-        "body": "hey $[NAME],\n\nif you have time for roofing projects, we have some that could use your expertise. Let’s discuss it.\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "want to hear about more roofing gigs?",
-        "body": "hey $[NAME],\n\nwe'd love to share more about the roofing gigs we have lined up. Interested in connecting?\n\nyou open to talk it?\n$[LINK]"
-    },
-    {
-        "subject": "curious about our roofing jobs?",
-        "body": "hey $[NAME],\n\ncurious about the roofing jobs we have on offer? We think you'd be a good fit for some of them.\n\nyou open to talk it?\n$[LINK]"
-    },
-        {
         "subject": "can we discuss new roofing jobs?",
         "body": "hey $[NAME],\n\nmy team and I – we really like what we see in your work – reason for that is your attention to detail and quality. We currently have new roofing jobs available that might interest you.\n\nYou open to talk it?\n$[LINK]"
     },
@@ -1888,6 +1180,566 @@ Ready to set it up? Here’s the link - $[LINK]`
     {
         "subject": "Your roofing revenue potential?",
         "body": "Hi $[NAME],\n\nWhat’s your roofing revenue potential? I can help maximize it.\n\nLet’s talk about how to elevate your business.\n\n$[LINK]"
-    }
+    },
+        {
+        "subject": "Tired of chasing low-bid roofing jobs?",
+        "body": "Hi $[NAME],\n\nIs your team always fighting for the lowest price? Let's attract *premium* clients.\n\nWorth a quick chat?\n\n$[LINK]"
+    },
+    {
+        "subject": "Are you *the* roofer everyone recommends?",
+        "body": "Hi $[NAME],\n\nWord-of-mouth is powerful, but can we amplify it?  Let's make you the go-to roofer in $[CITY].\n\nCurious?\n\n$[LINK]"
+    },
+    {
+        "subject": "Stop competing on price, start competing on value",
+        "body": "Hi $[NAME],\n\nPrice wars are a race to the bottom.  Let's position your roofing services as the *obvious best choice.*\n\nInterested in learning how?\n\n$[LINK]"
+    },
+    {
+        "subject": "Roofing leads that *actually* convert?",
+        "body": "Hi $[NAME],\n\nSick of leads that go nowhere?  I can help you attract higher-quality prospects who are ready to hire.\n\nUp for a quick discussion?\n\n$[LINK]"
+    },
+    {
+        "subject": "Scale your roofing business *the right way*",
+        "body": "Hi $[NAME],\n\nScaling isn't just about more jobs, it's about *more profitable* jobs.  Let's build a sustainable growth strategy.\n\nOpen to exploring options?\n\n$[LINK]"
+    },
+    {
+        "subject": "Dominate the roofing market in $[CITY]?",
+        "body": "Hi $[NAME],\n\nWhat if you became *the* dominant roofing company in $[CITY]?  I have a strategy.\n\nIntrigued?\n\n$[LINK]"
+    },
+    {
+        "subject": "From 'busy' to 'profitable'",
+        "body": "Hi $[NAME],\n\nAre you busy, but not as profitable as you'd like?  Let's fix that disconnect.\n\nDown for a brief chat?\n\n$[LINK]"
+    },
+    {
+        "subject": "Is your roofing brand *forgettable*?",
+        "body": "Hi $[NAME],\n\nIn a crowded market, standing out is crucial.  Let's create a roofing brand that's *impossible to ignore.*\n\nThoughts?\n\n$[LINK]"
+    },
+    {
+        "subject": "The *secret* to higher-value roofing projects?",
+        "body": "Hi $[NAME],\n\nThere's a secret to attracting clients willing to pay more for quality roofing. Want to know it?\n\n$[LINK]"
+    },
+    {
+        "subject": "What's *one thing* holding back your roofing growth?",
+        "body": "Hi $[NAME],\n\nIf you could pinpoint *one thing* preventing you from getting more high-value roofing projects, what would it be?  I might have the solution.\n\nInterested?\n\n$[LINK]"
+    },
+    {
+        "subject": "Roofing: Be the *obvious choice*",
+        "body": "Hi $[NAME],\n\nToo many roofers are interchangeable. How do you become the *only* logical option for premium clients?\n\nReady for a new approach?\n\n$[LINK]"
+    },
+    {
+        "subject": "Less price haggling, more booked jobs?",
+        "body": "Hi $[NAME],\n\nImagine a world with less haggling and more closed deals.\nInterested in such an opportunity?\n\n$[LINK]"
+    },
+   {
+        "subject": "Are you the number 1 roofer in the area?",
+        "body": "Hi $[NAME],\n\nThere's always a number 1 roofer, why isn't it you?\nInterested in the solution?\n\n$[LINK]"
+    },
+    {
+        "subject": "Untapped clients? (Roofing)",
+        "body": "Hi $[NAME],\n\nThere are always untapped clients left on the table, are you going to do something about that?\nInterested in the solution?\n\n$[LINK]"
+    },
+    {
+        "subject": "Roofing bottleneck",
+        "body": "Hi $[NAME],\n\nLet's find and solve the bottleneck to getting you more clients.\nCare to discuss with me and get that solved?\n\n$[LINK]"
+    },
+   {
+        "subject": "Revenue? Roofing Business",
+        "body": "Hi $[NAME],\n\nThere's so much revenue left on the table for many roofers.\nI can help you grab some of those untapped clients.\nInterested in discussing this?\n\n$[LINK]"
+    },
+    {
+        "subject": "Roofing Marketing struggles?",
+        "body": "Hi $[NAME],\n\nIt can be tough marketing for roofers, let's make a system out of it.\nI'm pretty good at creating consistent systems.\n\n$[LINK]"
+    },
+   {
+        "subject": "Roofing business goals?",
+        "body": "Hi $[NAME],\n\nAre you hitting your revenue goals for your roofing business? If not, I can help.\nInterested?\n\n$[LINK]"
+    },
+    {
+        "subject": "Untapped potential for roofers?",
+        "body": "Hi $[NAME],\n\nMost roofers have tons of untapped potential that is not yet realized, I can help you with that.\nReady to discuss the solution?\n\n$[LINK]"
+    },
+   {
+        "subject": "Closing more roofing business?",
+        "body": "Hi $[NAME],\n\nClosing more deals will grow your business, I can help provide a system to make that happen.\nReady to chat?\n\n$[LINK]"
+    },
+        {
+        "subject": "more roofing work this month?",
+        "body": "hi $[NAME],\n\nknowing you don't know me... quick question. would you potentially be open to a chat about how we could get you at least 5 guaranteed roofing jobs?\n\n$[LINK]"
+    },
+    {
+        "subject": "struggling to find leads?",
+        "body": "hi $[NAME],\n\njust reaching out -- would you be open to discussing a guaranteed method to secure 5 new roofing projects in the near future?\n\n$[LINK]"
+    },
+    {
+        "subject": "ready for consistent projects?",
+        "body": "hi $[NAME],\n\nwe can chat about how you can get 5 guarenteed roofing jobs.\ninterested in discussing that?\n\n$[LINK]"
+    },
+    {
+        "subject": "is it time to boost your business?",
+        "body": "hi $[NAME],\n\nwe can chat about how you can get 5 guarenteed roofing jobs.\ninterested in discussing that?\n\n$[LINK]"
+    },
+    {
+        "subject": "tired of the same process?",
+        "body": "hi $[NAME],\n\nwe can chat about how you can get 5 guarenteed roofing jobs.\ninterested in discussing that?\n\n$[LINK]"
+    },
+    {
+        "subject": "leads drying up?",
+        "body": "hi $[NAME],\n\nwe can chat about how you can get 5 guarenteed roofing jobs.\ninterested in discussing that?\n\n$[LINK]"
+    },
+    {
+        "subject": "ready to close more deals?",
+        "body": "hi $[NAME],\n\nwe can chat about how you can get 5 guarenteed roofing jobs.\ninterested in discussing that?\n\n$[LINK]"
+    },
+    {
+        "subject": "any client aquisition struggles?",
+        "body": "hi $[NAME],\n\nwe can chat about how you can get 5 guarenteed roofing jobs.\ninterested in discussing that?\n\n$[LINK]"
+    },
+    {
+        "subject": "any goals you are not hitting?",
+        "body": "hi $[NAME],\n\nwe can chat about how you can get 5 guarenteed roofing jobs.\ninterested in discussing that?\n\n$[LINK]"
+    },
+    {
+        "subject": "is it time to change the game?",
+        "body": "hi $[NAME],\n\nwe can chat about how you can get 5 guarenteed roofing jobs.\ninterested in discussing that?\n\n$[LINK]"
+    },
+    {
+        "subject": "jobs slipping away?",
+        "body": "hi $[NAME],\n\nwe can chat about how you can get 5 guarenteed roofing jobs.\ninterested in discussing that?\n\n$[LINK]"
+    },
+    {
+        "subject": "are you seeing what you want to see?",
+        "body": "hi $[NAME],\n\nwe can chat about how you can get 5 guarenteed roofing jobs.\ninterested in discussing that?\n\n$[LINK]"
+    },
+    {
+        "subject": "do you need more potential clients?",
+        "body": "hi $[NAME],\n\nwe can chat about how you can get 5 guarenteed roofing jobs.\ninterested in discussing that?\n\n$[LINK]"
+    },
+    {
+        "subject": "untapped business?",
+        "body": "hi $[NAME],\n\nwe can chat about how you can get 5 guarenteed roofing jobs.\ninterested in discussing that?\n\n$[LINK]"
+    },
+    {
+        "subject": "what are you hoping for?",
+        "body": "hi $[NAME],\n\nwe can chat about how you can get 5 guarenteed roofing jobs.\ninterested in discussing that?\n\n$[LINK]"
+    },
+    {
+        "subject": "how can i help?",
+        "body": "hi $[NAME],\n\nwe can chat about how you can get 5 guarenteed roofing jobs.\ninterested in discussing that?\n\n$[LINK]"
+    },
+    {
+        "subject": "potential revenue growth?",
+        "body": "hi $[NAME],\n\nwe can chat about how you can get 5 guarenteed roofing jobs.\ninterested in discussing that?\n\n$[LINK]"
+    },
+    {
+        "subject": "marketing struggles?",
+        "body": "hi $[NAME],\n\nwe can chat about how you can get 5 guarenteed roofing jobs.\ninterested in discussing that?\n\n$[LINK]"
+    },
+    {
+        "subject": "do you hit your goals?",
+        "body": "hi $[NAME],\n\nwe can chat about how you can get 5 guarenteed roofing jobs.\ninterested in discussing that?\n\n$[LINK]"
+    },
+    {
+        "subject": "do you want better business?",
+        "body": "hi $[NAME],\n\nwe can chat about how you can get 5 guarenteed roofing jobs.\ninterested in discussing that?\n\n$[LINK]"
+    },
+     {
+        "subject": "roofing work?",
+        "body": "hi $[NAME],\n\ni know you don't know me. quick chat about ensuring 5 roofing jobs are secured?\n\n$[LINK]"
+    },
+    {
+        "subject": "more roofing jobs secured?",
+        "body": "hi $[NAME],\n\nsurely the best solution for your business is guaranteed jobs? 5 roofing project guaranteed, interested in discussing that?\n\n$[LINK]"
+    },
+    {
+        "subject": "5 roofing jobs guaranteed?",
+        "body": "hi $[NAME],\n\nfinding work might be hard, but it doesn't have to be. 5 guarenteed roofing jobs sound good?\n\n$[LINK]"
+    },
+    {
+        "subject": "client struggles?",
+        "body": "hi $[NAME],\n\nstruggles with clients? lets talk about that solution, with 5 guarenteed roofing jobs!\n\n$[LINK]"
+    },
+    {
+        "subject": "business growth possible?",
+        "body": "hi $[NAME],\n\nsurely business growth is possible if you can guarantee the work. lets chat on how we can create 5 guarenteed roofing jobs!\n\n$[LINK]"
+    },
+    {
+        "subject": "5 client jobs?",
+        "body": "hi $[NAME],\n\nmore clients might the answer to all your struggles.\n\n$[LINK]"
+    },
+    {
+        "subject": "untapped roofers?",
+        "body": "hi $[NAME],\n\nclient struggles? lets talk about that solution, with 5 guarenteed roofing jobs!\n\n$[LINK]"
+    },
+    {
+        "subject": "5 guaranteed clients for roofers?",
+        "body": "hi $[NAME],\n\n5 guaranteed clients? what are your thoughts on discussing a partnership with that?\n\n$[LINK]"
+    },
+    {
+        "subject": "revenue potential?",
+        "body": "hi $[NAME],\n\nlets make some revenue together with 5 clients!\n\n$[LINK]"
+    },
+    {
+        "subject": "5 contracts for your business?",
+        "body": "hi $[NAME],\n\n5 contracts sound great for a business such as yours. lets chat?\n\n$[LINK]"
+    },
+    {
+        "subject": "more business?",
+        "body": "hi $[NAME],\n\n\nopportunities for more business?\n\n$[LINK]"
+    },
+    {
+        "subject": "business growth potential?",
+        "body": "hi $[NAME],\n\nare you willing to scale? lets discuss 5 new clients.\n\n$[LINK]"
+    },
+    {
+        "subject": "clients this month?",
+        "body": "hi $[NAME],\n\nstruggling with getting new clients? lets talk about that!\n\n$[LINK]"
+    },
+    {
+        "subject": "quick clients?",
+        "body": "hi $[NAME],\n\nquick questions, clients this month?\n\n$[LINK]"
+    },
+    {
+        "subject": "untapped potential?",
+        "body": "hi $[NAME],\n\nuntapped potential for your business? lets unleash that.\n\n$[LINK]"
+    },
+    {
+        "subject": "help this month?",
+        "body": "hi $[NAME],\n\nif help is needed, here i am!\n\n$[LINK]"
+    },
+    {
+        "subject": "more deals done?",
+        "body": "hi $[NAME],\n\ngetting more deals done? lets get started.\n\n$[LINK]"
+    },
+    {
+        "subject": "marketing help?",
+        "body": "hi $[NAME],\n\nmarketing struggles? lets resolve it!\n\n$[LINK]"
+    },
+    {
+        "subject": "hitting goals?",
+        "body": "hi $[NAME],\n\nwhats the goal? lets reach it!\n\n$[LINK]"
+    },
+    {
+        "subject": "5 more?",
+        "body": "hi $[NAME],\n\nquick question! lets help you get 5 more! (clients).\n\n$[LINK]"
+    },
+        {
+        "subject": "quick roof Q?",
+        "body": "hey $[NAME],\n\nwhat's the biggest hurdle right now?\n\n$[LINK]"
+    },
+    {
+        "subject": "roofing plans?",
+        "body": "hey $[NAME],\n\nany plans to scale things up soon?\n\n$[LINK]"
+    },
+    {
+        "subject": "project flow stable?",
+        "body": "hey $[NAME],\n\nkeeping a steady stream of projects coming in?\n\n$[LINK]"
+    },
+    {
+        "subject": "roofing biz – challenge?",
+        "body": "hey $[NAME],\n\nwhat's the toughest part of running the biz lately?\n\n$[LINK]"
+    },
+    {
+        "subject": "biz scaling soon?",
+        "body": "hey $[NAME],\n\nthinking of expanding in the near future?\n\n$[LINK]"
+    },
+    {
+        "subject": "more local work?",
+        "body": "hey $[NAME],\n\neasy to grab local jobs?\n\n$[LINK]"
+    },
+    {
+        "subject": "roof project backlog?",
+        "body": "hey $[NAME],\n\nprojects stacking up nicely?\n\n$[LINK]"
+    },
+    {
+        "subject": "roofers needed?",
+        "body": "hey $[NAME],\n\nfinding reliable roofers a pain?\n\n$[LINK]"
+    },
+    {
+        "subject": "this year's goals?",
+        "body": "hey $[NAME],\n\nambitious targets this year?\n\n$[LINK]"
+    },
+    {
+        "subject": "roof market changing?",
+        "body": "hey $[NAME],\n\nseeing changes in the local market?\n\n$[LINK]"
+    },
+    {
+        "subject": "roof project target?",
+        "body": "hey $[NAME],\n\nMeeting roof project target?\n\n$[LINK]"
+    },
+    {
+        "subject": "more biz in area?",
+        "body": "hey $[NAME],\n\ndifficult to get biz from your area\n\n$[LINK]"
+    },
+    {
+        "subject": "roofing biz support?",
+        "body": "hey $[NAME],\n\ndifficult to get support locally?\n\n$[LINK]"
+    },
+    {
+        "subject": "roofing project support?",
+        "body": "hey $[NAME],\n\ndifficult to get support roofing\n\n$[LINK]"
+    },
+    {
+        "subject": "roofing biz area?",
+        "body": "hey $[NAME],\n\nchallenging business area?\n\n$[LINK]"
+    },
+    {
+        "subject": "roofing help locally?",
+        "body": "hey $[NAME],\n\nneed help, ask the question?\n\n$[LINK]"
+    },
+    {
+        "subject": "easy more business?",
+        "body": "hey $[NAME],\n\nto easy or too hard?\n\n$[LINK]"
+    },
+    {
+        "subject": "marketing roofing?",
+        "body": "hey $[NAME],\n\nwhats your plan?\n\n$[LINK]"
+    },
+    {
+        "subject": "area reach?",
+        "body": "hey $[NAME],\n\narea easy to reach?\n\n$[LINK]"
+    },
+    {
+        "subject": "project roofing?",
+        "body": "hey $[NAME],\n\nHow are things going?\n\n$[LINK]"
+    },
+      {
+    "subject": "more roofing jobs possible?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nhow about we discuss getting you more roofing jobs to help your business grow?\n$[LINK]"
+  },
+  {
+    "subject": "grow your roofing biz?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat if we chatted about how to help you get more roofing jobs and scale your business?\n$[LINK]"
+  },
+  {
+    "subject": "need more roofing leads?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwould you be open to a quick call to discuss getting more roofing jobs?\n$[LINK]"
+  },
+  {
+    "subject": "roofing job flow okay?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat about discussing how we can get more roofing jobs to help your business grow?\n$[LINK]"
+  },
+  {
+    "subject": "roofing business boost?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat if we chatted about how to help you get more roofing jobs and grow your business?\n$[LINK]"
+  },
+  {
+    "subject": "roofing jobs help?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nopen to a quick call to discuss how we can help you get more roofing jobs?\n$[LINK]"
+  },
+  {
+    "subject": "roofing client increase?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nhow about discussing getting you more roofing jobs to help your business grow?\n$[LINK]"
+  },
+  {
+    "subject": "roofing work better?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat if we chatted about how to help you get more roofing jobs and scale your business?\n$[LINK]"
+  },
+  {
+    "subject": "more roofing coming?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nquick call to discuss how we can help you get more roofing jobs?\n$[LINK]"
+  },
+  {
+    "subject": "roofing progression?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\ndiscussing how we can get more roofing jobs to help your business grow?\n$[LINK]"
+  },
+  {
+    "subject": "new roofing clients?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nchat about how to help you get more roofing jobs and scale your business?\n$[LINK]"
+  },
+  {
+    "subject": "roofing jobs boost?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\ncall to discuss how we can help you get more roofing jobs?\n$[LINK]"
+  },
+    {
+    "subject": "roofing business increase?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\ndiscussing how we can get more roofing jobs to help your business grow?\n$[LINK]"
+  },
+  {
+    "subject": "roofing business ideas?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nchat about how to help you get more roofing jobs and scale your business?\n$[LINK]"
+  },
+  {
+    "subject": "roofing more progression?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\ncall to discuss how we can help you get more roofing jobs?\n$[LINK]"
+  },
+  {
+    "subject": "roofing plans?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\ndiscussing how we can get more roofing jobs to help your business grow?\n$[LINK]"
+  },
+  {
+    "subject": "roofing business changes?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nchat about how to help you get more roofing jobs and scale your business?\n$[LINK]"
+  },
+  {
+    "subject": "roofing more scale?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\ncall to discuss how we can help you get more roofing jobs?\n$[LINK]"
+  },
+    {
+    "subject": "roofing jobs?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\ndiscussing how we can get more roofing jobs to help your business grow?\n$[LINK]"
+  },
+  {
+    "subject": "clients scaling roofing business",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nchat about how to help you get more roofing jobs and scale your business?\n$[LINK]"
+  },
+    {
+    "subject": "roofing jobs growth?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nhow about we discuss how we can help you get more roofing jobs to help your business grow?\n$[LINK]"
+  },
+  {
+    "subject": "roofing boost soon?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat if we spoke about getting you more roofing jobs and scaling your business?\n$[LINK]"
+  },
+  {
+    "subject": "more clients for roofing?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwould you be open to a quick chat about getting more roofing jobs?\n$[LINK]"
+  },
+  {
+    "subject": "better roofing numbers?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat about discussing how we can get more roofing jobs to help your business grow?\n$[LINK]"
+  },
+  {
+    "subject": "improve roofing flow?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat if we spoke about how to help you get more roofing jobs and grow your business?\n$[LINK]"
+  },
+  {
+    "subject": "grow roofing client base?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nopen to a quick chat to discuss how we can help you get more roofing jobs?\n$[LINK]"
+  },
+  {
+    "subject": "roofing more work?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nhow about we discuss how we can help you get more roofing jobs to help your business grow?\n$[LINK]"
+  },
+  {
+    "subject": "roofing improve flow?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat if we spoke about how to help you get more roofing jobs and scale your business?\n$[LINK]"
+  },
+  {
+    "subject": "roofing new ideas?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nquick chat to discuss how we can help you get more roofing jobs?\n$[LINK]"
+  },
+  {
+    "subject": "roofing help available?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\ndiscussing how we can get more roofing jobs to help your business grow?\n$[LINK]"
+  },
+  {
+    "subject": "roofing scaling up?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nspeaking about how to help you get more roofing jobs and scale your business?\n$[LINK]"
+  },
+  {
+    "subject": "roofing growth plans?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nchat to discuss how we can help you get more roofing jobs?\n$[LINK]"
+  },
+  {
+    "subject": "roofing more work?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nhow about we discuss how we can help you get more roofing jobs to help your business grow?\n$[LINK]"
+  },
+  {
+    "subject": "roofing scaling flow?",
+    "body": "hi $[NAME],\n\n<img src=\"https://lirp.cdn-website.com/e6c7cb13/dms3rep/multi/opt/roofing+meme-640w.jpeg\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat if we spoke about how to help you get more roofing jobs and scale your business?\n$[LINK]"
+  },
+  {
+    "subject": "roofing quick chats?",
+    "body": "hi $[NAME],\n\n<img src=\"https://cdn.prod.website-files.com/645a1ad87702f184c1429815/656ef9bf4bce1dc4808c3790_meme%2021.png\" style=\"max-width: 400px; height: auto; display: block;\">\n\nquick chat to discuss how we can help you get more roofing jobs?\n$[LINK]"
+  },
+  {
+    "subject": "roofing work",
+    "body": "hi $[NAME],\n\n<img src=\"https://www.roofingwebmasters.com/site/wp-content/uploads/got-you-covered-meme-1024x576.jpeg\" style=\"max-width: 400px; height: auto; display: block;\">\n\ndiscussing how we can get more roofing jobs to help your business grow?\n$[LINK]"
+  },
+  {
+    "subject": "roofing sales plans",
+    "body": "hi $[NAME],\n\n<img src=\"https://www.roofingwebmasters.com/site/wp-content/uploads/got-you-covered-meme-1024x576.jpeg\" style=\"max-width: 400px; height: auto; display: block;\">\n\nspeaking about how to help you get more roofing jobs and scale your business?\n$[LINK]"
+  },
+  {
+    "subject": "roofing chat",
+    "body": "hi $[NAME],\n\n<img src=\"https://www.roofingwebmasters.com/site/wp-content/uploads/got-you-covered-meme-1024x576.jpeg\" style=\"max-width: 400px; height: auto; display: block;\">\n\nchat to discuss how we can help you get more roofing jobs?\n$[LINK]"
+  },
+  {
+    "subject": "roofing jobs more",
+    "body": "hi $[NAME],\n\n<img src=\"https://www.roofingwebmasters.com/site/wp-content/uploads/got-you-covered-meme-1024x576.jpeg\" style=\"max-width: 400px; height: auto; display: block;\">\n\nhow about we discuss how we can help you get more roofing jobs to help your business grow?\n$[LINK]"
+  },
+    {
+    "subject": "roofing quick boost",
+    "body": "hi $[NAME],\n\n<img src=\"https://www.roofingwebmasters.com/site/wp-content/uploads/got-you-covered-meme-1024x576.jpeg\" style=\"max-width: 400px; height: auto; display: block;\">\n\nquick chat to discuss how we can help you get more roofing jobs?\n$[LINK]"
+  },
+    {
+    "subject": "roofing jobs boost?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat if we discussed how to help you get more roofing jobs to grow your business?\n$[LINK]"
+  },
+  {
+    "subject": "more roofing soon?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat about discussing how we can help you secure more roofing jobs to expand your business?\n$[LINK]"
+  },
+  {
+    "subject": "roofing prospects good?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nkeen to explore how we could get you more roofing jobs and a bigger business?\n$[LINK]"
+  },
+  {
+    "subject": "roofing growth coming?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nconsidering discussing how we can help your business grow with more roofing jobs?\n$[LINK]"
+  },
+  {
+    "subject": "roofing leads now?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat if we talked about helping you find more roofing jobs and scale your business?\n$[LINK]"
+  },
+  {
+    "subject": "roofing help okay?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\ninterested in a chat about how we can help you get more roofing jobs and grow?\n$[LINK]"
+  },
+  {
+    "subject": "roofing gains?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nhow about discussing how we can help you bring in more roofing jobs for business growth?\n$[LINK]"
+  },
+  {
+    "subject": "roofing better numbers?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat if we looked at how we could help you get more roofing jobs to grow your business?\n$[LINK]"
+  },
+  {
+    "subject": "roofing quick client?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwant to explore how we can help you get more roofing jobs and build your business?\n$[LINK]"
+  },
+  {
+    "subject": "roofing progression boost?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nconsidering a conversation about how we can help your business grow with more roofing jobs?\n$[LINK]"
+  },
+  {
+    "subject": "roofing more options?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat if we talked about helping you find more roofing jobs and scale your business?\n$[LINK]"
+  },
+  {
+    "subject": "roofing growth soon?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\ninterested in a chat about how we can help you get more roofing jobs and grow?\n$[LINK]"
+  },
+  {
+    "subject": "roofing help boost?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nhow about discussing how we can help you bring in more roofing jobs for business growth?\n$[LINK]"
+  },
+  {
+    "subject": "roofing options available?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat if we looked at how we could help you get more roofing jobs to grow your business?\n$[LINK]"
+  },
+  {
+    "subject": "roofing quick boost?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwant to explore how we can help you get more roofing jobs and build your business?\n$[LINK]"
+  },
+  {
+    "subject": "roofing plan?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat if we discussed how to help you get more roofing jobs to grow your business?\n$[LINK]"
+  },
+    {
+    "subject": "roofing business growth?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat about discussing how we can help you secure more roofing jobs to expand your business?\n$[LINK]"
+  },
+  {
+    "subject": "roofing prospects",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nkeen to explore how we could get you more roofing jobs and a bigger business?\n$[LINK]"
+  },
+  {
+    "subject": "roofing coming?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nconsidering discussing how we can help your business grow with more roofing jobs?\n$[LINK]"
+  },
+  {
+    "subject": "roofing for clients?",
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat if we talked about helping you find more roofing jobs and scale your business?\n$[LINK]"
+  }
 
 ];
