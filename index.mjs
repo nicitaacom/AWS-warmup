@@ -10,6 +10,13 @@ import { SchedulerClient,UpdateScheduleCommand,GetScheduleCommand } from "@aws-s
 import decryptResendModule from './dist/utils/decryptResend.js';
 const { decryptResend } = decryptResendModule;
 
+import randomNamesModule from './dist/const/randomNames.js';
+const { randomNames } = randomNamesModule;
+
+import randomMemesModule from './dist/const/randomMemes.js';
+const { randomMemes } = randomMemesModule;
+
+
 
 // render email using this function because you need each time render email async on client (on server .tsx not avaiable)
 // DO NOT INSERT NEW LINES HERE - it may casuse unexpected output (its better to don't change this function - you may do it but do some backup before)
@@ -283,6 +290,71 @@ export async function updateSchedule(
 
 
 
+
+
+
+
+
+
+
+
+/* Insert the following helper function after the declaration of emailTemplatesArray */
+async function createEmail(niche) {
+    const emailTemplates = await import(`./dist/const/${niche}.js`).then(module => module.default);
+ 
+
+  const emailTemplatesArray = Object.values(emailTemplates).flat();
+  // Select a random email template from the array
+  const template = emailTemplatesArray[Math.floor(Math.random() * emailTemplatesArray.length)];
+  // Select a random name and a random meme URL
+  const name = randomNames[Math.floor(Math.random() * randomNames.length)];
+  const meme = randomMemes[Math.floor(Math.random() * randomMemes.length)];
+
+  // Clone the template to avoid mutating the original object
+  const email = {
+    subject: template.subject,
+    body: template.body,
+  };
+
+  // Replace placeholders in the subject
+  email.subject = email.subject
+    .replace("$[NAME]", name)
+    .replace("$[LINK]", process.env.LINK)
+    .replace("$[OWNER_NAME]", process.env.OWNER_NAME)
+    .replace("$[COMPANY_NAME]", process.env.COMPANY_NAME);
+
+  // Replace placeholders in the body, including the meme URL
+  email.body = email.body
+    .replace("$[NAME]", name)
+    .replace("$[LINK]", process.env.LINK)
+    .replace("$[OWNER_NAME]", process.env.OWNER_NAME)
+    .replace("$[COMPANY_NAME]", process.env.COMPANY_NAME)
+    .replace("$[MEME-URL]", meme);
+
+  return email;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 export const handler = async (event) => {
 
   // created_at - it's ISO - to detect how much days smb warming up and to scale from 10 to 20 ... to 100 emails per day 
@@ -396,53 +468,46 @@ export const handler = async (event) => {
 
 
   // 3. Send email for warmup 
-  const emailTemplates = await import(`./dist/const/${niche}.js`).then(module => module.default);
-  const { randomNames } = await import(`./dist/const/randomNames.js`); // using export const, then your import should be like this
-  const { randomMemes } = await import(`./dist/const/randomMemes.js`); // using export const, then your import should be like this
-
-  const emailTemplatesArray = Object.values(emailTemplates).flat();
-
-  const randomTemplate = emailTemplatesArray[Math.floor(Math.random() * emailTemplatesArray.length)];
-  const randomName = randomNames[Math.floor(Math.random() * randomNames.length)];
-  const randomMeme = randomMemes[Math.floor(Math.random() * randomMemes.length)];
-  
-  randomTemplate.body = randomTemplate.body
-    .replace("$[NAME]", randomName)
-    .replace("$[LINK]", process.env.LINK)
-    .replace("$[OWNER_NAME]", process.env.OWNER_NAME)
-    .replace("$[COMPANY_NAME]", process.env.COMPANY_NAME)
-    .replace("$[MEME-URL]", randomMeme);
-   
-  randomTemplate.subject = randomTemplate.subject
-    .replace("$[NAME]", randomName)
-    .replace("$[LINK]", process.env.LINK)
-    .replace("$[OWNER_NAME]", process.env.OWNER_NAME)
-    .replace("$[COMPANY_NAME]", process.env.COMPANY_NAME);
-
-
-
   let sendError = null;
   const currentTime = moment().tz(userTimezone);
   const checkEmailTime = {
     startTime: currentTime.clone().startOf("day").add(9, "hours").add(59, "minutes"),
     endTime: currentTime.clone().startOf("day").add(11, "hours"),
   };
-  
-  // Send email to checkEmail within times from 9:59 till 11 (userTimezone)
-  if (currentTime.isBetween(checkEmailTime.startTime, checkEmailTime.endTime)) {
-    // TODO - send email stats e.g emailsPerDay - cron expression - warmupState
-    const sendEmailResp = await sendEmail(resend, emailFrom, checkEmail, randomTemplate.subject, renderedEmailString(randomTemplate.body)) 
-    if (typeof sendEmailResp === 'string') throw Error(sendEmailResp,{cause:"sendEmailResp"})
-  }
 
-  for (let i = 0; i < sendEmailsTo.length; i++) {
-    const sendEmailResp = await sendEmail(resend, emailFrom, sendEmailsTo[i], randomTemplate.subject, renderedEmailString(randomTemplate.body)) 
-    if (typeof sendEmailResp === 'string') {
-      sendError = sendEmailResp
-      break
-    }
-  }
 
+ /* Replace the warmup email generation with: */
+const checkEmailTemplate = await createEmail(niche);
+
+/* Replace the warmup email sending block with: */
+if (currentTime.isBetween(checkEmailTime.startTime, checkEmailTime.endTime)) {
+  // Send warmup email during allowed time window (9:59 - 11:00 userTimezone)
+  const sendEmailResp = await sendEmail(
+    resend,
+    emailFrom,
+    checkEmail,
+    checkEmailTemplate.subject,
+    renderedEmailString(checkEmailTemplate.body)
+  );
+  if (typeof sendEmailResp === 'string') throw Error(sendEmailResp, { cause: "sendEmailResp" });
+}
+
+/* Replace the for-loop with: */
+for (let i = 0; i < sendEmailsTo.length; i++) {
+  // Generate a unique email for each recipient
+  const recipientEmail = await createEmail(niche);
+  const sendEmailResp = await sendEmail(
+    resend,
+    emailFrom,
+    sendEmailsTo[i],
+    recipientEmail.subject,
+    renderedEmailString(recipientEmail.body)
+  );
+  if (typeof sendEmailResp === 'string') {
+    sendError = sendEmailResp;
+    break;
+  }
+}
   if (sendError) {
     throw new Error(sendError, { cause: "sendError" });
   }
