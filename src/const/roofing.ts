@@ -1185,10 +1185,7 @@ Ready to set it up? Here’s the link - $[LINK]`
         "subject": "Tired of chasing low-bid roofing jobs?",
         "body": "Hi $[NAME],\n\nIs your team always fighting for the lowest price? Let's attract *premium* clients.\n\nWorth a quick chat?\n\n$[LINK]"
     },
-    {
-        "subject": "Are you *the* roofer everyone recommends?",
-        "body": "Hi $[NAME],\n\nWord-of-mouth is powerful, but can we amplify it?  Let's make you the go-to roofer in $[CITY].\n\nCurious?\n\n$[LINK]"
-    },
+
     {
         "subject": "Stop competing on price, start competing on value",
         "body": "Hi $[NAME],\n\nPrice wars are a race to the bottom.  Let's position your roofing services as the *obvious best choice.*\n\nInterested in learning how?\n\n$[LINK]"
@@ -1200,10 +1197,6 @@ Ready to set it up? Here’s the link - $[LINK]`
     {
         "subject": "Scale your roofing business *the right way*",
         "body": "Hi $[NAME],\n\nScaling isn't just about more jobs, it's about *more profitable* jobs.  Let's build a sustainable growth strategy.\n\nOpen to exploring options?\n\n$[LINK]"
-    },
-    {
-        "subject": "Dominate the roofing market in $[CITY]?",
-        "body": "Hi $[NAME],\n\nWhat if you became *the* dominant roofing company in $[CITY]?  I have a strategy.\n\nIntrigued?\n\n$[LINK]"
     },
     {
         "subject": "From 'busy' to 'profitable'",
