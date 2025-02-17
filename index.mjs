@@ -23,15 +23,20 @@ const { randomMemes } = randomMemesModule;
 function renderedEmailString(body) {
   return `
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<table>
-  <tbody>
-    <tr>
-      <td>
-        ${body.trim().replace(/\\n/g, '\n').replace(/\n/g, '<br>')}
-      </td>
-    </tr>
-  </tbody>
-</table>`;
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+  </head>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          ${body.trim().replace(/\\n/g, '\n').replace(/\n/g, '<br>')}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</html>`;
 }
 
 
