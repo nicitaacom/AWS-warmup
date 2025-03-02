@@ -391,14 +391,6 @@ exports.emails = [
         "body": "mnbvcdxszaqwertyguiop\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
-        "subject": "important - clients and you?",
-        "body": "asdfghjklpoiuytrewqzxc\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
-    },
-    {
-        "subject": "important - new client leads?",
-        "body": "wsxcdefrvbgtyhnmjukilo\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
-    },
-    {
         "subject": "important - curious about new clients?",
         "body": "fno493402dk #$##E23dj2cp32\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
@@ -465,10 +457,6 @@ exports.emails = [
     {
         "subject": "important - discussing clients?",
         "body": "okmn!@34rtyuikj123\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
-    },
-    {
-        "subject": "important - need clients soon?",
-        "body": "plmokn^&$#345}\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - more clients ahead?",
@@ -679,26 +667,6 @@ exports.emails = [
         "body": "I want to help you attract clients.\n\nThe fantastic part is we assure you results.\n\nIf this call doesn't assist you, I'll treat you to your next cup of coffee :) \n$[LINK]"
     },
     {
-        "subject": "want proven client methods?",
-        "body": "I want to help you attract clients.\n\nThe fantastic part is we assure you results.\n\nIf this call doesn't assist you, I'll treat you to your next cup of coffee :) \n$[LINK]"
-    },
-    {
-        "subject": "can we chat about client solutions?",
-        "body": "I want to help you attract clients.\n\nThe fantastic part is we assure you results.\n\nIf this call doesn't assist you, I'll treat you to your next cup of coffee :) \n$[LINK]"
-    },
-    {
-        "subject": "looking for effective client strategies?",
-        "body": "I want to help you attract clients.\n\nThe fantastic part is we assure you results.\n\nIf this call doesn't assist you, I'll treat you to your next cup of coffee :) \n$[LINK]"
-    },
-    {
-        "subject": "do you want more client leads?",
-        "body": "I want to help you attract clients.\n\nThe fantastic part is we assure you results.\n\nIf this call doesn't assist you, I'll treat you to your next cup of coffee :) \n$[LINK]"
-    },
-    {
-        "subject": "can we explore client options?",
-        "body": "I want to help you attract clients.\n\nThe fantastic part is we assure you results.\n\nIf this call doesn't assist you, I'll treat you to your next cup of coffee :) \n$[LINK]"
-    },
-    {
         "subject": "is increasing client interest important?",
         "body": "I want to help you attract clients.\n\nThe fantastic part is we assure you results.\n\nIf this call doesn't assist you, I'll treat you to your next cup of coffee :) \n$[LINK]"
     },
@@ -759,18 +727,6 @@ exports.emails = [
         "body": "Hi $[NAME], I get that your inbox is flooded with pitches.\n\nHowever, I'm confident in the results I can provide.\n\nJust send a thumbs up if you'd like to chat"
     },
     {
-        "subject": "want to achieve meaningful results?",
-        "body": "Hi $[NAME], I know you’re likely overwhelmed with offers.\n\nStill, I believe I can deliver impactful results.\n\nReply with a thumbs up if this resonates with you"
-    },
-    {
-        "subject": "how can we make an impact?",
-        "body": "Hi $[NAME], I understand that you've received many requests.\n\nBut I am sure I can achieve the results you seek.\n\nJust drop a thumbs up if you’re interested"
-    },
-    {
-        "subject": "do you seek effective results?",
-        "body": "Hi $[NAME], I recognize that pitches are common for you.\n\nYet, I'm genuinely confident in my ability to produce results.\n\nLet me know with a thumbs up if you'd like to explore"
-    },
-    {
         "subject": "ready for a meaningful conversation?",
         "body": "Hi $[NAME], I know countless offers find their way to you.\n\nBut I'm positive I can deliver substantial results.\n\nRespond with a thumbs up if you're interested"
     },
@@ -825,10 +781,6 @@ exports.emails = [
     {
         "subject": "could we chat about your roofing plans?",
         "body": "Hi $[NAME]\n\nI realize we are not yet familiar with each other.\nFeel free to arrange a call if you would like to discuss how we can guarantee 5 roofing jobs.\n\n$[LINK]"
-    },
-    {
-        "subject": "want to see how we can help with roofing?",
-        "body": "Hi $[NAME]\n\nI know you don't know me yet.\nJust schedule a call if you might be interested in learning how we can provide 5 roofing jobs for you.\n\n$[LINK]"
     },
     {
         "subject": "how can we assist with your roofing needs?",
@@ -1152,10 +1104,6 @@ exports.emails = [
     },
     {
         "subject": "potential revenue growth?",
-        "body": "hi $[NAME],\n\nwe can chat about how you can get 5 guarenteed roofing jobs.\ninterested in discussing that?\n\n$[LINK]"
-    },
-    {
-        "subject": "marketing struggles?",
         "body": "hi $[NAME],\n\nwe can chat about how you can get 5 guarenteed roofing jobs.\ninterested in discussing that?\n\n$[LINK]"
     },
     {
@@ -1515,10 +1463,6 @@ exports.emails = [
         "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nhow about discussing how we can help you bring in more roofing jobs for business growth?\n$[LINK]"
     },
     {
-        "subject": "roofing better numbers?",
-        "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat if we looked at how we could help you get more roofing jobs to grow your business?\n$[LINK]"
-    },
-    {
         "subject": "roofing quick client?",
         "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwant to explore how we can help you get more roofing jobs and build your business?\n$[LINK]"
     },
@@ -1565,5 +1509,301 @@ exports.emails = [
     {
         "subject": "roofing for clients?",
         "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat if we talked about helping you find more roofing jobs and scale your business?\n$[LINK]"
+    },
+    {
+        "subject": "more roofing jobs for you?",
+        "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to help you secure additional roofing jobs\n$[LINK]"
+    },
+    {
+        "subject": "interested in roofing jobs?",
+        "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI aim to assist you in increasing your roofing work\n$[LINK]"
+    },
+    {
+        "subject": "looking for more roofing jobs?",
+        "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to support you in obtaining roofing projects\n$[LINK]"
+    },
+    {
+        "subject": "want more roofing leads?",
+        "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to help you grow your roofing clientele\n$[LINK]"
+    },
+    {
+        "subject": "can I help with roofing jobs?",
+        "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to facilitate your roofing job acquisition\n$[LINK]"
+    },
+    {
+        "subject": "looking to grow your roofing jobs?",
+        "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to share opportunities for more roofing projects\n$[LINK]"
+    },
+    {
+        "subject": "do you want more roofing clients?",
+        "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to assist you in expanding your roofing jobs\n$[LINK]"
+    },
+    {
+        "subject": "how about more roofing work?",
+        "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to help you find new roofing job leads\n$[LINK]"
+    },
+    {
+        "subject": "need help with roofing jobs?",
+        "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to aid you in acquiring more roofing jobs\n$[LINK]"
+    },
+    {
+        "subject": "want to boost your roofing jobs?",
+        "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to provide you with more roofing opportunities\n$[LINK]"
+    },
+    {
+        "subject": "how can I help you with roofing jobs?",
+        "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to help you expand your roofing work\n$[LINK]"
+    },
+    {
+        "subject": "curious about roofing jobs?",
+        "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to help you find additional roofing clients\n$[LINK]"
+    },
+    {
+        "subject": "how to improve your roofing jobs?",
+        "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to assist you in enhancing your roofing business\n$[LINK]"
+    },
+    {
+        "subject": "want to expand roofing opportunities?",
+        "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to share ways to increase your roofing jobs\n$[LINK]"
+    },
+    {
+        "subject": "how to get more roofing jobs?",
+        "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to help you secure more roofing projects\n$[LINK]"
+    },
+    {
+        "subject": "want more leads for roofing jobs?",
+        "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to provide leads for your roofing work\n$[LINK]"
+    },
+    {
+        "subject": "seeking more roofing jobs?",
+        "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to support you in generating more roofing jobs\n$[LINK]"
+    },
+    {
+        "subject": "quick question about roofing jobs",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita connecting with you as I can provide more roofing jobs on a commission basis. I can also assist with hiring to facilitate your growth.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question on roofing projects",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita reaching out to offer more roofing jobs which operate on a commission basis. Additionally, I can support your hiring efforts to help you expand.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question regarding your roofing needs",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita wanting to share opportunities for roofing jobs on a commission basis. I can also help streamline your hiring process for scaling purposes.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about getting roofing jobs",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita here to talk about providing you with roofing jobs on a commission basis. I can assist in hiring to support your growth initiatives.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about roofing leads",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita reaching out to help you obtain roofing jobs on a commission plan. I can also assist with your hiring needs to help scale your business.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question on expanding roofing jobs",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita reaching out to provide roofing jobs on a commission structure. I can also help with recruiting to aid in your scaling efforts.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about increasing your roofing jobs",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita here to share ways to increase your roofing jobs via commission. Furthermore, I can assist with hiring to promote growth.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question on roofing opportunities",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita looking to offer you roofing jobs based on a commission model. I can also aid with hiring as you seek to scale your operations.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about roofing business",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita reaching out to discuss options for roofing jobs on a commission basis. I can also help with your hiring strategy for better scaling.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question regarding expanding your roofing work",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita interested in helping provide roofing jobs under a commission structure. I also offer assistance with hiring to help improve your scalability.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about job opportunities in roofing",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita reaching out to help you secure roofing jobs on a commission basis. Plus, I can support you with hiring to achieve your growth targets.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question on getting roofing clients",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita eager to provide more roofing jobs based on commission. I can also assist with hiring, enabling you to scale effectively.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about boosting your roofing services",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita looking to offer roofing jobs on a commission basis. I can also help with hiring to facilitate your business growth.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question regarding your roofing strategy",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita connecting to help you with roofing jobs on a commission structure. Additionally, I can assist with your hiring to enable smarter scaling.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about scaling your roofing jobs",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita reaching out to discuss providing roofing jobs on commission. I can also support your hiring to help you expand.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about your roofing operations",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita here to offer you roofing jobs through a commission approach. I can assist you in your hiring journey to enhance scalability.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about roofing solutions",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita reaching out to present more roofing jobs under a commission plan. I can also help with hiring as you look to grow.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question on your roofing business model",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita aiming to help you secure roofing jobs on commission. Additionally, I can assist with your hiring strategy to support scaling.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about your roofing growth",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita looking to discuss opportunities for roofing jobs that operate on commission. I can also offer assistance with hiring to help you scale efficiently.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about roofing options",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita, and I wanted to reach out about some roofing jobs you might find beneficial. Additionally, I can assist with finding the right people for your team.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question on roofing job availability",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita, looking to share some roofing job opportunities that could align with your work. I also provide support if you are considering expanding your team.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question regarding roofing projects",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita here to talk about roofing projects that could fit your needs. If you need help with hiring, I can offer assistance in that area too.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about increasing roofing work",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita, reaching out to discuss roofing jobs that are available on a commission basis. I can also provide help if you're looking to add more members to your team.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question on your roofing strategy",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita, and I wanted to connect about roofing work that might suit your operations. Additionally, I can assist with finding new talent for your team.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about roofing job potential",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita; I’d like to share some roofing job options that could be a good fit for you. If you're considering hiring, I'm available to assist.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question on enhancing roofing projects",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita, reaching out with roofing jobs that might be of interest. If you’re looking for help with recruitment, I can offer resources for that as well.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question regarding roofing job leads",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita, and I wanted to discuss roofing job leads that might work well for you. Additionally, I’m here to help if you're expanding your workforce.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about your roofing work",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita reaching out to talk about some roofing jobs available on a commission structure. I can assist with your hiring needs whenever you're ready.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question on finding roofing jobs",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita looking to offer information on roofing jobs that could complement your business. I can also help with your hiring process if needed.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about roofing services",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita, reaching out regarding some roofing services available on a commission basis. I can support you with hiring efforts should you decide to expand.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question on your roofing opportunities",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita here to discuss roofing opportunities that may fit your goals. If you're looking to hire more people, I can assist in that area as well.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about roofing potential",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita reaching out to talk about roofing job potential available on commission. I'm also able to help with hiring if you're planning to grow your team.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question on roofing business support",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita, and I wanted to connect about roofing business support that could help you. If you’re considering hiring more employees, I can offer my assistance.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question regarding roofing collaboration",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita looking to explore the possibility of collaboration on roofing jobs. Additionally, if you're seeking assistance with hiring, I'm here to help.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question on your roofing services",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita reaching out to see how I can assist with your roofing projects. If you're considering adding new team members, I can support that as well.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about project opportunities in roofing",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita, reaching out to discuss some project opportunities in roofing that I believe might suit you. If you're looking at hiring needs, I'm also available to help.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question regarding roofing tasks",
+        "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita, and I wanted to share some tasks related to roofing jobs that are available. I can also help you find candidates for your hiring needs if that would be useful.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about roofing options",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. I have roofing jobs you might find helpful. Let's discuss!\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question on roofing jobs",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. There are roofing opportunities I’d like to share. Interested?\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about roofing projects",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. I can assist with some roofing jobs that may suit you.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question on roofing work",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. I have a few roofing jobs available for you. Let’s chat!\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about roofing assistance",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. I’d like to discuss some roofing assistance options with you.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question on roofing leads",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. I have roofing leads that might interest you. Let’s talk!\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about roofing services",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. I’d like to share some roofing services available. Are you open to a call?\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question on your roofing options",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. I've got some roofing options to discuss if you’re available.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about roofing support",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. I can offer support for some roofing jobs. Let’s connect!\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question on roofing opportunities",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. There are roofing opportunities I think you'll like! Let's chat.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about your roofing needs",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. I want to help with your roofing needs. Are you free for a call?\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question on your roofing tasks",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. I’d like to explore roofing tasks with you. How about a call?\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question regarding roofing collaborations",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. Let’s discuss collaborations on roofing work. Interested?\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about roofing projects",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. I have some roofing projects I’d like to share. Let’s connect!\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question on roofing jobs",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. I’ve got roofing jobs available that we should discuss!\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about your roofing plans",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. Let’s chat about your roofing plans and how I can help.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about roofing tasks",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. I would love to offer some roofing tasks that might help you.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about roofing leads",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. I have roofing leads that might be useful for you. Can we talk?\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question on roofing opportunities",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. I’d like to discuss some roofing opportunities with you.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question regarding roofing possibilities",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. I think we should connect about some roofing possibilities. Up for a call?\n\n$[LINK]"
     }
 ];
