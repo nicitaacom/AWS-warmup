@@ -16,11 +16,96 @@ const { randomNames } = randomNamesModule;
 import randomMemesModule from './dist/const/randomMemes.js';
 const { randomMemes } = randomMemesModule;
 
+const warmupDurationInDays = 30
+
+const getBgColorClass = (warmupState) => {
+  switch (warmupState) {
+    case "enabled":
+      return "#38c800" // Deep Green
+    case "enabling-1/4":
+      return "#FFEB3B" // Yellow
+    case "enabling-2/4":
+      return "#9CDA1E" // Yellow-Green
+    case "enabling-3/4":
+      return "#6AD10F" // Near Green
+    case "disabling-1/4":
+      return "#f8c003" // Dark Yellow
+    case "disabling-2/4":
+      return "#FB6702" // Intermediate Orange
+    case "disabling-3/4":
+      return "#FD3B01" // Near Red
+    case "disabled":
+      return "#fe0e00" // Red
+    default:
+      return ""
+  }
+}
+
+
+function renderEmailStats(domain, created_at, userTimezone, niche, cronParts, warmupState) {
+  const daysDifference = moment().tz(userTimezone).diff(moment(created_at).tz(userTimezone),"days")
+  const bgColorClass = getBgColorClass(warmupState);
+ return `
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+  </head>
+  <body style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
+    <!-- Layer 1: Black parent background -->
+    <div style="position: relative; background-color: #000000;">
+      
+    
+      <!-- Layer 2: Gradient overlay with increased opacity (40%) -->
+      <!-- Layer 3: Glares -->
+      <!-- I don't use that because absolute and filter:blur doesn't work - so I need to use image but I don't want -->
+   
+      <!-- Layer 4: Table container -->
+      <div style="position: relative; z-index: 3; padding: 3rem 0;">
+        <table style="border-collapse: separate; border-spacing: 0; border: 1px solid; border-image: linear-gradient(to top right, white, gray) 1; border-radius: 8px; width: 100%;">
+          <tr>
+            <td style="border: 1px solid #fff; padding: 4px 8px;">Domain</td>
+            <td style="border: 1px solid #fff; padding: 4px 8px;">${domain}</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #fff; padding: 4px 8px;">Created At</td>
+            <td style="border: 1px solid #fff; padding: 4px 8px;">${moment(created_at).tz(userTimezone).format('DD.MM.YYYY [at] HH:mm')} ${userTimezone}</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #fff; padding: 4px 8px;">Niche</td>
+            <td style="border: 1px solid #fff; padding: 4px 8px;">${niche}</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #fff; padding: 4px 8px;">Cron Parts</td>
+            <td style="border: 1px solid #fff; padding: 4px 8px;">
+              ${cronParts.minutes} ${cronParts.hours} ${cronParts.dayOfMonth} ${cronParts.month} ${cronParts.dayOfWeek} ${cronParts.year}
+            </td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #fff; padding: 4px 8px;">Warmup State</td>
+            <td style="border: 1px solid #fff; padding: 4px 8px; color: ${bgColorClass};">${warmupState}</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #fff; padding: 4px 8px;">Warmup progress</td>
+            <td style="border: 1px solid #fff; padding: 4px 8px;">
+            <div style="margin-bottom: 4px; font-size: 0.9rem; color: #fff;">${daysDifference}/${warmupDurationInDays}</div>
+            <div style="width: 100%; border: 1px solid #eee; border-radius: 4px; overflow: hidden;">
+              <div style="width: ${Math.min((daysDifference / warmupDurationInDays) * 100, 100)}%; background: linear-gradient(to right, whitesmoke, lightgray); height: 16px;"></div>
+            </div>
+          </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
+`;
+}
 
 
 // render email using this function because you need each time render email async on client (on server .tsx not avaiable)
 // DO NOT INSERT NEW LINES HERE - it may casuse unexpected output (its better to don't change this function - you may do it but do some backup before)
-function renderedEmailString(body) {
+function renderedEmailWarmup(body) {
   return `
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang='en'>
@@ -38,6 +123,29 @@ function renderedEmailString(body) {
   </table>
 </html>`;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -220,7 +328,7 @@ function shouldUpdateSchedule(cronParts, daysDifference, sendEmailsCount, curren
   const isShouldUpdate = JSON.stringify(cronParts) !== JSON.stringify(newCronParts);
   
   // If warmup period is ended and state is not yet updated, force update (caller should set state to "disabled-1/4")
-  if (daysDifference >= 30 && currentWarmupState !== "disabled-1/4") {
+  if (daysDifference >= warmupDurationInDays && currentWarmupState !== "disabling-1/4") {
     return { isShouldUpdate: true, newCronExpression, newEmailsPerDay };
   }
   
@@ -304,7 +412,7 @@ export async function updateSchedule(
 
 
 /* Insert the following helper function after the declaration of emailTemplatesArray */
-async function createEmail(niche) {
+async function getRandomEmail(niche) {
     const emailTemplates = await import(`./dist/const/${niche}.js`).then(module => module.default);
  
 
@@ -435,84 +543,90 @@ export const handler = async (event) => {
 
 
 
-
-
-   const decypredResend = await decryptResend(encryptedResend)
+  // ------ 1. Create instances ------ //
+  
+  // 1.1 [VARIABLE]: Decrypt resned
+  const decypredResend = await decryptResend(encryptedResend)
+  if (typeof decypredResend === 'string') throw Error(decypredResend,{cause:"decypredResend"})
     
-    // 1. Create SDKs
-    const resend = new Resend(decypredResend.value);
+    
+    // 1.2 [INSTANCE]: Create Resend SDK instance
+    const resend = new Resend(decypredResend.value)
+    // 1.3 [INSTANCE]: Create Redis SDK instance
+    const redis = new Redis(process.env.UPSTASH_REDIS_URL)
+    // 1.4 [INSTANCE]: Create schedulerClient SDK instance (EventBridge)
     const schedulerClient = new SchedulerClient({
       region: process.env.REGION,
       credentials: {
-      accessKeyId: process.env.ACCESS_KEY_ID,
-      secretAccessKey: process.env.SECRET_ACCESS_KEY,
-    },
-  });
-  const redis = new Redis(process.env.UPSTASH_REDIS_URL);
-
-
-
-
-
-
-
-
-  
-  // 2. Check do I need to up/down scale volume of warming up
+        accessKeyId: process.env.ACCESS_KEY_ID,
+        secretAccessKey: process.env.SECRET_ACCESS_KEY,
+      },
+    });
+    
+    
+    
+    
+    
+    
+    
+    
+  // ------ 2. Check do I need to up/down scale volume of warming up ------ //
   const scheduleName = `warmup-${domain}`
   const updScheduleResp = await updateSchedule(redis, schedulerClient, created_at, scheduleName, warmupState, sendEmailsTo, cronParts, userTimezone)
   if (typeof updScheduleResp === 'string') throw Error(updScheduleResp,{cause:"updScheduleResp"})
+    
+    
+    
+ 
+    
+  // ------ 3. Send warmup email ------ //
 
-
-
-
-
-
-
-
-
-
-  // 3. Send email for warmup 
-  let sendError = null;
+  // 3.1.1 [VARIABLE]: Decrypt resned
   const currentTime = moment().tz(userTimezone);
+  const checkEmailTemplate = await getRandomEmail(niche);
   const checkEmailTime = {
     startTime: currentTime.clone().startOf("day").add(9, "hours").add(59, "minutes"),
     endTime: currentTime.clone().startOf("day").add(11, "hours"),
-  };
-
-
- /* Replace the warmup email generation with: */
-const checkEmailTemplate = await createEmail(niche);
-
-/* Replace the warmup email sending block with: */
-if (currentTime.isBetween(checkEmailTime.startTime, checkEmailTime.endTime)) {
-  // Send warmup email during allowed time window (9:59 - 11:00 userTimezone)
-  const sendEmailResp = await sendEmail(
-    resend,
-    emailFrom,
-    checkEmail,
-    checkEmailTemplate.subject,
-    renderedEmailString(checkEmailTemplate.body)
-  );
-  if (typeof sendEmailResp === 'string') throw Error(sendEmailResp, { cause: "sendEmailResp" });
-}
-
-/* Replace the for-loop with: */
-for (let i = 0; i < sendEmailsTo.length; i++) {
-  // Generate a unique email for each recipient
-  const recipientEmail = await createEmail(niche);
-  const sendEmailResp = await sendEmail(
-    resend,
-    emailFrom,
-    sendEmailsTo[i],
-    recipientEmail.subject,
-    renderedEmailString(recipientEmail.body)
-  );
-  if (typeof sendEmailResp === 'string') {
-    sendError = sendEmailResp;
-    break;
   }
-}
+  const formattedTodayDate = `${moment().tz(userTimezone).format('DD.MM.YYYY [at] HH:mm')} ${userTimezone}`
+
+  
+  // 3.1.2 Send checkEmail - during allowed time window (9:59 - 11:00 userTimezone)
+  if (currentTime.isBetween(checkEmailTime.startTime, checkEmailTime.endTime)) {
+    const sendStats = Math.random() < 0.2; // send stats with 20% chance
+    const emailBody = sendStats
+    ? renderEmailStats(domain, created_at, userTimezone, niche, cronParts, warmupState)
+    : renderedEmailWarmup(checkEmailTemplate.body);
+    
+    const response = await sendEmail(
+      resend,
+      emailFrom,
+      checkEmail,
+      sendStats ? `stats for ${emailFrom} in ${niche} ${formattedTodayDate}` : checkEmailTemplate.subject,
+      emailBody
+    );
+    if (typeof response === 'string') throw Error(response, { cause: sendStats ? "sendEmailStatsResp" : "sendEmailResp" });
+  }
+  
+  
+  
+  
+  // 3.2 Send warmup email  
+  let sendError = null;
+  for (let i = 0; i < sendEmailsTo.length; i++) {
+    const recipientEmail = await getRandomEmail(niche);
+    const sendEmailResp = await sendEmail(
+      resend,
+      emailFrom,
+      sendEmailsTo[i],
+      recipientEmail.subject,
+      renderedEmailWarmup(recipientEmail.body)
+    );
+    if (typeof sendEmailResp === 'string') {
+      sendError = sendEmailResp;
+      break;
+    }
+  }
   if (sendError) {
     throw new Error(sendError, { cause: "sendError" });
   }
@@ -523,12 +637,12 @@ for (let i = 0; i < sendEmailsTo.length; i++) {
 
 
     
-    return {
-      statusCode: 200,
-      body: `Warmup email sent to:\n
-        ${sendEmailsTo}\n
-        Note: if email in spam you may click NOT SPAM in sendEmailsTo BUT NOT in checkEmail which is ${checkEmail}`
-    }
+  return {
+    statusCode: 200,
+    body: `Warmup email sent to:\n
+      ${sendEmailsTo}\n
+      Note: if email in spam you may click NOT SPAM in sendEmailsTo BUT NOT in checkEmail which is ${checkEmail}`
+  }
     
   } catch (error) {
   const cleanErrorMessage = error.message
@@ -541,9 +655,7 @@ for (let i = 0; i < sendEmailsTo.length; i++) {
       statusCode: 400,
       body: JSON.stringify({
         error: `Failed to send warmup email - ${cleanErrorMessage}${error.cause ? `(${error.cause})` : ""}`,
-    
       })
     } 
   }
-
 };
