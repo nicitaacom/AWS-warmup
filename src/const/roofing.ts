@@ -81,544 +81,544 @@ export const emails = [
     },
         {
         "subject": "are you able to connect with clients now?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
     },
     {
         "subject": "can you reach out to clients today?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\ncan you reach your clients for a quick check-in?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\ncan you reach your clients for a quick check-in?\n$[OWNER_NAME]"
     },
     {
         "subject": "are you open to client conversations?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you available for client chats soon?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you available for client chats soon?\n$[OWNER_NAME]"
     },
     {
         "subject": "is now a good time for client talks?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nis now a good time for you to talk with clients?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nis now a good time for you to talk with clients?\n$[OWNER_NAME]"
     },
     {
         "subject": "are you checking in on clients today?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you checking in on your clients today?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you checking in on your clients today?\n$[OWNER_NAME]"
     },
     {
         "subject": "do you have time for client updates?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\ndo you have time for quick client updates?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\ndo you have time for quick client updates?\n$[OWNER_NAME]"
     },
     {
         "subject": "want to catch up with clients soon?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nwant to catch up with your clients this week?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nwant to catch up with your clients this week?\n$[OWNER_NAME]"
     },
     {
         "subject": "are you planning to talk to clients?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you planning to speak with your clients shortly?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you planning to speak with your clients shortly?\n$[OWNER_NAME]"
     },
     {
         "subject": "could you connect with clients today?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\ncould you connect with your clients later today?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\ncould you connect with your clients later today?\n$[OWNER_NAME]"
     },
     {
         "subject": "might you reach out to clients soon?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nmight you reach out to your clients later?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nmight you reach out to your clients later?\n$[OWNER_NAME]"
     },
     {
         "subject": "will you have time for client talks?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nwill you have time to talk to your clients this week?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nwill you have time to talk to your clients this week?\n$[OWNER_NAME]"
     },
     {
         "subject": "can you review client needs today?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\ncan you review your clients' needs today?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\ncan you review your clients' needs today?\n$[OWNER_NAME]"
     },
     {
         "subject": "are you reaching out to clients this week?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you reaching out to any clients this week?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you reaching out to any clients this week?\n$[OWNER_NAME]"
     },
     {
         "subject": "will you connect with a client today?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nwill you connect with a client today for a quick chat?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nwill you connect with a client today for a quick chat?\n$[OWNER_NAME]"
     },
     {
         "subject": "are you taking a moment for clients?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking a moment for client conversations?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking a moment for client conversations?\n$[OWNER_NAME]"
     },
     {
         "subject": "can you jump on a client call?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\ncan you jump on a quick call with a client?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\ncan you jump on a quick call with a client?\n$[OWNER_NAME]"
     },
     {
         "subject": "want to check in with your clients?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nwant to check in with your clients this week?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nwant to check in with your clients this week?\n$[OWNER_NAME]"
     },
     {
         "subject": "can you review clients' projects soon?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\ncan you review your clients' projects soon?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\ncan you review your clients' projects soon?\n$[OWNER_NAME]"
     },
     {
         "subject": "are you set for client discussions?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you set for client discussions this week?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you set for client discussions this week?\n$[OWNER_NAME]"
     },
     {
         "subject": "want to schedule client follow-ups?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nwant to schedule some follow-ups with your clients?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nwant to schedule some follow-ups with your clients?\n$[OWNER_NAME]"
     },
         {
         "subject": "are you available for a quick client call?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
     },
     {
         "subject": "can we chat about your current clients?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
     },
     {
         "subject": "want to check in with your clients?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
     },
     {
         "subject": "do you have time for client updates today?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
     },
     {
         "subject": "are you connecting with clients this week?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
     },
     {
         "subject": "can we discuss your client projects?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
     },
     {
         "subject": "are you reaching out to clients soon?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
     },
     {
         "subject": "is now a good time to talk to clients?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
     },
     {
         "subject": "can you follow up with clients this week?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
     },
     {
         "subject": "would you like to schedule client meetings?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
     },
     {
         "subject": "can you provide client updates soon?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
     },
     {
         "subject": "do you have time for client discussions?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
     },
     {
         "subject": "would you like to connect with clients?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
     },
     {
         "subject": "are you planning to meet clients this week?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
     },
     {
         "subject": "can you touch base with clients soon?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
     },
     {
         "subject": "can we set up time for client chats?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
     },
     {
         "subject": "will you have time to discuss clients?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
     },
     {
         "subject": "do you want to review client needs soon?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
     },
     {
         "subject": "are you ready for client follow-ups?",
-        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
+        "body": "hey $[NAME]\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nuseless with gmails I think people attach them by mistake.\n\nare you taking your clients on a moment?\n$[OWNER_NAME]"
     },
        {
         "subject": "important - do you have a moment?",
-        "body": "fno49#3@402dk *&^%E23dj2cp32\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "fno49#3@402dk *&^%E23dj2cp32\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - can we chat briefly?",
-        "body": "gth^23kj1*#890d#*%@L2\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "gth^23kj1*#890d#*%@L2\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - interested in a quick call?",
-        "body": "wqe23412%$@kdfG%*&2!ef\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "wqe23412%$@kdfG%*&2!ef\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - quick question about growth?",
-        "body": "xyz!098@#5dfk1^2op23m\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "xyz!098@#5dfk1^2op23m\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - client acquisition?",
-        "body": "ljh34&^@10&dgh!3$#9mk\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "ljh34&^@10&dgh!3$#9mk\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - thinking about more clients?",
-        "body": "fghq78h@g#1^&*0lk&5pqr\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "fghq78h@g#1^&*0lk&5pqr\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - client strategy check?",
-        "body": "erty!1232^&5@#$ASdj4L\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "erty!1232^&5@#$ASdj4L\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - quick growth chat?",
-        "body": "ui34*%g9@#78&L7erfQ!2\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "ui34*%g9@#78&L7erfQ!2\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - client pipeline help?",
-        "body": "gh56@!#98jl&r%7f4$tE1\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "gh56@!#98jl&r%7f4$tE1\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - client generation ideas?",
-        "body": "vbn12%@34mnh^&9#5Dfg6!\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "vbn12%@34mnh^&9#5Dfg6!\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - are you seeking clients?",
-        "body": "as56&T34gdf39^%*jkl0\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "as56&T34gdf39^%*jkl0\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - clients a priority?",
-        "body": "zxcvbn!@#12^&56Rty*9\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "zxcvbn!@#12^&56Rty*9\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - a client question?",
-        "body": "qw12&$r4^&%S!5tTp1@3g\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "qw12&$r4^&%S!5tTp1@3g\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - new business?",
-        "body": "yui@34%vh^2$#EFtg&0\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "yui@34%vh^2$#EFtg&0\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - want more customers?",
-        "body": "qwxyz!@#fGH90&5jkl6F\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "qwxyz!@#fGH90&5jkl6F\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - could i help?",
-        "body": "0987LM@#*^j13__^^lk29\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "0987LM@#*^j13__^^lk29\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - can i get clients?",
-        "body": "9lk!^@2345#igh*&9$rD1\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "9lk!^@2345#igh*&9$rD1\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - help you grow",
-        "body": "pq96!@#jk12F&*^3tU1XY\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "pq96!@#jk12F&*^3tU1XY\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - grow my business?",
-        "body": "56yuh@#$2PLik^8&0qwe\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "56yuh@#$2PLik^8&0qwe\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - client opportunities?",
-        "body": "gfd12&%^23hjN9*#qw98\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "gfd12&%^23hjN9*#qw98\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
        {
         "subject": "important - a quick query?",
-        "body": "dsf87$#@hjlkj*&^*^%23\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "dsf87$#@hjlkj*&^*^%23\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - room for clients?",
-        "body": "tyu78^&*@$#jklm<>?123\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "tyu78^&*@$#jklm<>?123\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - new clients soon?",
-        "body": "bvn65%^&*()_+|}{POIU\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "bvn65%^&*()_+|}{POIU\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - can i assist you?",
-        "body": "jhg43$%^&*()QWERTY12\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "jhg43$%^&*()QWERTY12\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - expanding soon?",
-        "body": "mnb12!@#$%^&*ZXCVB89\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "mnb12!@#$%^&*ZXCVB89\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - what are your client goals?",
-        "body": "lkj90$^&*()plmoknijb\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "lkj90$^&*()plmoknijb\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - client boost in mind?",
-        "body": "poiuyt#^&*mnbv567890\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "poiuyt#^&*mnbv567890\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - need more reach?",
-        "body": "mjnhbg%^YHNMOKj234\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "mjnhbg%^YHNMOKj234\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - a thought about clients?",
-        "body": "likuhgyTGBVCDXEWSAQ\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "likuhgyTGBVCDXEWSAQ\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - growing your clients?",
-        "body": "vcdfrewq12356poiuytr\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "vcdfrewq12356poiuytr\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - clients important now?",
-        "body": "qawsedrftgyhujikolp;\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "qawsedrftgyhujikolp;\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - focused on clients atm?",
-        "body": "lkjhgfdsapoiuytrewqmn\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "lkjhgfdsapoiuytrewqmn\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - client target in sight?",
-        "body": "zxcvbnmasdfghjklqwerty\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "zxcvbnmasdfghjklqwerty\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - what about new clients?",
-        "body": "plokmijnuhbygvtfcrdxs\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "plokmijnuhbygvtfcrdxs\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - client strategies?",
-        "body": "nbvcxzpoiuytrewqlkjhg\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "nbvcxzpoiuytrewqlkjhg\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - current client flow?",
-        "body": "ytrewqasdfghjklmnbvcxz\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "ytrewqasdfghjklmnbvcxz\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - discuss new clients?",
-        "body": "vbgtyhnmjuiklopqwert\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "vbgtyhnmjuiklopqwert\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - expanding your market?",
-        "body": "mnbvcdxszaqwertyguiop\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "mnbvcdxszaqwertyguiop\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
         {
         "subject": "important - curious about new clients?",
-        "body": "fno493402dk #$##E23dj2cp32\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "fno493402dk #$##E23dj2cp32\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - exploring client growth?",
-        "body": "gt#2!sdg98@#kdqe34!*1g\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "gt#2!sdg98@#kdqe34!*1g\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - thoughts on client outreach?",
-        "body": "qw3#e$rt456&*()_\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "qw3#e$rt456&*()_\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - ready for more clients?",
-        "body": "kjhgfdsqa%$@#14gfd56\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "kjhgfdsqa%$@#14gfd56\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - can we discuss clients?",
-        "body": "zxcvb67890#$%^&*()\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "zxcvb67890#$%^&*()\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - how about client strategies?",
-        "body": "poiuyt67(*&^%$#@!\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "poiuyt67(*&^%$#@!\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - want to boost clients?",
-        "body": "mnbvcxzqwe@!#3456\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "mnbvcxzqwe@!#3456\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - interested in client ideas?",
-        "body": "fghjkl987@#$%^&*\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "fghjkl987@#$%^&*\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - seeking new clients?",
-        "body": "12345678qwertyuiop\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "12345678qwertyuiop\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - client conversations?",
-        "body": "zxcvbnm!@#$%^&*(987)\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "zxcvbnm!@#$%^&*(987)\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - clients on your mind?",
-        "body": "qazwsxd1234!@#$%&*()\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "qazwsxd1234!@#$%&*()\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - potential client leads?",
-        "body": "1qaz@12wsx^&*(!)(455)\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "1qaz@12wsx^&*(!)(455)\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - any thoughts on clients?",
-        "body": "asx!qwe$%123hgtyuj\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "asx!qwe$%123hgtyuj\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - are clients a goal?",
-        "body": "jkhgfd678^&*_12\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "jkhgfd678^&*_12\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - growing client base?",
-        "body": "jk^%23456zxCVBNMasdf\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "jk^%23456zxCVBNMasdf\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - let's chat about clients?",
-        "body": "uyt!#^&*12aqwe\mn\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "uyt!#^&*12aqwe\mn\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - discussing clients?",
-        "body": "okmn!@34rtyuikj123\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "okmn!@34rtyuikj123\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
 
     {
         "subject": "important - more clients ahead?",
-        "body": "qwazxsdcvbhjmklo!\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "qwazxsdcvbhjmklo!\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
         {
         "subject": "important - client boost needed?",
-        "body": "askjdhf%$##@kdhfa\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "askjdhf%$##@kdhfa\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - a quick client question?",
-        "body": "gkajsdh12389sdalkjh\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "gkajsdh12389sdalkjh\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - what's your client vision?",
-        "body": "wqerkjhf09823!@#$%\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "wqerkjhf09823!@#$%\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - client acquisition focus?",
-        "body": "kjhlakjsd78612#@@%$^\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "kjhlakjsd78612#@@%$^\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - discussing client growth?",
-        "body": "lkajsdh987324@#$%(^&\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "lkajsdh987324@#$%(^&\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - room for more clients?",
-        "body": "poiajsdlk12738@#$%\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "poiajsdlk12738@#$%\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - open to new client ideas?",
-        "body": "mbznxvcmqwe12983@#%$^\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "mbznxvcmqwe12983@#%$^\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - focused on client growth?",
-        "body": "zxcnmbasdflkjh18763#$%\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "zxcnmbasdflkjh18763#$%\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - client goals on radar?",
-        "body": "aqwslkjhfd09817%$#@\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "aqwslkjhfd09817%$#@\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - expanding client reach?",
-        "body": "mnbvytrewq098721@#$%\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "mnbvytrewq098721@#$%\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - client increase soon?",
-        "body": "plokmijnuhb65473#%$@\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "plokmijnuhb65473#%$@\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - thoughts on client influx?",
-        "body": "ytrewqasdf876398@%$#\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "ytrewqasdf876398@%$#\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - discussing client leads?",
-        "body": "vbgtyhnumji987632%$#@\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "vbgtyhnumji987632%$#@\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - growing client numbers?",
-        "body": "mnbvcxzpoiuytrewqlkjh\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "mnbvcxzpoiuytrewqlkjh\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
    {
         "subject": "important - clients and growth plans?",
-        "body": "f43oimwqeropasdffdkljf\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "f43oimwqeropasdffdkljf\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - interested in client talk?",
-        "body": "a93454nvbxcmwqeruqjkl\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "a93454nvbxcmwqeruqjkl\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - expanding client roster?",
-        "body": "m432pojbnmdwqeqasdffkl\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "m432pojbnmdwqeqasdffkl\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - how are client plans?",
-        "body": "l235po8789nvbnccvfgddr\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "l235po8789nvbnccvfgddr\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - talk about client vision?",
-        "body": "lkjhgfdsaqwertyuiopmnb\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "lkjhgfdsaqwertyuiopmnb\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
         "subject": "important - boosting client strategy?",
-        "body": "qazwsxedcrfvtgbyhnujmik\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
+        "body": "qazwsxedcrfvtgbyhnujmik\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
        {
         "subject": "clients: can we chat about ideas?",
-        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
+        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
     },
     {
         "subject": "client growth: a quick question?",
-        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
+        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
     },
     {
         "subject": "new clients: are you interested?",
-        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
+        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
     },
     {
         "subject": "client strategies: exploring options?",
-        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
+        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
     },
     {
         "subject": "client success: are we aligned?",
-        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
+        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
     },
     {
         "subject": "finding clients: want to collaborate?",
-        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
+        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
     },
     {
         "subject": "client potential: how can we help?",
-        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
+        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
     },
     {
         "subject": "more clients: is it a priority?",
-        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
+        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
     },
     {
         "subject": "client solutions: are you open?",
-        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
+        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
     },
     {
         "subject": "growing clients: what's your approach?",
-        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
+        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
     },
         {
         "subject": "client leads: need help?",
-        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
+        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
     },
     {
         "subject": "reaching clients: need a hand?",
-        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
+        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
     },
     {
         "subject": "boosting clients: can we chat?",
-        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
+        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
     },
     {
         "subject": "expanding clients: tell me more?",
-        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
+        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
     },
     {
         "subject": "clients base: are you satisfied?",
-        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
+        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
     },
     {
         "subject": "business clients: where to get them?",
-        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
+        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
     },
     {
         "subject": "marketing clients: have you tried these?",
-        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
+        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
     },
     {
         "subject": "clients now: a quick solution?",
-        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
+        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
     },
     {
         "subject": "quick clients: let's get them?",
-        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
+        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
     },
     {
         "subject": "clients goals: let's discuss?",
-        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; height: auto; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
+        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
     },
         {
         "subject": "eager to gain more clients?",
@@ -1275,455 +1275,455 @@ export const emails = [
     },
       {
     "subject": "more roofing jobs possible?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nhow about we discuss getting you more roofing jobs to help your business grow?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nhow about we discuss getting you more roofing jobs to help your business grow?\n$[LINK]"
   },
   {
     "subject": "grow your roofing biz?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat if we chatted about how to help you get more roofing jobs and scale your business?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nwhat if we chatted about how to help you get more roofing jobs and scale your business?\n$[LINK]"
   },
   {
     "subject": "need more roofing leads?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwould you be open to a quick call to discuss getting more roofing jobs?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nwould you be open to a quick call to discuss getting more roofing jobs?\n$[LINK]"
   },
   {
     "subject": "roofing job flow okay?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat about discussing how we can get more roofing jobs to help your business grow?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nwhat about discussing how we can get more roofing jobs to help your business grow?\n$[LINK]"
   },
   {
     "subject": "roofing business boost?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat if we chatted about how to help you get more roofing jobs and grow your business?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nwhat if we chatted about how to help you get more roofing jobs and grow your business?\n$[LINK]"
   },
   {
     "subject": "roofing jobs help?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nopen to a quick call to discuss how we can help you get more roofing jobs?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nopen to a quick call to discuss how we can help you get more roofing jobs?\n$[LINK]"
   },
   {
     "subject": "roofing client increase?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nhow about discussing getting you more roofing jobs to help your business grow?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nhow about discussing getting you more roofing jobs to help your business grow?\n$[LINK]"
   },
   {
     "subject": "roofing work better?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat if we chatted about how to help you get more roofing jobs and scale your business?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nwhat if we chatted about how to help you get more roofing jobs and scale your business?\n$[LINK]"
   },
   {
     "subject": "more roofing coming?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nquick call to discuss how we can help you get more roofing jobs?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nquick call to discuss how we can help you get more roofing jobs?\n$[LINK]"
   },
   {
     "subject": "roofing progression?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\ndiscussing how we can get more roofing jobs to help your business grow?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\ndiscussing how we can get more roofing jobs to help your business grow?\n$[LINK]"
   },
   {
     "subject": "new roofing clients?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nchat about how to help you get more roofing jobs and scale your business?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nchat about how to help you get more roofing jobs and scale your business?\n$[LINK]"
   },
   {
     "subject": "roofing jobs boost?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\ncall to discuss how we can help you get more roofing jobs?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\ncall to discuss how we can help you get more roofing jobs?\n$[LINK]"
   },
     {
     "subject": "roofing business increase?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\ndiscussing how we can get more roofing jobs to help your business grow?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\ndiscussing how we can get more roofing jobs to help your business grow?\n$[LINK]"
   },
   {
     "subject": "roofing business ideas?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nchat about how to help you get more roofing jobs and scale your business?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nchat about how to help you get more roofing jobs and scale your business?\n$[LINK]"
   },
   {
     "subject": "roofing more progression?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\ncall to discuss how we can help you get more roofing jobs?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\ncall to discuss how we can help you get more roofing jobs?\n$[LINK]"
   },
   {
     "subject": "roofing plans?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\ndiscussing how we can get more roofing jobs to help your business grow?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\ndiscussing how we can get more roofing jobs to help your business grow?\n$[LINK]"
   },
   {
     "subject": "roofing business changes?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nchat about how to help you get more roofing jobs and scale your business?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nchat about how to help you get more roofing jobs and scale your business?\n$[LINK]"
   },
   {
     "subject": "roofing more scale?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\ncall to discuss how we can help you get more roofing jobs?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\ncall to discuss how we can help you get more roofing jobs?\n$[LINK]"
   },
     {
     "subject": "roofing jobs?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\ndiscussing how we can get more roofing jobs to help your business grow?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\ndiscussing how we can get more roofing jobs to help your business grow?\n$[LINK]"
   },
   {
     "subject": "clients scaling roofing business",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nchat about how to help you get more roofing jobs and scale your business?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nchat about how to help you get more roofing jobs and scale your business?\n$[LINK]"
   },
     {
     "subject": "roofing jobs growth?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nhow about we discuss how we can help you get more roofing jobs to help your business grow?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nhow about we discuss how we can help you get more roofing jobs to help your business grow?\n$[LINK]"
   },
   {
     "subject": "roofing boost soon?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat if we spoke about getting you more roofing jobs and scaling your business?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nwhat if we spoke about getting you more roofing jobs and scaling your business?\n$[LINK]"
   },
   {
     "subject": "more clients for roofing?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwould you be open to a quick chat about getting more roofing jobs?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nwould you be open to a quick chat about getting more roofing jobs?\n$[LINK]"
   },
   {
     "subject": "better roofing numbers?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat about discussing how we can get more roofing jobs to help your business grow?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nwhat about discussing how we can get more roofing jobs to help your business grow?\n$[LINK]"
   },
   {
     "subject": "improve roofing flow?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat if we spoke about how to help you get more roofing jobs and grow your business?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nwhat if we spoke about how to help you get more roofing jobs and grow your business?\n$[LINK]"
   },
   {
     "subject": "grow roofing client base?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nopen to a quick chat to discuss how we can help you get more roofing jobs?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nopen to a quick chat to discuss how we can help you get more roofing jobs?\n$[LINK]"
   },
   {
     "subject": "roofing more work?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nhow about we discuss how we can help you get more roofing jobs to help your business grow?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nhow about we discuss how we can help you get more roofing jobs to help your business grow?\n$[LINK]"
   },
   {
     "subject": "roofing improve flow?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat if we spoke about how to help you get more roofing jobs and scale your business?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nwhat if we spoke about how to help you get more roofing jobs and scale your business?\n$[LINK]"
   },
   {
     "subject": "roofing new ideas?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nquick chat to discuss how we can help you get more roofing jobs?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nquick chat to discuss how we can help you get more roofing jobs?\n$[LINK]"
   },
   {
     "subject": "roofing help available?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\ndiscussing how we can get more roofing jobs to help your business grow?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\ndiscussing how we can get more roofing jobs to help your business grow?\n$[LINK]"
   },
   {
     "subject": "roofing scaling up?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nspeaking about how to help you get more roofing jobs and scale your business?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nspeaking about how to help you get more roofing jobs and scale your business?\n$[LINK]"
   },
   {
     "subject": "roofing growth plans?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nchat to discuss how we can help you get more roofing jobs?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nchat to discuss how we can help you get more roofing jobs?\n$[LINK]"
   },
   {
     "subject": "roofing more work?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nhow about we discuss how we can help you get more roofing jobs to help your business grow?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nhow about we discuss how we can help you get more roofing jobs to help your business grow?\n$[LINK]"
   },
   {
     "subject": "roofing scaling flow?",
-    "body": "hi $[NAME],\n\n<img src=\"https://lirp.cdn-website.com/e6c7cb13/dms3rep/multi/opt/roofing+meme-640w.jpeg\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat if we spoke about how to help you get more roofing jobs and scale your business?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"https://lirp.cdn-website.com/e6c7cb13/dms3rep/multi/opt/roofing+meme-640w.jpeg\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nwhat if we spoke about how to help you get more roofing jobs and scale your business?\n$[LINK]"
   },
   {
     "subject": "roofing quick chats?",
-    "body": "hi $[NAME],\n\n<img src=\"https://cdn.prod.website-files.com/645a1ad87702f184c1429815/656ef9bf4bce1dc4808c3790_meme%2021.png\" style=\"max-width: 400px; height: auto; display: block;\">\n\nquick chat to discuss how we can help you get more roofing jobs?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"https://cdn.prod.website-files.com/645a1ad87702f184c1429815/656ef9bf4bce1dc4808c3790_meme%2021.png\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nquick chat to discuss how we can help you get more roofing jobs?\n$[LINK]"
   },
   {
     "subject": "roofing work",
-    "body": "hi $[NAME],\n\n<img src=\"https://www.roofingwebmasters.com/site/wp-content/uploads/got-you-covered-meme-1024x576.jpeg\" style=\"max-width: 400px; height: auto; display: block;\">\n\ndiscussing how we can get more roofing jobs to help your business grow?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"https://www.roofingwebmasters.com/site/wp-content/uploads/got-you-covered-meme-1024x576.jpeg\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\ndiscussing how we can get more roofing jobs to help your business grow?\n$[LINK]"
   },
   {
     "subject": "roofing sales plans",
-    "body": "hi $[NAME],\n\n<img src=\"https://www.roofingwebmasters.com/site/wp-content/uploads/got-you-covered-meme-1024x576.jpeg\" style=\"max-width: 400px; height: auto; display: block;\">\n\nspeaking about how to help you get more roofing jobs and scale your business?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"https://www.roofingwebmasters.com/site/wp-content/uploads/got-you-covered-meme-1024x576.jpeg\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nspeaking about how to help you get more roofing jobs and scale your business?\n$[LINK]"
   },
   {
     "subject": "roofing chat",
-    "body": "hi $[NAME],\n\n<img src=\"https://www.roofingwebmasters.com/site/wp-content/uploads/got-you-covered-meme-1024x576.jpeg\" style=\"max-width: 400px; height: auto; display: block;\">\n\nchat to discuss how we can help you get more roofing jobs?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"https://www.roofingwebmasters.com/site/wp-content/uploads/got-you-covered-meme-1024x576.jpeg\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nchat to discuss how we can help you get more roofing jobs?\n$[LINK]"
   },
   {
     "subject": "roofing jobs more",
-    "body": "hi $[NAME],\n\n<img src=\"https://www.roofingwebmasters.com/site/wp-content/uploads/got-you-covered-meme-1024x576.jpeg\" style=\"max-width: 400px; height: auto; display: block;\">\n\nhow about we discuss how we can help you get more roofing jobs to help your business grow?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"https://www.roofingwebmasters.com/site/wp-content/uploads/got-you-covered-meme-1024x576.jpeg\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nhow about we discuss how we can help you get more roofing jobs to help your business grow?\n$[LINK]"
   },
     {
     "subject": "roofing quick boost",
-    "body": "hi $[NAME],\n\n<img src=\"https://www.roofingwebmasters.com/site/wp-content/uploads/got-you-covered-meme-1024x576.jpeg\" style=\"max-width: 400px; height: auto; display: block;\">\n\nquick chat to discuss how we can help you get more roofing jobs?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"https://www.roofingwebmasters.com/site/wp-content/uploads/got-you-covered-meme-1024x576.jpeg\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nquick chat to discuss how we can help you get more roofing jobs?\n$[LINK]"
   },
     {
     "subject": "roofing jobs boost?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat if we discussed how to help you get more roofing jobs to grow your business?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nwhat if we discussed how to help you get more roofing jobs to grow your business?\n$[LINK]"
   },
   {
     "subject": "more roofing soon?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat about discussing how we can help you secure more roofing jobs to expand your business?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nwhat about discussing how we can help you secure more roofing jobs to expand your business?\n$[LINK]"
   },
   {
     "subject": "roofing prospects good?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nkeen to explore how we could get you more roofing jobs and a bigger business?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nkeen to explore how we could get you more roofing jobs and a bigger business?\n$[LINK]"
   },
   {
     "subject": "roofing growth coming?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nconsidering discussing how we can help your business grow with more roofing jobs?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nconsidering discussing how we can help your business grow with more roofing jobs?\n$[LINK]"
   },
   {
     "subject": "roofing leads now?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat if we talked about helping you find more roofing jobs and scale your business?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nwhat if we talked about helping you find more roofing jobs and scale your business?\n$[LINK]"
   },
   {
     "subject": "roofing help okay?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\ninterested in a chat about how we can help you get more roofing jobs and grow?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\ninterested in a chat about how we can help you get more roofing jobs and grow?\n$[LINK]"
   },
   {
     "subject": "roofing gains?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nhow about discussing how we can help you bring in more roofing jobs for business growth?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nhow about discussing how we can help you bring in more roofing jobs for business growth?\n$[LINK]"
   },
   {
     "subject": "roofing quick client?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwant to explore how we can help you get more roofing jobs and build your business?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nwant to explore how we can help you get more roofing jobs and build your business?\n$[LINK]"
   },
   {
     "subject": "roofing progression boost?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nconsidering a conversation about how we can help your business grow with more roofing jobs?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nconsidering a conversation about how we can help your business grow with more roofing jobs?\n$[LINK]"
   },
   {
     "subject": "roofing more options?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat if we talked about helping you find more roofing jobs and scale your business?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nwhat if we talked about helping you find more roofing jobs and scale your business?\n$[LINK]"
   },
   {
     "subject": "roofing growth soon?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\ninterested in a chat about how we can help you get more roofing jobs and grow?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\ninterested in a chat about how we can help you get more roofing jobs and grow?\n$[LINK]"
   },
   {
     "subject": "roofing help boost?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nhow about discussing how we can help you bring in more roofing jobs for business growth?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nhow about discussing how we can help you bring in more roofing jobs for business growth?\n$[LINK]"
   },
   {
     "subject": "roofing options available?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat if we looked at how we could help you get more roofing jobs to grow your business?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nwhat if we looked at how we could help you get more roofing jobs to grow your business?\n$[LINK]"
   },
   {
     "subject": "roofing quick boost?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwant to explore how we can help you get more roofing jobs and build your business?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nwant to explore how we can help you get more roofing jobs and build your business?\n$[LINK]"
   },
   {
     "subject": "roofing plan?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat if we discussed how to help you get more roofing jobs to grow your business?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nwhat if we discussed how to help you get more roofing jobs to grow your business?\n$[LINK]"
   },
     {
     "subject": "roofing business growth?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat about discussing how we can help you secure more roofing jobs to expand your business?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nwhat about discussing how we can help you secure more roofing jobs to expand your business?\n$[LINK]"
   },
   {
     "subject": "roofing prospects",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nkeen to explore how we could get you more roofing jobs and a bigger business?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nkeen to explore how we could get you more roofing jobs and a bigger business?\n$[LINK]"
   },
   {
     "subject": "roofing coming?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nconsidering discussing how we can help your business grow with more roofing jobs?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nconsidering discussing how we can help your business grow with more roofing jobs?\n$[LINK]"
   },
   {
     "subject": "roofing for clients?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nwhat if we talked about helping you find more roofing jobs and scale your business?\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nwhat if we talked about helping you find more roofing jobs and scale your business?\n$[LINK]"
   },
     {
     "subject": "more roofing jobs for you?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to help you secure additional roofing jobs\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to help you secure additional roofing jobs\n$[LINK]"
   },
   {
     "subject": "interested in roofing jobs?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI aim to assist you in increasing your roofing work\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI aim to assist you in increasing your roofing work\n$[LINK]"
   },
   {
     "subject": "looking for more roofing jobs?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to support you in obtaining roofing projects\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to support you in obtaining roofing projects\n$[LINK]"
   },
   {
     "subject": "want more roofing leads?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to help you grow your roofing clientele\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to help you grow your roofing clientele\n$[LINK]"
   },
   {
     "subject": "can I help with roofing jobs?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to facilitate your roofing job acquisition\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to facilitate your roofing job acquisition\n$[LINK]"
   },
   {
     "subject": "looking to grow your roofing jobs?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to share opportunities for more roofing projects\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to share opportunities for more roofing projects\n$[LINK]"
   },
   {
     "subject": "do you want more roofing clients?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to assist you in expanding your roofing jobs\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to assist you in expanding your roofing jobs\n$[LINK]"
   },
   {
     "subject": "how about more roofing work?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to help you find new roofing job leads\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to help you find new roofing job leads\n$[LINK]"
   },
   {
     "subject": "need help with roofing jobs?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to aid you in acquiring more roofing jobs\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to aid you in acquiring more roofing jobs\n$[LINK]"
   },
   {
     "subject": "want to boost your roofing jobs?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to provide you with more roofing opportunities\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to provide you with more roofing opportunities\n$[LINK]"
   },
   {
     "subject": "how can I help you with roofing jobs?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to help you expand your roofing work\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to help you expand your roofing work\n$[LINK]"
   },
   {
     "subject": "curious about roofing jobs?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to help you find additional roofing clients\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to help you find additional roofing clients\n$[LINK]"
   },
   {
     "subject": "how to improve your roofing jobs?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to assist you in enhancing your roofing business\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to assist you in enhancing your roofing business\n$[LINK]"
   },
   {
     "subject": "want to expand roofing opportunities?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to share ways to increase your roofing jobs\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to share ways to increase your roofing jobs\n$[LINK]"
   },
   {
     "subject": "how to get more roofing jobs?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to help you secure more roofing projects\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to help you secure more roofing projects\n$[LINK]"
   },
   {
     "subject": "want more leads for roofing jobs?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to provide leads for your roofing work\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to provide leads for your roofing work\n$[LINK]"
   },
   {
     "subject": "seeking more roofing jobs?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to support you in generating more roofing jobs\n$[LINK]"
+    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to support you in generating more roofing jobs\n$[LINK]"
   },
     {
     "subject": "quick question about roofing jobs",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita connecting with you as I can provide more roofing jobs on a commission basis. I can also assist with hiring to facilitate your growth.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita connecting with you as I can provide more roofing jobs on a commission basis. I can also assist with hiring to facilitate your growth.\n\n$[LINK]"
   },
   {
     "subject": "quick question on roofing projects",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita reaching out to offer more roofing jobs which operate on a commission basis. Additionally, I can support your hiring efforts to help you expand.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita reaching out to offer more roofing jobs which operate on a commission basis. Additionally, I can support your hiring efforts to help you expand.\n\n$[LINK]"
   },
   {
     "subject": "quick question regarding your roofing needs",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita wanting to share opportunities for roofing jobs on a commission basis. I can also help streamline your hiring process for scaling purposes.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita wanting to share opportunities for roofing jobs on a commission basis. I can also help streamline your hiring process for scaling purposes.\n\n$[LINK]"
   },
   {
     "subject": "quick question about getting roofing jobs",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita here to talk about providing you with roofing jobs on a commission basis. I can assist in hiring to support your growth initiatives.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita here to talk about providing you with roofing jobs on a commission basis. I can assist in hiring to support your growth initiatives.\n\n$[LINK]"
   },
   {
     "subject": "quick question about roofing leads",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita reaching out to help you obtain roofing jobs on a commission plan. I can also assist with your hiring needs to help scale your business.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita reaching out to help you obtain roofing jobs on a commission plan. I can also assist with your hiring needs to help scale your business.\n\n$[LINK]"
   },
   {
     "subject": "quick question on expanding roofing jobs",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita reaching out to provide roofing jobs on a commission structure. I can also help with recruiting to aid in your scaling efforts.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita reaching out to provide roofing jobs on a commission structure. I can also help with recruiting to aid in your scaling efforts.\n\n$[LINK]"
   },
   {
     "subject": "quick question about increasing your roofing jobs",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita here to share ways to increase your roofing jobs via commission. Furthermore, I can assist with hiring to promote growth.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita here to share ways to increase your roofing jobs via commission. Furthermore, I can assist with hiring to promote growth.\n\n$[LINK]"
   },
   {
     "subject": "quick question on roofing opportunities",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita looking to offer you roofing jobs based on a commission model. I can also aid with hiring as you seek to scale your operations.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita looking to offer you roofing jobs based on a commission model. I can also aid with hiring as you seek to scale your operations.\n\n$[LINK]"
   },
   {
     "subject": "quick question about roofing business",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita reaching out to discuss options for roofing jobs on a commission basis. I can also help with your hiring strategy for better scaling.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita reaching out to discuss options for roofing jobs on a commission basis. I can also help with your hiring strategy for better scaling.\n\n$[LINK]"
   },
   {
     "subject": "quick question regarding expanding your roofing work",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita interested in helping provide roofing jobs under a commission structure. I also offer assistance with hiring to help improve your scalability.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita interested in helping provide roofing jobs under a commission structure. I also offer assistance with hiring to help improve your scalability.\n\n$[LINK]"
   },
   {
     "subject": "quick question about job opportunities in roofing",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita reaching out to help you secure roofing jobs on a commission basis. Plus, I can support you with hiring to achieve your growth targets.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita reaching out to help you secure roofing jobs on a commission basis. Plus, I can support you with hiring to achieve your growth targets.\n\n$[LINK]"
   },
   {
     "subject": "quick question on getting roofing clients",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita eager to provide more roofing jobs based on commission. I can also assist with hiring, enabling you to scale effectively.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita eager to provide more roofing jobs based on commission. I can also assist with hiring, enabling you to scale effectively.\n\n$[LINK]"
   },
   {
     "subject": "quick question about boosting your roofing services",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita looking to offer roofing jobs on a commission basis. I can also help with hiring to facilitate your business growth.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita looking to offer roofing jobs on a commission basis. I can also help with hiring to facilitate your business growth.\n\n$[LINK]"
   },
   {
     "subject": "quick question regarding your roofing strategy",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita connecting to help you with roofing jobs on a commission structure. Additionally, I can assist with your hiring to enable smarter scaling.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita connecting to help you with roofing jobs on a commission structure. Additionally, I can assist with your hiring to enable smarter scaling.\n\n$[LINK]"
   },
   {
     "subject": "quick question about scaling your roofing jobs",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita reaching out to discuss providing roofing jobs on commission. I can also support your hiring to help you expand.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita reaching out to discuss providing roofing jobs on commission. I can also support your hiring to help you expand.\n\n$[LINK]"
   },
   {
     "subject": "quick question about your roofing operations",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita here to offer you roofing jobs through a commission approach. I can assist you in your hiring journey to enhance scalability.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita here to offer you roofing jobs through a commission approach. I can assist you in your hiring journey to enhance scalability.\n\n$[LINK]"
   },
   {
     "subject": "quick question about roofing solutions",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita reaching out to present more roofing jobs under a commission plan. I can also help with hiring as you look to grow.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita reaching out to present more roofing jobs under a commission plan. I can also help with hiring as you look to grow.\n\n$[LINK]"
   },
   {
     "subject": "quick question on your roofing business model",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita aiming to help you secure roofing jobs on commission. Additionally, I can assist with your hiring strategy to support scaling.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita aiming to help you secure roofing jobs on commission. Additionally, I can assist with your hiring strategy to support scaling.\n\n$[LINK]"
   },
   {
     "subject": "quick question about your roofing growth",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita looking to discuss opportunities for roofing jobs that operate on commission. I can also offer assistance with hiring to help you scale efficiently.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita looking to discuss opportunities for roofing jobs that operate on commission. I can also offer assistance with hiring to help you scale efficiently.\n\n$[LINK]"
   },
     {
     "subject": "quick question about roofing options",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita, and I wanted to reach out about some roofing jobs you might find beneficial. Additionally, I can assist with finding the right people for your team.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita, and I wanted to reach out about some roofing jobs you might find beneficial. Additionally, I can assist with finding the right people for your team.\n\n$[LINK]"
   },
   {
     "subject": "quick question on roofing job availability",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita, looking to share some roofing job opportunities that could align with your work. I also provide support if you are considering expanding your team.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita, looking to share some roofing job opportunities that could align with your work. I also provide support if you are considering expanding your team.\n\n$[LINK]"
   },
   {
     "subject": "quick question regarding roofing projects",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita here to talk about roofing projects that could fit your needs. If you need help with hiring, I can offer assistance in that area too.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita here to talk about roofing projects that could fit your needs. If you need help with hiring, I can offer assistance in that area too.\n\n$[LINK]"
   },
   {
     "subject": "quick question about increasing roofing work",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita, reaching out to discuss roofing jobs that are available on a commission basis. I can also provide help if you're looking to add more members to your team.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita, reaching out to discuss roofing jobs that are available on a commission basis. I can also provide help if you're looking to add more members to your team.\n\n$[LINK]"
   },
   {
     "subject": "quick question on your roofing strategy",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita, and I wanted to connect about roofing work that might suit your operations. Additionally, I can assist with finding new talent for your team.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita, and I wanted to connect about roofing work that might suit your operations. Additionally, I can assist with finding new talent for your team.\n\n$[LINK]"
   },
   {
     "subject": "quick question about roofing job potential",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita; I’d like to share some roofing job options that could be a good fit for you. If you're considering hiring, I'm available to assist.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita; I’d like to share some roofing job options that could be a good fit for you. If you're considering hiring, I'm available to assist.\n\n$[LINK]"
   },
   {
     "subject": "quick question on enhancing roofing projects",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita, reaching out with roofing jobs that might be of interest. If you’re looking for help with recruitment, I can offer resources for that as well.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita, reaching out with roofing jobs that might be of interest. If you’re looking for help with recruitment, I can offer resources for that as well.\n\n$[LINK]"
   },
   {
     "subject": "quick question regarding roofing job leads",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita, and I wanted to discuss roofing job leads that might work well for you. Additionally, I’m here to help if you're expanding your workforce.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita, and I wanted to discuss roofing job leads that might work well for you. Additionally, I’m here to help if you're expanding your workforce.\n\n$[LINK]"
   },
   {
     "subject": "quick question about your roofing work",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita reaching out to talk about some roofing jobs available on a commission structure. I can assist with your hiring needs whenever you're ready.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita reaching out to talk about some roofing jobs available on a commission structure. I can assist with your hiring needs whenever you're ready.\n\n$[LINK]"
   },
   {
     "subject": "quick question on finding roofing jobs",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita looking to offer information on roofing jobs that could complement your business. I can also help with your hiring process if needed.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita looking to offer information on roofing jobs that could complement your business. I can also help with your hiring process if needed.\n\n$[LINK]"
   },
   {
     "subject": "quick question about roofing services",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita, reaching out regarding some roofing services available on a commission basis. I can support you with hiring efforts should you decide to expand.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita, reaching out regarding some roofing services available on a commission basis. I can support you with hiring efforts should you decide to expand.\n\n$[LINK]"
   },
   {
     "subject": "quick question on your roofing opportunities",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita here to discuss roofing opportunities that may fit your goals. If you're looking to hire more people, I can assist in that area as well.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita here to discuss roofing opportunities that may fit your goals. If you're looking to hire more people, I can assist in that area as well.\n\n$[LINK]"
   },
   {
     "subject": "quick question about roofing potential",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita reaching out to talk about roofing job potential available on commission. I'm also able to help with hiring if you're planning to grow your team.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita reaching out to talk about roofing job potential available on commission. I'm also able to help with hiring if you're planning to grow your team.\n\n$[LINK]"
   },
   {
     "subject": "quick question on roofing business support",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita, and I wanted to connect about roofing business support that could help you. If you’re considering hiring more employees, I can offer my assistance.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita, and I wanted to connect about roofing business support that could help you. If you’re considering hiring more employees, I can offer my assistance.\n\n$[LINK]"
   },
   {
     "subject": "quick question regarding roofing collaboration",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita looking to explore the possibility of collaboration on roofing jobs. Additionally, if you're seeking assistance with hiring, I'm here to help.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita looking to explore the possibility of collaboration on roofing jobs. Additionally, if you're seeking assistance with hiring, I'm here to help.\n\n$[LINK]"
   },
   {
     "subject": "quick question on your roofing services",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita reaching out to see how I can assist with your roofing projects. If you're considering adding new team members, I can support that as well.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita reaching out to see how I can assist with your roofing projects. If you're considering adding new team members, I can support that as well.\n\n$[LINK]"
   },
   {
     "subject": "quick question about project opportunities in roofing",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita, reaching out to discuss some project opportunities in roofing that I believe might suit you. If you're looking at hiring needs, I'm also available to help.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita, reaching out to discuss some project opportunities in roofing that I believe might suit you. If you're looking at hiring needs, I'm also available to help.\n\n$[LINK]"
   },
   {
     "subject": "quick question regarding roofing tasks",
-    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; height: auto; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita, and I wanted to share some tasks related to roofing jobs that are available. I can also help you find candidates for your hiring needs if that would be useful.\n\n$[LINK]"
+    "body": "Hi $[NAME]\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nWAIT\nWAIT\nWAIT\nWAIT WAIT WAIT\n\nI'm Nikita, and I wanted to share some tasks related to roofing jobs that are available. I can also help you find candidates for your hiring needs if that would be useful.\n\n$[LINK]"
   },
     {
     "subject": "quick question about roofing options",
