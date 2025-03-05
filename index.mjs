@@ -64,35 +64,37 @@ function renderEmailStats(domain, created_at, userTimezone, niche, cronParts, wa
       <div style="position: relative; z-index: 3; padding: 3rem 0;">
         <table style="border-collapse: separate; border-spacing: 0; border: 1px solid; border-image: linear-gradient(to top right, white, gray) 1; border-radius: 8px; width: 100%;">
           <tr>
-            <td style="border: 1px solid #fff; padding: 4px 8px;">Domain</td>
-            <td style="border: 1px solid #fff; padding: 4px 8px;">${domain}</td>
+            <td style="border: 1px solid #fff; padding: 4px 8px; color: whitesmoke;">Domain</td>
+            <td style="border: 1px solid #fff; padding: 4px 8px; color: whitesmoke;">${domain}</td>
           </tr>
           <tr>
-            <td style="border: 1px solid #fff; padding: 4px 8px;">Created At</td>
-            <td style="border: 1px solid #fff; padding: 4px 8px;">${moment(created_at).tz(userTimezone).format('DD.MM.YYYY [at] HH:mm')} ${userTimezone}</td>
+            <td style="border: 1px solid #fff; padding: 4px 8px; color: whitesmoke;">Created At</td>
+            <td style="border: 1px solid #fff; padding: 4px 8px; color: whitesmoke;">
+              ${moment(created_at).tz(userTimezone).format('DD.MM.YYYY [at] HH:mm')} ${userTimezone}
+            </td>
           </tr>
           <tr>
-            <td style="border: 1px solid #fff; padding: 4px 8px;">Niche</td>
-            <td style="border: 1px solid #fff; padding: 4px 8px;">${niche}</td>
+            <td style="border: 1px solid #fff; padding: 4px 8px; color: whitesmoke;">Niche</td>
+            <td style="border: 1px solid #fff; padding: 4px 8px; color: whitesmoke;">${niche}</td>
           </tr>
           <tr>
-            <td style="border: 1px solid #fff; padding: 4px 8px;">Cron Parts</td>
-            <td style="border: 1px solid #fff; padding: 4px 8px;">
+            <td style="border: 1px solid #fff; padding: 4px 8px; color: whitesmoke;">Cron Parts</td>
+            <td style="border: 1px solid #fff; padding: 4px 8px; color: whitesmoke;">
               ${cronParts.minutes} ${cronParts.hours} ${cronParts.dayOfMonth} ${cronParts.month} ${cronParts.dayOfWeek} ${cronParts.year}
             </td>
           </tr>
           <tr>
-            <td style="border: 1px solid #fff; padding: 4px 8px;">Warmup State</td>
+            <td style="border: 1px solid #fff; padding: 4px 8px; color: whitesmoke;">Warmup State</td>
             <td style="border: 1px solid #fff; padding: 4px 8px; color: ${bgColorClass};">${warmupState}</td>
           </tr>
           <tr>
-            <td style="border: 1px solid #fff; padding: 4px 8px;">Warmup progress</td>
+            <td style="border: 1px solid #fff; padding: 4px 8px; color: whitesmoke;">Warmup progress</td>
             <td style="border: 1px solid #fff; padding: 4px 8px;">
-            <div style="margin-bottom: 4px; font-size: 0.9rem; color: #fff;">${daysDifference}/${warmupDurationInDays}</div>
-            <div style="width: 100%; border: 1px solid #eee; border-radius: 4px; overflow: hidden;">
-              <div style="width: ${Math.min((daysDifference / warmupDurationInDays) * 100, 100)}%; background: linear-gradient(to right, whitesmoke, lightgray); height: 16px;"></div>
-            </div>
-          </td>
+              <div style="margin-bottom: 4px; font-size: 0.9rem; color: whitesmoke;">${daysDifference}/${warmupDurationInDays}</div>
+              <div style="width: 100%; border: 1px solid #eee; border-radius: 4px; overflow: hidden;">
+                <div style="width: ${Math.min((daysDifference / warmupDurationInDays) * 100, 100)}%; background: linear-gradient(to right, whitesmoke, lightgray); height: 16px;"></div>
+              </div>
+            </td>
           </tr>
         </table>
       </div>
