@@ -355,14 +355,8 @@ export const emails = [
         "subject": "important - growing your clients?",
         "body": "vcdfrewq12356poiuytr\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
-    {
-        "subject": "important - clients important now?",
-        "body": "qawsedrftgyhujikolp;\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
-    },
-    {
-        "subject": "important - focused on clients atm?",
-        "body": "lkjhgfdsapoiuytrewqmn\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
-    },
+
+
     {
         "subject": "important - client target in sight?",
         "body": "zxcvbnmasdfghjklqwerty\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
@@ -427,10 +421,7 @@ export const emails = [
         "subject": "important - client conversations?",
         "body": "zxcvbnm!@#$%^&*(987)\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
-    {
-        "subject": "important - clients on your mind?",
-        "body": "qazwsxd1234!@#$%&*()\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
-    },
+
     {
         "subject": "important - potential client leads?",
         "body": "1qaz@12wsx^&*(!)(455)\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
@@ -456,10 +447,7 @@ export const emails = [
         "body": "okmn!@34rtyuikj123\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
 
-    {
-        "subject": "important - more clients ahead?",
-        "body": "qwazxsdcvbhjmklo!\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
-    },
+
         {
         "subject": "important - client boost needed?",
         "body": "askjdhf%$##@kdhfa\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
@@ -592,10 +580,7 @@ export const emails = [
         "subject": "boosting clients: can we chat?",
         "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
     },
-    {
-        "subject": "expanding clients: tell me more?",
-        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
-    },
+
     {
         "subject": "clients base: are you satisfied?",
         "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
@@ -604,10 +589,7 @@ export const emails = [
         "subject": "business clients: where to get them?",
         "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
     },
-    {
-        "subject": "marketing clients: have you tried these?",
-        "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
-    },
+
     {
         "subject": "clients now: a quick solution?",
         "body": "<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients.\n\nIf I send you a link just to discover if we can help you - would you like to do a face spalm?"
@@ -1021,10 +1003,7 @@ export const emails = [
         "subject": "Revenue? Roofing Business",
         "body": "Hi $[NAME],\n\nThere's so much revenue left on the table for many roofers.\nI can help you grab some of those untapped clients.\nInterested in discussing this?\n\n$[LINK]"
     },
-    {
-        "subject": "Roofing Marketing struggles?",
-        "body": "Hi $[NAME],\n\nIt can be tough marketing for roofers, let's make a system out of it.\nI'm pretty good at creating consistent systems.\n\n$[LINK]"
-    },
+
    {
         "subject": "Roofing business goals?",
         "body": "Hi $[NAME],\n\nAre you hitting your revenue goals for your roofing business? If not, I can help.\nInterested?\n\n$[LINK]"
@@ -1557,10 +1536,7 @@ export const emails = [
     "subject": "curious about roofing jobs?",
     "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to help you find additional roofing clients\n$[LINK]"
   },
-  {
-    "subject": "how to improve your roofing jobs?",
-    "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to assist you in enhancing your roofing business\n$[LINK]"
-  },
+
   {
     "subject": "want to expand roofing opportunities?",
     "body": "hi $[NAME],\n\n<img src=\"$[MEME-URL]\" style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nSTOP\n\nSTOP\n\nSTOP\n\nSTOP\n\nI just want to share ways to increase your roofing jobs\n$[LINK]"
