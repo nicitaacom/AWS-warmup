@@ -955,10 +955,6 @@ exports.emails = [
         "body": "Hi $[NAME],\n\nSick of leads that go nowhere?  I can help you attract higher-quality prospects who are ready to hire.\n\nUp for a quick discussion?\n\n$[LINK]"
     },
     {
-        "subject": "Scale your roofing business *the right way*",
-        "body": "Hi $[NAME],\n\nScaling isn't just about more jobs, it's about *more profitable* jobs.  Let's build a sustainable growth strategy.\n\nOpen to exploring options?\n\n$[LINK]"
-    },
-    {
         "subject": "From 'busy' to 'profitable'",
         "body": "Hi $[NAME],\n\nAre you busy, but not as profitable as you'd like?  Let's fix that disconnect.\n\nDown for a brief chat?\n\n$[LINK]"
     },

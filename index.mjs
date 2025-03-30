@@ -16,7 +16,16 @@ const { randomNames } = randomNamesModule;
 import randomMemesModule from './dist/const/randomMemes.js';
 const { randomMemes } = randomMemesModule;
 
-const warmupDurationInDays = 30
+const DISABLE_STAGE_DURATION = 7; // 7 days per disabling stage
+const WARMUP_DURATION_DAYS = 30;
+const MAX_DAILY_EMAILS = 80;
+const DISABLE_STAGES = [
+  { phase: 'disabling-1/4', factor: 0.75, duration: 7 },
+  { phase: 'disabling-2/4', factor: 0.5, duration: 7 },
+  { phase: 'disabling-3/4', factor: 0.25, duration: 7 },
+  { phase: 'disabled', factor: 0, duration: 0 }
+];
+
 
 const getBgColorClass = (warmupState) => {
   switch (warmupState) {
@@ -85,14 +94,14 @@ function renderEmailStats(domain, created_at, userTimezone, niche, cronParts, wa
           </tr>
           <tr>
             <td style="border: 1px solid #fff; padding: 4px 8px; color: whitesmoke;">Warmup State</td>
-            <td style="border: 1px solid #fff; padding: 4px 8px; color: ${bgColorClass};">${warmupState}</td>
+            <td style="border: 1px solid #fff; padding: 4px 8px; color: ${bgColorClass}">${warmupState}</td>
           </tr>
           <tr>
             <td style="border: 1px solid #fff; padding: 4px 8px; color: whitesmoke;">Warmup progress</td>
             <td style="border: 1px solid #fff; padding: 4px 8px;">
-              <div style="margin-bottom: 4px; font-size: 0.9rem; color: whitesmoke;">${daysDifference}/${warmupDurationInDays}</div>
+              <div style="margin-bottom: 4px; font-size: 0.9rem; color: whitesmoke;">${daysDifference}/${WARMUP_DURATION_DAYS}</div>
               <div style="width: 100%; border: 1px solid #eee; border-radius: 4px; overflow: hidden;">
-                <div style="width: ${Math.min((daysDifference / warmupDurationInDays) * 100, 100)}%; background: linear-gradient(to right, whitesmoke, lightgray); height: 16px;"></div>
+                <div style="width: ${Math.min((daysDifference / WARMUP_DURATION_DAYS) * 100, 100)}%; background: linear-gradient(to right, whitesmoke, lightgray); height: 16px;"></div>
               </div>
             </td>
           </tr>
@@ -134,24 +143,6 @@ function renderedEmailWarmup(body) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 async function sendEmail(resend,emailFrom,emailTo,subject,html) {
   const email = {
       from: emailFrom,
@@ -163,6 +154,81 @@ async function sendEmail(resend,emailFrom,emailTo,subject,html) {
   const { error } = await resend.emails.send(email);
   if (error) return error.message
 }
+
+
+
+/* Insert the following helper function after the declaration of emailTemplatesArray */
+async function getRandomEmail(niche) {
+    const emailTemplates = await import(`./dist/const/${niche}.js`).then(module => module.default);
+ 
+
+  const emailTemplatesArray = Object.values(emailTemplates).flat();
+  // Select a random email template from the array
+  const template = emailTemplatesArray[Math.floor(Math.random() * emailTemplatesArray.length)];
+  // Select a random name and a random meme URL
+  const name = randomNames[Math.floor(Math.random() * randomNames.length)];
+  const meme = randomMemes[Math.floor(Math.random() * randomMemes.length)];
+
+  // Clone the template to avoid mutating the original object
+  const email = {
+    subject: template.subject,
+    body: template.body,
+  }
+
+  // Replace placeholders in the subject
+  email.subject = email.subject
+    .replace("$[NAME]", name)
+    .replace("$[LINK]", process.env.LINK)
+    .replace("$[OWNER_NAME]", process.env.OWNER_NAME)
+    .replace("$[COMPANY_NAME]", process.env.COMPANY_NAME);
+
+  // Replace placeholders in the body, including the meme URL
+  email.body = email.body
+    .replace("$[NAME]", name)
+    .replace("$[LINK]", process.env.LINK)
+    .replace("$[OWNER_NAME]", process.env.OWNER_NAME)
+    .replace("$[COMPANY_NAME]", process.env.COMPANY_NAME)
+    .replace("$[MEME-URL]", meme);
+
+  return email;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -205,47 +271,243 @@ async function sendEmail(resend,emailFrom,emailTo,subject,html) {
 // 2.1. scaleSendingVolume
 // Updates warmup.cronParts based on warmupState to scale sending volume by a quarter
 // -------------------------
-export function scaleSendingVolume(warmupState, warmup, userTimezone) {
-  let factor;
-  switch (warmupState) {
-    case "enabling-1/4": factor = 1 / 4; break;
-    case "enabling-2/4": factor = 2 / 4; break;
-    case "enabling-3/4": factor = 3 / 4; break;
-    case "enabled":      factor = 1;     break;
-    case "disabling-1/4": factor = 3 / 4; break;
-    case "disabling-2/4": factor = 2 / 4; break;
-    case "disabling-3/4": factor = 1 / 4; break;
-    case "disabled":     factor = 0;     break;
-    default:             factor = 1;     break;
-  }
-  // Use warmup.emailsPerDay if exists; otherwise assume 100 as baseline
-  const baseline = warmup.emailsPerDay || 100;
-  const newEmailsPerDay = Math.floor(baseline * factor);
-  // Update cronParts based on newEmailsPerDay
-  const newCronExpression = calculateCronExpression(newEmailsPerDay);
-  warmup.cronParts = parseCronExpression(newCronExpression);
-  warmup.emailsPerDay = newEmailsPerDay;
-  warmup.updated_at = moment().tz(userTimezone).toISOString();
-  return warmup;
+
+// 4. Implementation understanding:
+/*
+1. Email Distribution:
+   - 80 max emails ÷ 2 recipients = 40 emails/recipient (40x2=80)
+   - 80 ÷ 4 recipients = 20 emails/recipient (20x4=80)
+   - Uneven division: 85 emails ÷ 3 recipients → 28x3=84 (floor division)
+
+2. Warmdown Process:
+   Days 1-30: Normal warmup progression
+   Day 31: Start disabling-1/4 (75% of 80 = 60 emails)
+   Day 38: Auto-transition to disabling-2/4 (50% = 40 emails)
+   Day 45: Auto-transition to disabling-3/4 (25% = 20 emails)
+   Day 52: Auto-disable completely
+
+3. Execution Schedule:
+   - 60 emails with 2 recipients = 30 executions (30x2=60)
+   - cron(*/48 * /* /* ? /*) = every 48 minutes (1440/30=48)
+*/
+
+
+function capEmailVolume(volume) {
+  return Math.min(Math.max(volume, 0), MAX_DAILY_EMAILS);
 }
 
-// -------------------------
-// Helper: updateEBSchedule
-// Sends updated warmup (from Redis) to EventBridge schedule
-// -------------------------
-async function updateEBSchedule(schedulerClient, scheduleName, warmup) {
-  // Get existing schedule to retain timezone info
-  const existingSchedule = await schedulerClient.send(
-    new GetScheduleCommand({ Name: scheduleName, GroupName: "warmup-group" })
+// 5. State transition logic
+function getNextDisableState(currentState, daysInState) {
+  const currentIndex = DISABLE_STAGES.findIndex(s => s.phase === currentState);
+  if (currentIndex === -1 || daysInState < DISABLE_STAGE_DURATION) return null;
+  return DISABLE_STAGES[Math.min(currentIndex + 1, DISABLE_STAGES.length - 1)].phase;
+}
+
+/**
+ * Parses cron expression string into its components
+ * @example
+ * parseCronExpression('*/5 /* * * *') // returns { minutes: '5', hours: '*', ... }
+ * @param {string} expression - Cron expression string
+ * @returns {CronParts} Parsed cron components
+ */
+function parseCronExpression(expression) {
+  // Clean AWS cron() wrapper if present
+  const cleaned = expression.replace(/^cron\(|\)$/g, '');
+  const [minutes, hours, dayOfMonth, month, dayOfWeek, year] = cleaned.split(' ');
+  
+  return {
+    minutes: minutes.replace('*/', '') || '*',
+    hours: hours || '*',
+    dayOfMonth: dayOfMonth || '*',
+    month: month || '*',
+    dayOfWeek: dayOfWeek || '?',
+    year: year || '*'
+  }
+}
+
+/**
+ * Generates valid AWS EventBridge cron expression
+ * @example generateCronForEmails(100) => "cron(*14 * * * ? *)"
+ * @param {number} emailsPerDay - Target daily email count
+ * @returns {string} Valid AWS cron expression
+ */
+function generateCronForEmails(emailsPerDay) {
+  const validEmails = capEmailVolume(emailsPerDay);
+  const interval = Math.floor(1440 / Math.max(validEmails, 1));
+  return `*/${interval} * * * ? *`;
+}
+
+
+/**
+ * Calculates daily email limit based on warmup phase progression.
+ * @example
+ * // During initial warmup (day 2) → returns random between 10-15
+ * calculateEmailVolume(2) // → 12
+ * // During ramp-up phase (day 25) → returns 80
+ * calculateEmailVolume(25) // → 80
+ * @param {number} daysElapsed - Days since warmup started (0 = first day)
+ * @returns {number} Recommended emails per day (capped at 80)
+ */
+function calculateEmailVolume(daysElapsed) {
+  // Define warmup phases with day limits and email ranges.
+  const phases = [
+    { maxDays: 3, min: 10, max: 15 },    // Phase 1: Days 0-3 (random 10-15 emails/day)
+    { maxDays: 7, min: 20, max: 30 },     // Phase 2: Days 4-7 (random 20-30 emails/day)
+    { maxDays: 13, min: 30, max: 50 },    // Phase 3: Days 8-13 (random 30-50 emails/day)
+    { maxDays: 21, min: 50, max: 80 },    // Phase 4: Days 14-21 (random 50-80 emails/day)
+    { maxDays: 29, min: 70, max: 80 },    // Phase 5: Days 22-29 (random 70-80 emails/day)
+    { maxDays: Infinity, min: 80, max: 80 } // Phase 6: Day 30+ (fixed at 80)
+  ];
+
+  // Identify current phase based on elapsed days - daysElapsed is 5 (Phase 1: 5 <= 3 is false) Phase 2: 5 <= 7 is true so it returns Phase 2
+  const phase = phases.find(p => daysElapsed <= p.maxDays) // returns the first matching Phase
+  
+  // Phase 2: Random value between 20 and 30 - (managed by deepSeek AI)
+  return Math.min(Math.floor(Math.random() * (phase.max - phase.min + 1)) + phase.min, 80);
+}
+
+/**
+ * Determines if schedule needs update and next warmup state
+ * @example
+ * // After 30 days with enabled state:
+ * checkScheduleUpdate(currentCron, 30, 5, 'enabled')
+ * // returns { needsUpdate: true, newCron: '...', newEmails: 75, nextState: 'disabling-1/4' }
+ * @param {CronParts} currentCron - Current cron schedule
+ * @param {number} daysElapsed - Days since warmup started
+ * @param {number} recipients - Number of email recipients
+ * @param {string} currentState - Current warmup state
+ * @returns {ScheduleUpdate}
+ */
+function checkScheduleUpdate(currentCron, daysElapsed, recipients, currentState, warmup) {
+  // Email calculation
+  const baseVolume = capEmailVolume(calculateEmailVolume(daysElapsed));
+  const validRecipients = Math.max(recipients, 1);
+  const perRecipient = Math.floor(baseVolume / validRecipients);
+  const totalEmails = perRecipient * validRecipients;
+
+  // State transition
+  let nextState = null;
+  if (daysElapsed >= WARMUP_DURATION_DAYS) {
+    const daysInState = moment().diff(moment(warmup.updated_at), 'days');
+    nextState = getNextDisableState(currentState, daysInState);
+  }
+
+  return {
+    needsUpdate: JSON.stringify(currentCron) !== JSON.stringify(parseCronExpression(generateCronForEmails(totalEmails))) || !!nextState,
+    newCron: generateCronForEmails(totalEmails),
+    newEmails: totalEmails,
+    nextState
+  };
+}
+
+
+/**
+ * Scales sending volume based on warmup state.
+ * 
+ * @example
+ * // When disabling to 75% capacity:
+ * const result = scaleVolume('disabling-1/4', { emailsPerDay: 100 }, 'Europe/Paris');
+ * // returns { emailsPerDay: 75, cronParts: '*/19 /* * * *' }
+ * 
+ * @param {string} warmupState - Current warmup state.
+ * @param {WarmupConfig} warmup - Current warmup config.
+ * @param {string} timezone - User timezone.
+ * @returns {WarmupConfig} Updated warmup config.
+ */
+function scaleVolume(warmupState, warmup, timezone) {
+  const stage = DISABLE_STAGES.find(s => s.phase === warmupState) || { factor: 1 };
+  const base = warmup.emailsPerDay || MAX_DAILY_EMAILS;
+  const newEmails = capEmailVolume(Math.floor(base * stage.factor));
+
+  return {
+    ...warmup,
+    emailsPerDay: newEmails,
+    cronParts: parseCronExpression(generateCronForEmails(newEmails)),
+    updated_at: moment().tz(timezone).toISOString()
+  };
+}
+
+
+/**
+ * Main warmup schedule update handler
+ * @example
+ * // After 30 days warmup period:
+ * await updateSchedule(redis, scheduler, startDate, 'warmup-domain', 'enabled', 2, cronParts, 'Europe/Paris')
+ * // Transitions to 'disabling-1/4' state and updates schedule
+ * @param {Redis} redis - Redis client
+ * @param {SchedulerClient} scheduler - EventBridge scheduler
+ * @param {Date} createdAt - Warmup start date
+ * @param {string} scheduleName - Schedule identifier
+ * @param {string} warmupState - Current warmup state
+ * @param {number} recipients - Number of email recipients
+ * @param {CronParts} cronParts - Current cron schedule
+ * @param {string} timezone - User timezone
+ */
+export async function updateSchedule(
+  redis,
+  scheduler,
+  createdAt,
+  scheduleName,
+  warmupState,
+  recipients,
+  cronParts,
+  timezone
+) {
+  // 1. Load current warmup configuration
+  const warmup = JSON.parse(await redis.get('warmups'))[0];
+  if (!warmup) return;
+
+  // 2. Calculate days since warmup started
+  const daysElapsed = moment().tz(timezone).diff(createdAt, 'days');
+
+  // 3. Handle transitional states immediately
+  if (warmupState.includes('enabling') || warmupState.includes('disabling')) {
+    const updated = scaleVolume(warmupState, warmup, timezone);
+    await redis.set('warmups', JSON.stringify([updated]));
+    await updateEventBridgeSchedule(scheduler, scheduleName, updated);
+    return;
+  }
+
+  // 4. Check for required schedule updates
+  const update = checkScheduleUpdate(cronParts, daysElapsed, recipients, warmupState, warmup);
+  if (!update.needsUpdate) return;
+
+  // 5. Apply changes and state transition
+  const updatedConfig = {
+    ...warmup,
+    cronParts: parseCronExpression(update.newCron),
+    emailsPerDay: update.newEmails,
+    warmupState: update.nextState || warmup.warmupState,
+    updated_at: moment().tz(timezone).toISOString()
+  }
+
+  // 6. Persist changes and update scheduler
+  await redis.set('warmups', JSON.stringify([updatedConfig]));
+  await updateEventBridgeSchedule(scheduler, scheduleName, updatedConfig);
+}
+
+
+async function updateEventBridgeSchedule(scheduler, name, config) {
+  const existing = await scheduler.send(
+    new GetScheduleCommand({ Name: name, GroupName: 'warmup-group' })
   );
-  await schedulerClient.send(
+
+  await scheduler.send(
     new UpdateScheduleCommand({
-      Name: scheduleName,
-      GroupName: "warmup-group",
-      FlexibleTimeWindow: { Mode: "OFF" },
-      ScheduleExpression: calculateCronExpression(warmup.emailsPerDay),
-      ScheduleExpressionTimezone: existingSchedule.ScheduleExpressionTimezone,
-      Target: { ...existingSchedule.Target, Input: JSON.stringify(warmup) },
+      Name: name,
+      GroupName: 'warmup-group',
+      FlexibleTimeWindow: { 
+        Mode: "OFF"  // Required by EventBridge API
+      },
+      ScheduleExpression: `cron(${generateCronForEmails(config.emailsPerDay)})`,
+      ScheduleExpressionTimezone: existing.ScheduleExpressionTimezone,
+      Target: {
+        ...existing.Target,
+        Input: JSON.stringify(config),
+        // Ensure required Target fields are maintained
+        Arn: existing.Target.Arn,
+        RoleArn: existing.Target.RoleArn
+      }
     })
   );
 }
@@ -253,153 +515,6 @@ async function updateEBSchedule(schedulerClient, scheduleName, warmup) {
 
 
 
-function parseCronExpression(cronExpression) {
-  const [minutes, hours, dayOfMonth, month, dayOfWeek, year] = cronExpression.split(" ");
-  return { minutes, hours, dayOfMonth, month, dayOfWeek, year };
-}
-
-function calculateCronExpression(executionsPerDay) {
-  const interval = Math.floor(1440 / executionsPerDay); // Minutes per day divided by executions
-  return `*/${interval} * * * *`; // Generate cron for interval-based execution
-}
-
-
-
-
-
-
-
-
-
-
-
-
-// -------------------------
-// Helper: getWarmupSendingSettings
-// Returns newEmailsPerDay and newCronExpression based on daysDifference and recipient count.
-// Recommended warmup period is 30 days. Before 30 days, ramp-up occurs gradually.
-// -------------------------
-function getWarmupSendingSettings(daysDifference, sendEmailsCount) {
-  let newEmailsPerDay;
-  switch (true) {
-    // Early phase: Day 0-3 
-    // send from 10 to 15 emails per day
-    case (daysDifference <= 3):
-      newEmailsPerDay = Math.floor(Math.random() * (15 - 10 + 1)) + 10;
-      break;
-    // Early phase: Day 4-7 
-    // send from 20 to 30 emails per day
-    case (daysDifference <= 7):
-      newEmailsPerDay = Math.floor(Math.random() * (30 - 20 + 1)) + 20;
-      break;
-    // Early phase: Day 8-13 
-    // send from 30 to 50 emails per day
-    case (daysDifference < 14):
-      newEmailsPerDay = Math.floor(Math.random() * (50 - 30 + 1)) + 30;
-      break;
-    // Mid phase: Day 14-21 
-    // send from 50 to 80 emails per day
-    case (daysDifference < 22):
-      newEmailsPerDay = Math.floor(Math.random() * (80 - 50 + 1)) + 50;
-      break;
-    // Late phase: Day 22-29 
-    // send from 80 to 100 emails per day
-    case (daysDifference < 30):
-      newEmailsPerDay = Math.floor(Math.random() * (100 - 80 + 1)) + 80;
-      break;
-    // Warmup period ended (Day 30+)
-    // transition to production: baseline between 100 and 120 emails per day
-    case (daysDifference >= 30):
-      newEmailsPerDay = Math.floor(Math.random() * (120 - 100 + 1)) + 100;
-      break;
-    default:
-      newEmailsPerDay = 0;
-  }
-  const executionsPerDay = Math.ceil(newEmailsPerDay / sendEmailsCount);
-  const newCronExpression = calculateCronExpression(executionsPerDay);
-  return { newEmailsPerDay, newCronExpression };
-}
-// -------------------------
-// Updated shouldUpdateSchedule function
-// Slowly increases sending volume by adjusting emails per day and cronParts based on warmupToEnable.emailsPerDay.
-// Uses switch-case for period-based logic and sets warmup state to "disabled-1/4" if warmup period (30 days) has ended.
-// -------------------------
-function shouldUpdateSchedule(cronParts, daysDifference, sendEmailsCount, currentWarmupState) {
-  const { newEmailsPerDay, newCronExpression } = getWarmupSendingSettings(daysDifference, sendEmailsCount);
-  const newCronParts = parseCronExpression(newCronExpression);
-  const isShouldUpdate = JSON.stringify(cronParts) !== JSON.stringify(newCronParts);
-  
-  // If warmup period is ended and state is not yet updated, force update (caller should set state to "disabled-1/4")
-  if (daysDifference >= warmupDurationInDays && currentWarmupState !== "disabling-1/4") {
-    return { isShouldUpdate: true, newCronExpression, newEmailsPerDay };
-  }
-  
-  return { isShouldUpdate, newCronExpression: isShouldUpdate ? newCronExpression : undefined, newEmailsPerDay };
-}
-
-
-
-
-
-
-
-// -------------------------
-// 4. Main updateSchedule function
-// -------------------------
-export async function updateSchedule(
-  redis,
-  schedulerClient,
-  createdAt,
-  scheduleName,
-  warmupState,
-  sendEmailsTo,
-  cronParts,
-  userTimezone
-) {
-  // 1. Get warmup from Redis and parse it
-  const warmupString = await redis.get(process.env.WARMUP_KEY);
-  if (!warmupString) return console.log("Warmup not found in Redis.");
-  let warmup = JSON.parse(warmupString);
-
-  // 2. Calculate days difference using userTimezone
-  const daysDifference = moment().tz(userTimezone).diff(
-    moment(createdAt).tz(userTimezone),
-    "days"
-  );
-
-  // 3. If state is transitional, scale sending volume and update EB, then return
-  if (warmupState.startsWith("enabling") || warmupState.startsWith("disabling")) {
-    warmup = scaleSendingVolume(warmupState, warmup, userTimezone);
-    await redis.set(process.env.WARMUP_KEY, JSON.stringify(warmup));
-    await updateEBSchedule(schedulerClient, scheduleName, warmup);
-    return;
-  }
-
- // 4. Otherwise, check if sending volume should be increased based on daysDifference
-  const { isShouldUpdate, newCronExpression, newEmailsPerDay } = shouldUpdateSchedule(
-    cronParts,
-    daysDifference,
-    sendEmailsTo.length,
-    warmupState
-  );
-  if (!isShouldUpdate) return console.log("No update required: Schedule already matches expected values.");
-
-  // 5. Update warmup's cronParts and emailsPerDay with newEmailsPerDay value returned by shouldUpdateSchedule
-  const newCronParts = parseCronExpression(newCronExpression);
-  warmup.cronParts = newCronParts;
-  warmup.emailsPerDay = newEmailsPerDay;
-
-  // 6. If warmup period is over (daysDifference >= 30), update warmupState to "disabled-1/4"
-  if (daysDifference >= 30) {
-    warmup.warmupState = "disabled-1/4";
-  }
-  
-  // 7. Update Redis with the new warmup configuration
-  await redis.set(process.env.WARMUP_KEY, JSON.stringify(warmup));
-
-  // 8. Update EventBridge schedule with new cron expression and target data from updated warmup
-  await updateEBSchedule(schedulerClient, scheduleName, warmup);
-}
 
 
 
@@ -413,41 +528,16 @@ export async function updateSchedule(
 
 
 
-/* Insert the following helper function after the declaration of emailTemplatesArray */
-async function getRandomEmail(niche) {
-    const emailTemplates = await import(`./dist/const/${niche}.js`).then(module => module.default);
- 
 
-  const emailTemplatesArray = Object.values(emailTemplates).flat();
-  // Select a random email template from the array
-  const template = emailTemplatesArray[Math.floor(Math.random() * emailTemplatesArray.length)];
-  // Select a random name and a random meme URL
-  const name = randomNames[Math.floor(Math.random() * randomNames.length)];
-  const meme = randomMemes[Math.floor(Math.random() * randomMemes.length)];
 
-  // Clone the template to avoid mutating the original object
-  const email = {
-    subject: template.subject,
-    body: template.body,
-  };
 
-  // Replace placeholders in the subject
-  email.subject = email.subject
-    .replace("$[NAME]", name)
-    .replace("$[LINK]", process.env.LINK)
-    .replace("$[OWNER_NAME]", process.env.OWNER_NAME)
-    .replace("$[COMPANY_NAME]", process.env.COMPANY_NAME);
 
-  // Replace placeholders in the body, including the meme URL
-  email.body = email.body
-    .replace("$[NAME]", name)
-    .replace("$[LINK]", process.env.LINK)
-    .replace("$[OWNER_NAME]", process.env.OWNER_NAME)
-    .replace("$[COMPANY_NAME]", process.env.COMPANY_NAME)
-    .replace("$[MEME-URL]", meme);
 
-  return email;
-}
+
+
+
+
+
 
 
 
@@ -575,7 +665,7 @@ export const handler = async (event) => {
   // ------ 2. Check do I need to up/down scale volume of warming up ------ //
   const scheduleName = `warmup-${domain}`
   const updScheduleResp = await updateSchedule(redis, schedulerClient, created_at, scheduleName, warmupState, sendEmailsTo, cronParts, userTimezone)
-  if (typeof updScheduleResp === 'string') throw Error(updScheduleResp,{cause:"updScheduleResp"})
+  if (typeof updScheduleResp === 'string') throw Error(`Error on line 613: ${updScheduleResp}`,{cause:"updScheduleResp"})
     
     
     
@@ -607,7 +697,7 @@ export const handler = async (event) => {
       sendStats ? `stats for ${emailFrom} in ${niche} ${formattedTodayDate}` : checkEmailTemplate.subject,
       emailBody
     );
-    if (typeof response === 'string') throw Error(response, { cause: sendStats ? "sendEmailStatsResp" : "sendEmailResp" });
+    if (typeof response === 'string') throw Error(`error on line 638: ${response}`, { cause: sendStats ? "sendEmailStatsResp" : "sendEmailResp" });
   }
   
   
