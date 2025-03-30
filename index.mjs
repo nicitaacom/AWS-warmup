@@ -288,7 +288,7 @@ async function getRandomEmail(niche) {
 
 3. Execution Schedule:
    - 60 emails with 2 recipients = 30 executions (30x2=60)
-   - cron(*/48 * /* /* ? /*) = every 48 minutes (1440/30=48)
+   - cron(*/ /*48 * /* /* ? /*) = every 48 minutes (1440/30=48)
 */
 
 
