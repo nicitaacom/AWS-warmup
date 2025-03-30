@@ -397,7 +397,7 @@ function checkScheduleUpdate(currentCron, daysElapsed, recipients, currentState,
     newCron: generateCronForEmails(totalEmails),
     newEmails: totalEmails,
     nextState
-  };
+  }
 }
 
 
@@ -415,7 +415,7 @@ function checkScheduleUpdate(currentCron, daysElapsed, recipients, currentState,
  * @returns {WarmupConfig} Updated warmup config.
  */
 function scaleVolume(warmupState, warmup, timezone) {
-  const stage = DISABLE_STAGES.find(s => s.phase === warmupState) || { factor: 1 };
+  const stage = DISABLE_STAGES.find(s => s.phase === warmupState) || { factor: 1 }
   const base = warmup.emailsPerDay || MAX_DAILY_EMAILS;
   const newEmails = capEmailVolume(Math.floor(base * stage.factor));
 
@@ -424,7 +424,7 @@ function scaleVolume(warmupState, warmup, timezone) {
     emailsPerDay: newEmails,
     cronParts: parseCronExpression(generateCronForEmails(newEmails)),
     updated_at: moment().tz(timezone).toISOString()
-  };
+  }
 }
 
 

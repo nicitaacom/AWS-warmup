@@ -899,10 +899,6 @@ export const emails = [
         "body": "Hi $[NAME],\n\nAre client acquisition challenges holding back your roofing business?\n\nI can help simplify that.\nReady to find out how?\n\n$[LINK]"
     },
     {
-        "subject": "What’s your current marketing struggle?",
-        "body": "Hi $[NAME],\n\nWhat’s your biggest struggle in securing roofing jobs right now?\n\nI can help tackle that directly.\nLet’s chat?\n\n$[LINK]"
-    },
-    {
         "subject": "Roofing leads like clockwork?",
         "body": "Hi $[NAME],\n\nWhat if you could have roofing leads coming in like clockwork?\n\nIt’s possible, and I’d love to show you how.\nInterested?\n\n$[LINK]"
     },
