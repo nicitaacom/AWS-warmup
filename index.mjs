@@ -427,7 +427,7 @@ function checkScheduleUpdate(currentCron, daysElapsed, recipientCount, currentSt
     newCron,
     newEmails: baseVolume,
     nextState
-  };
+  }
 }
 
 
@@ -445,7 +445,7 @@ function checkScheduleUpdate(currentCron, daysElapsed, recipientCount, currentSt
  * @returns {WarmupConfig} Updated warmup config.
  */
 function scaleVolume(warmupState, warmup, timezone) {
-  const stage = DISABLE_STAGES.find(s => s.phase === warmupState) || { factor: 1 };
+  const stage = DISABLE_STAGES.find(s => s.phase === warmupState) || { factor: 1 }
   const base = warmup.emailsPerDay || MAX_DAILY_EMAILS;
   const newEmails = capEmailVolume(Math.floor(base * stage.factor));
 
@@ -454,23 +454,50 @@ function scaleVolume(warmupState, warmup, timezone) {
     emailsPerDay: newEmails,
     cronParts: parseCronExpression(generateCronExpression(newEmails, warmup.sendEmailsTo?.length)),
     updated_at: moment().tz(timezone).toISOString()
-  };
+  }
 }
 
 /**
- * Main warmup schedule update handler
+ * updateSchedule
+ *
+ * Loads your warmup config from Redis, decides whether to scale up/down
+ * and (re)write both Redis and the EventBridge schedule.
+ *
+ * @param {Redis}      redis          – Upstash Redis client
+ * @param {SchedulerClient} scheduler – AWS EventBridge SchedulerClient
+ * @param {string}     createdAt      – ISO timestamp when warmup started
+ * @param {string}     scheduleName   – e.g. "warmup-example.com"
+ * @param {string}     warmupState    – "enabled", "enabling-1/4", "disabling-2/4", etc.
+ * @param {number}     recipientCount – how many target emails per invocation
+ * @param {CronParts}  cronParts      – current parsed cron from EventBridge
+ * @param {string}     timezone       – IANA tz, e.g. "Europe/Berlin"
+ *
  * @example
- * // After 30 days warmup period:
- * await updateSchedule(redis, scheduler, startDate, 'warmup-domain', 'enabled', 2, cronParts, 'Europe/Paris')
- * // Transitions to 'disabling-1/4' state and updates schedule
- * @param {Redis} redis - Redis client
- * @param {SchedulerClient} scheduler - EventBridge scheduler
- * @param {Date} createdAt - Warmup start date
- * @param {string} scheduleName - Schedule identifier
- * @param {string} warmupState - Current warmup state
- * @param {number} recipientEmails - Number of email recipients
- * @param {CronParts} cronParts - Current cron schedule
- * @param {string} timezone - User timezone
+ * // 1) Enabling case (immediate scale):
+ * //    Day 2 of warmup, warmupState="enabling-1/4"
+ * //    → scaleVolume bumps to X emails/day, we write Redis & EB right away.
+ *
+ * // 2) Disabling case (scheduled scale):
+ * //    Day 35 of warmup, warmupState="enabled"
+ * //    → checkScheduleUpdate sees daysElapsed>=30, nextState="disabling-1/4"
+ * //       new cron & emails/day, reset updated_at, write Redis & EB.
+ *
+ * // 3) Just-enabled warmup (no change):
+ * //    Day 5 of warmup, warmupState="enabled"
+ * //    → daysElapsed<30, no nextState, cron stays same → no writes.
+ *
+ * Flow:
+ * 1. Fetch warmups array from Redis and find the one matching `scheduleName`.  
+ * 2. Compute daysElapsed = now.tz(timezone) – createdAt.  
+ * 3. **If** warmupState startsWith "enabling":  
+ *      • scaleVolume → updatedWarmup  
+ *      • overwrite local `warmup` + `cronParts`  
+ *      • write Redis & EB  
+ * 4. Compute check = checkScheduleUpdate(cronParts, daysElapsed, …)  
+ * 5. **If** check.needsUpdate:  
+ *      • build updatedWarmup (apply factor for disabling, reset updated_at if phase changed)  
+ *      • write Redis & EB  
+ * 6. Done.
  */
 export async function updateSchedule(
   redis,
@@ -478,48 +505,64 @@ export async function updateSchedule(
   createdAt,
   scheduleName,
   warmupState,
-  recipientEmails,
+  recipientCount,
   cronParts,
   timezone
 ) {
-  // 1. Extract domain from schedule name (warmup-{domain})
-  const domain = scheduleName.replace('warmup-', '');
-  
-  // 2. Load and update correct warmup config
-  const warmups = JSON.parse(await redis.get('warmups'));
-  const warmup = warmups.find(w => w.domain === domain);
-  
+  // 1) load, find our warmup entry
+  const warmups = JSON.parse(await redis.get('warmups') || '[]');
+  let warmup = warmups.find(w => w.domain === scheduleName.replace('warmup-', ''));
   if (!warmup) return;
 
-  // 3. Calculate days since warmup started
+  // 2) days since start
   const daysElapsed = moment().tz(timezone).diff(createdAt, 'days');
 
-  // 4. Handle transitional states immediately
-  if (warmupState.includes('enabling') || warmupState.includes('disabling')) {
+  // 3) enabling phases: immediate scale
+  if (warmupState.startsWith('enabling')) {
     const updated = scaleVolume(warmupState, warmup, timezone);
-    await redis.set('warmups', JSON.stringify([updated]));
+    // override locals so checkScheduleUpdate sees the fresh cronParts
+    warmup = updated;
+    cronParts = updated.cronParts;
+
+    // persist
+    const newList = warmups.map(w => w.domain === warmup.domain ? updated : w);
+    await redis.set('warmups', JSON.stringify(newList));
     await updateEventBridgeSchedule(scheduler, scheduleName, updated);
-    return;
   }
 
-  // 5. Check for required schedule updates
-  const update = checkScheduleUpdate(cronParts, daysElapsed, recipientEmails, warmupState, warmup);
-  if (!update.needsUpdate) return;
+  // 4) see if any further schedule updates needed (covers disabling & first disable transition)
+  const check = checkScheduleUpdate(
+    cronParts,
+    daysElapsed,
+    recipientCount,
+    warmupState,
+    warmup
+  );
 
-  // 6. Apply changes and state transition
-  const updatedConfig = {
-    ...warmup,
-    cronParts: parseCronExpression(update.newCron),
-    emailsPerDay: update.nextState ? Math.floor(update.newEmails * DISABLE_STAGES.find(s => s.phase === update.nextState)?.factor || 1) : update.newEmails,
-    warmupState: update.nextState || warmup.warmupState,
-    // Reset timer when state changes
-    updated_at: update.nextState ? moment().tz(timezone).toISOString() : warmup.updated_at
+  // 5) apply if needed
+  if (check.needsUpdate) {
+    // compute next state / volume
+    const nextState = check.nextState;
+    const newEmails = check.newEmails;
+    const updatedConfig = {
+      ...warmup,
+      // apply disabling stage factor if we just moved into a disabling phase
+      emailsPerDay: nextState
+        ? Math.floor(newEmails * (DISABLE_STAGES.find(s => s.phase === nextState)?.factor || 1))
+        : newEmails,
+      cronParts: parseCronExpression(check.newCron),
+      warmupState: nextState || warmup.warmupState,
+      updated_at: nextState
+        ? moment().tz(timezone).toISOString()
+        : warmup.updated_at
+    }
+
+    const updatedWarmups = warmups.map(w =>
+      w.domain === updatedConfig.domain ? updatedConfig : w
+    );
+    await redis.set('warmups', JSON.stringify(updatedWarmups));
+    await updateEventBridgeSchedule(scheduler, scheduleName, updatedConfig);
   }
-
-   // 7. Update correct array element and persist
-  const updatedWarmups = warmups.map(w => w.domain === domain ? updatedConfig : w);
-  await redis.set('warmups', JSON.stringify(updatedWarmups));
-  await updateEventBridgeSchedule(scheduler, scheduleName, updatedConfig);
 }
 
 
