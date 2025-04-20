@@ -16,13 +16,13 @@ const { randomNames } = randomNamesModule;
 import randomMemesModule from './dist/const/randomMemes.js';
 const { randomMemes } = randomMemesModule;
 
-const DISABLE_STAGE_DURATION = 7; // 7 days per disabling stage
+const DISABLE_STAGE_DURATION = 3; // 3 days per disabling stage
 const WARMUP_DURATION_DAYS = 30;
 const MAX_DAILY_EMAILS = 80;
 const DISABLE_STAGES = [
-  { phase: 'disabling-1/4', factor: 0.75, duration: 7 },
-  { phase: 'disabling-2/4', factor: 0.5, duration: 7 },
-  { phase: 'disabling-3/4', factor: 0.25, duration: 7 },
+  { phase: 'disabling-1/4', factor: 0.75, duration: 3 },
+  { phase: 'disabling-2/4', factor: 0.5, duration: 3 },
+  { phase: 'disabling-3/4', factor: 0.25, duration: 3 },
   { phase: 'disabled', factor: 0, duration: 0 }
 ];
 
@@ -306,7 +306,12 @@ function capEmailVolume(volume) {
 // 5. State transition logic
 function getNextDisableState(currentState, daysInState) {
   const currentIndex = DISABLE_STAGES.findIndex(s => s.phase === currentState);
-  if (currentIndex === -1 || daysInState < DISABLE_STAGE_DURATION) return null;
+  if (currentIndex === -1) return null;
+  
+  // Use current stage's duration instead of global constant
+  const currentStage = DISABLE_STAGES[currentIndex];
+  if (daysInState < currentStage.duration) return null;
+  
   return DISABLE_STAGES[Math.min(currentIndex + 1, DISABLE_STAGES.length - 1)].phase;
 }
 
@@ -411,7 +416,7 @@ function checkScheduleUpdate(currentCron, daysElapsed, recipientCount, currentSt
   
   let nextState = null;
   if (daysElapsed >= WARMUP_DURATION_DAYS) {
-    const daysInState = moment().diff(moment(warmup.updated_at), 'days');
+    const daysInState = moment.utc().diff(moment.utc(warmup.updated_at), 'days');
     nextState = getNextDisableState(currentState, daysInState);
   }
 
@@ -505,9 +510,10 @@ export async function updateSchedule(
   const updatedConfig = {
     ...warmup,
     cronParts: parseCronExpression(update.newCron),
-    emailsPerDay: update.newEmails,
+    emailsPerDay: update.nextState ? Math.floor(update.newEmails * DISABLE_STAGES.find(s => s.phase === update.nextState)?.factor || 1) : update.newEmails,
     warmupState: update.nextState || warmup.warmupState,
-    updated_at: moment().tz(timezone).toISOString()
+    // Reset timer when state changes
+    updated_at: update.nextState ? moment().tz(timezone).toISOString() : warmup.updated_at
   }
 
    // 7. Update correct array element and persist
