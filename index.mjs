@@ -16,7 +16,7 @@ const { randomNames } = randomNamesModule;
 import randomMemesModule from './dist/const/randomMemes.js';
 const { randomMemes } = randomMemesModule;
 
-const DISABLE_STAGE_DURATION = 3; // 3 days per disabling stage
+
 const WARMUP_DURATION_DAYS = 30;
 const MAX_DAILY_EMAILS = 80;
 const DISABLE_STAGES = [
@@ -449,11 +449,30 @@ function scaleVolume(warmupState, warmup, timezone) {
   const base = warmup.emailsPerDay || MAX_DAILY_EMAILS;
   const newEmails = capEmailVolume(Math.floor(base * stage.factor));
 
+  // Calculate natural completion window
+  const disableDuration = DISABLE_STAGES.reduce((sum, s) => sum + s.duration, 0);
+  const naturalCompletionDays = WARMUP_DURATION_DAYS + disableDuration;
+
+  // Initialize completion state
+  let completion = warmup.warmupCompletion || 'not completed';
+  
+  // Only check when entering disabled state
+  if (warmupState === 'disabled' && warmup.warmupState !== 'disabled') {
+    const created = moment(warmup.created_at);
+    const updated = moment(warmup.updated_at);
+    const actualDuration = updated.diff(created, 'days');
+    
+    completion = actualDuration >= naturalCompletionDays 
+      ? 'completed' 
+      : 'forcibly disabled';
+  }
+
   return {
     ...warmup,
     emailsPerDay: newEmails,
     cronParts: parseCronExpression(generateCronExpression(newEmails, warmup.sendEmailsTo?.length)),
-    updated_at: moment().tz(timezone).toISOString()
+    updated_at: moment().tz(timezone).toISOString(),
+    warmupCompletion: completion
   }
 }
 
