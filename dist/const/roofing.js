@@ -247,10 +247,6 @@ exports.emails = [
         "body": "gth^23kj1*#890d#*%@L2\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
     {
-        "subject": "important - interested in a quick call?",
-        "body": "wqe23412%$@kdfG%*&2!ef\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
-    },
-    {
         "subject": "important - quick question about growth?",
         "body": "xyz!098@#5dfk1^2op23m\n\n<img src=\"$[MEME-URL]\"/ style=\"max-width: 400px; max-height: 300px; display: block;\">\n\nI want to get you clients - open to learn more?\nYour G\n$[OWNER_NAME]"
     },
@@ -1765,5 +1761,513 @@ exports.emails = [
     {
         "subject": "quick question regarding roofing possibilities",
         "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. I think we should connect about some roofing possibilities. Up for a call?\n\n$[LINK]"
-    }
+    },
+    {
+        "subject": "quick question on roofing jobs",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. I’ve got roofing positions available that might interest you.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about your roofing projects",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. Let’s chat about your roofing projects and how I can assist.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question on roofing services",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. I can help with some roofing services that you might find useful.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question on securing roofing jobs",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. I’d like to discuss how I can assist with roofing jobs for you.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about roofing job assistance",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. I can provide assistance for securing roofing jobs you need.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question regarding roofing options",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. Let’s discuss some promising roofing options I have.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question on enhancing your roofing business",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. I’m here to discuss ways to enhance your roofing business.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about your hiring needs",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. If you're hiring, I can help find the right candidates.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question on your roofing supply needs",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. I’d like to see if I can assist with your roofing supplies.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about roofing proposals",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. I have some roofing proposals that could fit your projects.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question on your roofing leads",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. I’d love to discuss roofing leads that might suit your needs.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question regarding collaborative roofing efforts",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. I’m here to explore potential collaborative roofing efforts.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about roofing partnerships",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. I’d like to discuss possible roofing partnerships with you.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question on roofing team expansion",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. I can assist with your roofing team expansion plans.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question regarding roofing efficiency",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. Let’s chat about improving efficiency in your roofing jobs.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question about roofing trends",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. I’d like to share some trends in roofing that might interest you.\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question on optimizing roofing resources",
+        "body": "Hi $[NAME]\n\n• BETTER\n• NO UPFRONT\n• WANNA CALL?\n\nI'm Nikita. I can help optimize resources for your roofing projects.\n\n$[LINK]"
+    },
+    {
+        "subject": "curious about roofing opportunities?",
+        "body": "Hi $[NAME]\n\n• LET'S TALK\n• NO PRESSURE\n• WANNA CHAT?\n\nI'm Nikita. I have some exciting roofing opportunities that could be a great fit for you. If you'd like to chat, I'd be happy to discuss further!\n\n$[LINK]"
+    },
+    {
+        "subject": "exploring roofing prospects?",
+        "body": "Hi $[NAME]\n\n• EASY CHAT\n• NO HASSLE\n• WANNA CONNECT?\n\nI'm Nikita. I’m reaching out to share some roofing prospects that might interest you. Let me know if you'd like to dive deeper!\n\n$[LINK]"
+    },
+    {
+        "subject": "ready to boost your roofing business?",
+        "body": "Hi $[NAME]\n\n• SIMPLE SOLUTIONS\n• NO STRINGS\n• WANNA DISCUSS?\n\nI'm Nikita, and I have ideas for boosting your roofing business that I'd love to share. Let’s discuss if you’re open to it!\n\n$[LINK]"
+    },
+    {
+        "subject": "looking for roofing leads?",
+        "body": "Hi $[NAME]\n\n• STRAIGHTFORWARD\n• CATCHING UP\n• WANNA CHAT?\n\nI'm Nikita. I have some leads that could enhance your roofing projects. Let’s connect if you’re interested!\n\n$[LINK]"
+    },
+    {
+        "subject": "want to talk roofing strategies?",
+        "body": "Hi $[NAME]\n\n• NO WORRIES\n• JUST CONNECTING\n• WANNA CALL?\n\nI'm Nikita, and I’d like to explore some roofing strategies that could benefit you. Happy to chat whenever you are!\n\n$[LINK]"
+    },
+    {
+        "subject": "interested in roofing growth?",
+        "body": "Hi $[NAME]\n\n• STRATEGIC MOVE\n• NO OBLIGATIONS\n• WANNA CHAT?\n\nI'm Nikita. I have some great ideas on growing your roofing business. Let’s discuss if you’d like!\n\n$[LINK]"
+    },
+    {
+        "subject": "chat about roofing innovations?",
+        "body": "Hi $[NAME]\n\n• THOUGHTS TO SHARE\n• NO RUSH\n• WANNA CONNECT?\n\nI'm Nikita, here to share insights on roofing innovations. If you’re curious, let’s set up a time to chat!\n\n$[LINK]"
+    },
+    {
+        "subject": "exploring roofing solutions?",
+        "body": "Hi $[NAME]\n\n• INQUIRY TIME\n• NO COMMITMENTS\n• WANNA CALL?\n\nI'm Nikita. I’m reaching out to explore possible roofing solutions tailored for you. Interested in a conversation?\n\n$[LINK]"
+    },
+    {
+        "subject": "considering roofing options?",
+        "body": "Hi $[NAME]\n\n• OPEN DIALOGUE\n• NOT PUSHY\n• WANNA DISCUSS?\n\nI'm Nikita. I have some options for roofing that might align with your needs. Let’s talk if you’re available!\n\n$[LINK]"
+    },
+    {
+        "subject": "what's new in your roofing world?",
+        "body": "Hi $[NAME]\n\n• JUST A CHAT\n• NO PRESSURE\n• WANNA CONNECT?\n\nI'm Nikita, reaching out to catch up about what's happening in roofing. Let me know if you’re open for a discussion!\n\n$[LINK]"
+    },
+    {
+        "subject": "how's your roofing game?",
+        "body": "Hi $[NAME]\n\n• SIMPLE CHECK-IN\n• EASY DISCUSSION\n• WANNA CALL?\n\nI'm Nikita. I’d love to hear how things are going with your roofing projects. Let’s connect when you have a moment!\n\n$[LINK]"
+    },
+    {
+        "subject": "want new roofing insights?",
+        "body": "Hi $[NAME]\n\n• STRAIGHT TALK\n• NO GIMMICKS\n• WANNA CHAT?\n\nI'm Nikita. If you’re looking for fresh insights in roofing, I’d love to share what I have. Let’s discuss!\n\n$[LINK]"
+    },
+    {
+        "subject": "ready to innovate your roofing approach?",
+        "body": "Hi $[NAME]\n\n• INNOVATIVE IDEAS\n• ZERO PRESSURE\n• WANNA CONNECT?\n\nI'm Nikita, wanting to share some innovative approaches to roofing that could serve you well. Let me know if you’d like to talk!\n\n$[LINK]"
+    },
+    {
+        "subject": "want to enhance your roofing reach?",
+        "body": "Hi $[NAME]\n\n• NO STRINGS ATTACHED\n• OPEN CONVERSATION\n• WANNA CHAT?\n\nI'm Nikita. I have strategies for enhancing your roofing reach. If you’re interested, let’s connect!\n\n$[LINK]"
+    },
+    {
+        "subject": "need support with roofing?",
+        "body": "Hi $[NAME]\n\n• HELP ON HAND\n• NO STRESS\n• WANNA DISCUSS?\n\nI'm Nikita. I’m here if you need support with your roofing jobs. Happy to chat whenever you are!\n\n$[LINK]"
+    },
+    {
+        "subject": "curious about roofing trends?",
+        "body": "Hi $[NAME]\n\n• TREND ALERT\n• NO JUDGMENT\n• WANNA CALL?\n\nI'm Nikita. Let’s discuss some emerging trends in roofing that could benefit you.\n\n$[LINK]"
+    },
+    {
+        "subject": "what's next for your roofing business?",
+        "body": "Hi $[NAME]\n\n• EASY CHECK\n• NO OBLIGATION\n• WANNA CONNECT?\n\nI'm Nikita, and I’d like to see what’s next for your roofing business. Let’s talk if you’re interested!\n\n$[LINK]"
+    },
+    {
+        "subject": "interested in new roofing leads?",
+        "body": "Hi $[NAME]\n\n• NO HASSLES\n• JUST A CHAT\n• WANNA CONNECT?\n\nI'm Nikita. I have some leads that could be great for your roofing efforts. Let’s discuss!\n\n$[LINK]"
+    },
+    {
+        "subject": "exploring roofing opportunities?",
+        "body": "Hi $[NAME]\n\n• OPEN TO DISCUSS\n• NO WORRIES\n• WANNA CHAT?\n\nI'm Nikita. I want to explore some exciting roofing opportunities with you. Up for a call?\n\n$[LINK]"
+    },
+    {
+        "subject": "10% more?",
+        "body": "hi $[NAME],\n\nhow to boost sales by 10%? lets find out!\n\n$[LINK]"
+    },
+    {
+        "subject": "reach 100?",
+        "body": "hi $[NAME],\n\nlets crush your goal of 100 new clients!\n\n$[LINK]"
+    },
+    {
+        "subject": "sales surge?",
+        "body": "hi $[NAME],\n\nhow to create a sales surge? lets talk!\n\n$[LINK]"
+    },
+    {
+        "subject": "find 50?",
+        "body": "hi $[NAME],\n\nquick question! how to find 50 new clients?\n\n$[LINK]"
+    },
+    {
+        "subject": "5 fold growth?",
+        "body": "hi $[NAME],\n\nhow to achieve 5 fold growth? lets explore!\n\n$[LINK]"
+    },
+    {
+        "subject": "50% off?",
+        "body": "hi $[NAME],\n\nlets discuss how to offer 50% off without losing profit!\n\n$[LINK]"
+    },
+    {
+        "subject": "grow your team?",
+        "body": "hi $[NAME],\n\nhow to grow your team without breaking the bank?\n\n$[LINK]"
+    },
+    {
+        "subject": "new client quest?",
+        "body": "hi $[NAME],\n\nlets find out how to get new clients today!\n\n$[LINK]"
+    },
+    {
+        "subject": "boost profits?",
+        "body": "hi $[NAME],\n\nhow to boost profits without sacrificing quality?\n\n$[LINK]"
+    },
+    {
+        "subject": "10 new leads?",
+        "body": "hi $[NAME],\n\nlets generate 10 new leads this week!\n\n$[LINK]"
+    },
+    {
+        "subject": "reach new heights?",
+        "body": "hi $[NAME],\n\nhow to take your business to new heights?\n\n$[LINK]"
+    },
+    {
+        "subject": "double sales?",
+        "body": "hi $[NAME],\n\nlets discuss how to double sales in no time!\n\n$[LINK]"
+    },
+    {
+        "subject": "50% increase?",
+        "body": "hi $[NAME],\n\nhow to increase sales by 50% in the next quarter?\n\n$[LINK]"
+    },
+    {
+        "subject": "5 star service?",
+        "body": "hi $[NAME],\n\nlets create a 5-star customer experience!\n\n$[LINK]"
+    },
+    {
+        "subject": "new business model?",
+        "body": "hi $[NAME],\n\nhow to create a new business model that generates more revenue?\n\n$[LINK]"
+    },
+    {
+        "subject": "7 figure income?",
+        "body": "hi $[NAME],\n\nlets explore how to achieve a 7-figure income!\n\n$[LINK]"
+    },
+    {
+        "subject": "10x growth?",
+        "body": "hi $[NAME],\n\nhow to achieve 10x growth without sacrificing quality?\n\n$[LINK]"
+    },
+    {
+        "subject": "win more deals?",
+        "body": "hi $[NAME],\n\nlets discuss how to win more deals and close more sales!\n\n$[LINK]"
+    },
+    {
+        "subject": "more customers?",
+        "body": "hi $[NAME],\n\nhow to attract more customers and increase sales?\n\n$[LINK]"
+    },
+    {
+        "subject": "quick question: can you take on more clients?",
+        "body": "Hi $[NAME]\n\n-------------------------------------------------------------------------\n\nCan you manage additional clients?\n- YES (reply if you wish to collaborate - we take just 10% from each client)\n- NO (feel free to disregard)\n\n-------------------------------------------------------------------------\nI prefer not to play email tag (let’s schedule a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: interested in more clients?",
+        "body": "Hi $[NAME]\n\n-------------------------------------------------------------------------\n\nAre you able to accept more clients?\n- YES (reply if you want to partner - we take just 10% from each client)\n- NO (just ignore)\n\n-------------------------------------------------------------------------\nI would rather avoid endless back and forth (book a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: ready for new clients?",
+        "body": "Hi $[NAME]\n\n-------------------------------------------------------------------------\n\nCould you welcome new clients into your workflow?\n- YES (reply if you’d like to work together - we take just 10% from each client)\n- NO (no need to respond)\n\n-------------------------------------------------------------------------\nI’d prefer a direct conversation (let's arrange a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: can you grow your client base?",
+        "body": "Hi $[NAME]\n\n-------------------------------------------------------------------------\n\nIs it possible for you to onboard more clients?\n- YES (reply if you’re interested in partnering - we take just 10% from each client)\n- NO (no need to reply)\n\n-------------------------------------------------------------------------\nI suggest we skip the back-and-forth (schedule a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: looking for additional clients?",
+        "body": "Hi $[NAME]\n\n-------------------------------------------------------------------------\n\nAre you in a position to take on extra clients?\n- YES (reply if you want to collaborate - we take just 10% from each client)\n- NO (just ignore)\n\n-------------------------------------------------------------------------\nI’d rather avoid the ping-pong of emails (book a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: able to handle more projects?",
+        "body": "Hi $[NAME]\n\n-------------------------------------------------------------------------\n\nCan you take on more projects and clients?\n- YES (reply if you’d like to team up - we take just 10% from each client)\n- NO (ignore this)\n\n-------------------------------------------------------------------------\nI prefer to connect directly (let's set up a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: want to increase your client load?",
+        "body": "Hi $[NAME]\n\n-------------------------------------------------------------------------\n\nWould you be able to increase your client load?\n- YES (reply if you want to collaborate - we take just 10% from each client)\n- NO (feel free to disregard)\n\n-------------------------------------------------------------------------\nI’d rather not do the email back-and-forth (book a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: can you support more clients?",
+        "body": "Hi $[NAME]\n\n-------------------------------------------------------------------------\n\nAre you capable of supporting more clients?\n- YES (reply if you wish to work with me - we take just 10% from each client)\n- NO (no need to respond)\n\n-------------------------------------------------------------------------\nLet’s avoid prolonged emails (schedule a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: looking to expand client relationships?",
+        "body": "Hi $[NAME]\n\n-------------------------------------------------------------------------\n\nCan you expand your client relationships?\n- YES (reply if you’d like to partner - we take just 10% from each client)\n- NO (just ignore)\n\n-------------------------------------------------------------------------\nI’d prefer we talk directly (let's arrange a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: considering additional clients?",
+        "body": "Hi $[NAME]\n\n-------------------------------------------------------------------------\n\nAre you open to additional clients?\n- YES (reply if you’re open to collaborating - we take just 10% from each client)\n- NO (no need to reply)\n\n-------------------------------------------------------------------------\nLet’s not drag this out (book a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: can you fit in more clients?",
+        "body": "Hi $[NAME]\n\n-------------------------------------------------------------------------\n\nCan you accommodate more clients in your schedule?\n- YES (reply if you want to team up - we take just 10% from each client)\n- NO (ignore this)\n\n-------------------------------------------------------------------------\nI’d prefer a direct conversation (let's set up a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: could you manage extra clients?",
+        "body": "Hi $[NAME]\n\n-------------------------------------------------------------------------\n\nIs it feasible for you to manage extra clients?\n- YES (reply if you want to collaborate - we take just 10% from each client)\n- NO (just ignore)\n\n-------------------------------------------------------------------------\nLet’s avoid email ping-pong (schedule a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: would more clients help?",
+        "body": "Hi $[NAME]\n\n-------------------------------------------------------------------------\n\nWould it help your business to take on more clients?\n- YES (reply if you’d like to work together - we take just 10% from each client)\n- NO (you can disregard this)\n\n-------------------------------------------------------------------------\nI’d suggest a quick call instead (let's schedule): $[LINK]"
+    },
+    {
+        "subject": "quick question: ready for more clients?",
+        "body": "Hi $[NAME]\n\n-------------------------------------------------------------------------\n\nAre you ready to accept more clients?\n- YES (reply if you want to partner - we take just 10% from each client)\n- NO (feel free to ignore)\n\n-------------------------------------------------------------------------\nI’d prefer we connect directly (let's arrange a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: open to new clients?",
+        "body": "Hi $[NAME]\n\n-------------------------------------------------------------------------\n\nAre you open to taking on new clients?\n- YES (reply if you wish to collaborate - we take just 10% from each client)\n- NO (just disregard)\n\n-------------------------------------------------------------------------\nI’d prefer we connect directly (let's arrange a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: can you handle new projects?",
+        "body": "Hi $[NAME]\n\n-------------------------------------------------------------------------\n\nCould you handle new projects and clients?\n- YES (reply if you’re open to working together - we take just 10% from each client)\n- NO (feel free not to respond)\n\n-------------------------------------------------------------------------\nLet's avoid endless emails (schedule a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: interested in growing your client base?",
+        "body": "Hi $[NAME]\n\n-------------------------------------------------------------------------\n\nAre you interested in growing your client base?\n- YES (reply if you’d like to partner - we take just 10% from each client)\n- NO (just ignore)\n\n-------------------------------------------------------------------------\nI’d rather have a conversation (let's set up a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: want more business opportunities?",
+        "body": "Hi $[NAME]\n\n-------------------------------------------------------------------------\n\nDo you want more business opportunities?\n- YES (reply if interested in collaborating - we take just 10% from each client)\n- NO (no need to respond)\n\n-------------------------------------------------------------------------\nLet’s not drag this out (book a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: want more clients?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nWould you like to take on more clients?\n- YES (reply if you want to partner - we take just 10% from each client)\n- NO (feel free to ignore)\n-------------------------------------------------------------------------\nI prefer not to engage in endless emails (let's book a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: interested in additional clients?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nAre you looking to acquire additional clients?\n- YES (reply if you're open to collaborating - we take just 10% from each client)\n- NO (you can disregard this)\n-------------------------------------------------------------------------\nI’d rather have a direct chat (let's schedule a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: ready for new clients?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nCan you handle new clients in your business?\n- YES (reply if you want to work together - we take just 10% from each client)\n- NO (just ignore)\n-------------------------------------------------------------------------\nLet's skip the back and forth (book a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: open to increasing your client base?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nWould you consider increasing your client base?\n- YES (reply if you're interested in partnering - we take just 10% from each client)\n- NO (no need to respond)\n-------------------------------------------------------------------------\nI prefer a straightforward approach (let's arrange a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: can you manage more clients?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nCan you manage to add more clients?\n- YES (reply if you wish to collaborate - we take just 10% from each client)\n- NO (feel free to disregard)\n-------------------------------------------------------------------------\nI suggest we connect directly (let's set up a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: would you like more clients?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nAre you interested in taking on more clients?\n- YES (reply if you want to work with me - we take just 10% from each client)\n- NO (just ignore)\n-------------------------------------------------------------------------\nI’d prefer a chat over emails (book a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: want to expand your client list?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nDo you want to expand your client list?\n- YES (reply if you’re open to partnering - we take just 10% from each client)\n- NO (no need to reply)\n-------------------------------------------------------------------------\nLet’s avoid long email threads (schedule a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: can we discuss more clients?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nIs it time to discuss acquiring more clients?\n- YES (reply if you’re interested - we take just 10% from each client)\n- NO (feel free to ignore)\n-------------------------------------------------------------------------\nI suggest a quick call instead (let's book one): $[LINK]"
+    },
+    {
+        "subject": "quick question: looking for new clients?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nAre you looking to find new clients?\n- YES (reply if you want to collaborate - we take just 10% from each client)\n- NO (no need to respond)\n-------------------------------------------------------------------------\nLet’s skip the emails (let's set up a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: ready to onboard more clients?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nAre you ready to onboard more clients?\n- YES (reply if you want to partner - we take just 10% from each client)\n- NO (just ignore)\n-------------------------------------------------------------------------\nI’d prefer a direct chat (let’s arrange a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: able to accept more clients?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nCan you accept more clients into your portfolio?\n- YES (reply if you want to collaborate - we take just 10% from each client)\n- NO (feel free to disregard)\n-------------------------------------------------------------------------\nI’d rather have a direct conversation (let's schedule a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: want to increase your clientele?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nWould you like to increase your clientele?\n- YES (reply if you would like to team up - we take just 10% from each client)\n- NO (just disregard)\n-------------------------------------------------------------------------\nLet’s set up a quick call instead (book one): $[LINK]"
+    },
+    {
+        "subject": "quick question: are you accepting more clients?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nAre you accepting more clients this month?\n- YES (reply if you're interested - we take just 10% from each client)\n- NO (no need to reply)\n-------------------------------------------------------------------------\nI’d prefer to have a call instead (let's schedule): $[LINK]"
+    },
+    {
+        "subject": "quick question: could you handle new clients?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nCan you handle new clients at this time?\n- YES (reply if you're open to collaboration - we take just 10% from each client)\n- NO (feel free to ignore)\n-------------------------------------------------------------------------\nLet’s not prolong this with emails (book a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: interested in finding more clients?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nAre you interested in finding more clients?\n- YES (reply if you want to work together - we take just 10% from each client)\n- NO (just ignore)\n-------------------------------------------------------------------------\nI’d rather have a quick discussion (let’s set up a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: time to chat about more clients?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nIs it time to chat about more clients?\n- YES (reply if you want to partner - we take just 10% from each client)\n- NO (no need to respond)\n-------------------------------------------------------------------------\nI suggest we talk directly (let's arrange a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: could you grow your client base?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nCould you grow your client base easily?\n- YES (reply if you are interested - we take just 10% from each client)\n- NO (feel free to disregard)\n-------------------------------------------------------------------------\nI’d rather have a direct conversation (let's book a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: how is your client situation?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nHow do you feel about your current client load?\n- YES (reply if you'd like to explore options - we take just 10% from each client)\n- NO (feel free to ignore)\n-------------------------------------------------------------------------\nI prefer not to engage in endless emails (let's book a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: thoughts on client growth?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nHave you thought about expanding your client base?\n- YES (reply if you’d like to discuss - we take just 10% from each client)\n- NO (you can disregard this)\n-------------------------------------------------------------------------\nI’d rather have a direct chat (let's schedule a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: how are you managing clients?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nHow are you currently managing your client relationships?\n- YES (reply if you're open to talking - we take just 10% from each client)\n- NO (just ignore)\n-------------------------------------------------------------------------\nLet's skip the back and forth (book a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: any thoughts on client capacity?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nDo you have any thoughts about your capacity for more clients?\n- YES (reply if you'd like to discuss - we take just 10% from each client)\n- NO (no worries if not)\n-------------------------------------------------------------------------\nI suggest a straightforward conversation (let's arrange a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: how's your client pipeline?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nHow is your client pipeline looking these days?\n- YES (reply if you want to chat - we take just 10% from each client)\n- NO (feel free to ignore)\n-------------------------------------------------------------------------\nI’d prefer a direct connection (let's set up a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: managing client expectations?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nHow are you managing client expectations at the moment?\n- YES (reply if you’d like to explore options - we take just 10% from each client)\n- NO (no need to respond)\n-------------------------------------------------------------------------\nLet’s have a quick discussion (book a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: addressing client needs?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nHow well are you addressing your clients’ needs?\n- YES (reply if you want to talk about strategies - we take just 10% from each client)\n- NO (that's okay)\n-------------------------------------------------------------------------\nI’d prefer a quick chat (let's schedule a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: thoughts on client retention?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nHow do you feel about your client retention rates?\n- YES (reply if you're interested in discussing - we take just 10% from each client)\n- NO (no pressure)\n-------------------------------------------------------------------------\nLet’s skip the emails (set up a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: exploring new opportunities?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nAre you exploring new opportunities for client acquisition?\n- YES (reply if you'd like to discuss options - we take just 10% from each client)\n- NO (feel free to ignore)\n-------------------------------------------------------------------------\nI prefer a direct conversation (let's arrange a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: getting new clients?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nHow are you finding new clients these days?\n- YES (reply if you're open to strategies - we take just 10% from each client)\n- NO (that's fine)\n-------------------------------------------------------------------------\nI’d rather connect directly (let's schedule a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: current client strategies?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nWhat are your current strategies for obtaining clients?\n- YES (reply if you would like to discuss - we take just 10% from each client)\n- NO (feel free to disregard)\n-------------------------------------------------------------------------\nLet’s schedule a chat (book a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: thoughts on client outreach?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nWhat are your thoughts on your client outreach efforts?\n- YES (reply if you want to brainstorm - we take just 10% from each client)\n- NO (no problem)\n-------------------------------------------------------------------------\nI’d prefer a chat about this (let's arrange a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: client referrals?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nHave you considered strategies for increasing client referrals?\n- YES (reply if you want to share ideas - we take just 10% from each client)\n- NO (ignore this)\n-------------------------------------------------------------------------\nLet’s have a quick discussion (book a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: building client relationships?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nHow do you approach building client relationships?\n- YES (reply if you'd like to talk - we take just 10% from each client)\n- NO (no worries)\n-------------------------------------------------------------------------\nI’d rather connect directly (let's schedule a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: enhancing client interactions?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nHow are you enhancing your client interactions?\n- YES (reply if you're interested in discussing - we take just 10% from each client)\n- NO (that's okay)\n-------------------------------------------------------------------------\nLet’s skip the emails (set up a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: client follow-ups?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nWhat is your approach to client follow-ups?\n- YES (reply if you'd like to chat about it - we take just 10% from each client)\n- NO (no pressure)\n-------------------------------------------------------------------------\nI’d prefer to have a quick discussion (book a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: handling client feedback?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nHow are you handling client feedback these days?\n- YES (reply if you want to discuss new ideas - we take just 10% from each client)\n- NO (feel free to ignore)\n-------------------------------------------------------------------------\nLet’s schedule a call instead (book one): $[LINK]"
+    },
+    {
+        "subject": "quick question: managing client interactions?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nHow do you manage client interactions currently?\n- YES (reply if you'd like to explore options together - we take just 10% from each client)\n- NO (that's okay)\n-------------------------------------------------------------------------\nI’d prefer a direct connection (let's set up a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: assessing client needs?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nHow do you assess your clients' needs at the moment?\n- YES (reply if you'd like to brainstorm - we take just 10% from each client)\n- NO (no need to respond)\n-------------------------------------------------------------------------\nI suggest a direct conversation (let's arrange a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: how are your clients doing?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nHow are your clients currently? Is there room for more?\n- YES (reply if you want to talk - we take just 10% from each client)\n- NO (no need to reply)\n-------------------------------------------------------------------------\nI’d prefer we discuss this directly (let’s book a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: exploring client opportunities?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nHave you thought about exploring new opportunities for clients?\n- YES (reply if you’re interested in a chat - we take just 10% from each client)\n- NO (that's fine)\n-------------------------------------------------------------------------\nLet’s have a quick discussion (schedule a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: managing client workload?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nHow are you managing your current client workload?\n- YES (reply if you’d like to brainstorm together - we take just 10% from each client)\n- NO (feel free to ignore)\n-------------------------------------------------------------------------\nI prefer a direct conversation (let’s set up a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: filling your client roster?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nAre you considering filling your client roster soon?\n- YES (reply if you’d like to discuss options - we take just 10% from each client)\n- NO (no worries)\n-------------------------------------------------------------------------\nLet’s skip the emails (let's book a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: attracting new clients?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nWhat strategies are you using to attract new clients?\n- YES (reply if you want to swap ideas - we take just 10% from each client)\n- NO (that's okay)\n-------------------------------------------------------------------------\nI suggest a quick chat instead (let’s schedule a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: handling client overflow?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nHow do you manage overflows of client requests?\n- YES (reply if you'd like to discuss solutions - we take just 10% from each client)\n- NO (feel free to disregard)\n-------------------------------------------------------------------------\nLet’s have a quick conversation (book a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: expanding your business network?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nAre you looking to expand your business network with new clients?\n- YES (reply if you'd like to explore together - we take just 10% from each client)\n- NO (no need to respond)\n-------------------------------------------------------------------------\nI’d prefer to connect directly (let's set up a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: how is client retention going?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nHow is your client retention looking these days?\n- YES (reply if you're open to discussing strategies - we take just 10% from each client)\n- NO (that's fine)\n-------------------------------------------------------------------------\nI suggest a quick chat (schedule a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: thinking about new services?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nHave you considered adding new services to attract clients?\n- YES (reply if you’d like to brainstorm - we take just 10% from each client)\n- NO (no problem)\n-------------------------------------------------------------------------\nLet’s avoid the email ping-pong (book a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: assessing your client needs?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nHow are you assessing your clients' evolving needs?\n- YES (reply if you wish to discuss - we take just 10% from each client)\n- NO (not an issue)\n-------------------------------------------------------------------------\nLet’s have a chat instead (let’s schedule a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: engaging with prospects?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nHow are you engaging with your prospects lately?\n- YES (reply if you want to share insights - we take just 10% from each client)\n- NO (that's perfectly fine)\n-------------------------------------------------------------------------\nI’d prefer we connect directly (let's arrange a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: reviewing client feedback?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nAre you currently reviewing feedback from your clients?\n- YES (reply if you’d like to discuss strategies - we take just 10% from each client)\n- NO (feel free to ignore)\n-------------------------------------------------------------------------\nLet’s have a call to discuss (book one): $[LINK]"
+    },
+    {
+        "subject": "quick question: evaluating client satisfaction?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nHow are you evaluating client satisfaction these days?\n- YES (reply if you’re open to strategizing - we take just 10% from each client)\n- NO (no need to respond)\n-------------------------------------------------------------------------\nLet’s chat about it (schedule a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: interested in strategic partnerships?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nAre you interested in forming strategic partnerships for growth?\n- YES (reply if you want to explore options - we take just 10% from each client)\n- NO (no worries)\n-------------------------------------------------------------------------\nI’d suggest a direct discussion (let's arrange a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: exploring your client base?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nAre you exploring ways to enhance your client base?\n- YES (reply if you’d like to connect - we take just 10% from each client)\n- NO (you can disregard this)\n-------------------------------------------------------------------------\nLet’s discuss it directly (book a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: finding new client sources?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nHow are you finding new sources for potential clients?\n- YES (reply if you want to talk options - we take just 10% from each client)\n- NO (that’s perfectly fine)\n-------------------------------------------------------------------------\nI suggest a quick chat (let's schedule a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: maintaining client relations?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nHow are you maintaining relationships with your clients?\n- YES (reply if you’d like to discuss strategies - we take just 10% from each client)\n- NO (just ignore)\n-------------------------------------------------------------------------\nLet’s connect directly (schedule a call): $[LINK]"
+    },
+    {
+        "subject": "quick question: boosting client engagement?",
+        "body": "Hi $[NAME]\n-------------------------------------------------------------------------\n\nHow are you boosting engagement with your clients?\n- YES (reply if you’d like to share ideas - we take just 10% from each client)\n- NO (no problem)\n-------------------------------------------------------------------------\nLet’s avoid email exchanges (book a call): $[LINK]"
+    },
 ];

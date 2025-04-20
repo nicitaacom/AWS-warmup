@@ -1,0 +1,188 @@
+{
+  "Records": [
+    {
+      "eventSource": "aws:ses",
+      "eventVersion": "1.0",
+      "ses": {
+        "mail": {
+          "timestamp": "2025-04-03T10:26:19.440Z",
+          "source": "nicitaacom@gmail.com",
+          "messageId": "e0l3lk4ph70j3e6ommetbjm6ukabri9dpcvah5g1",
+          "destination": [
+            "nicitaacom@nicitaa.com"
+          ],
+          "headersTruncated": false,
+          "headers": [
+            {
+              "name": "Return-Path",
+              "value": "nicitaacom@gmail.com"
+            },
+            {
+              "name": "Received",
+              "value": "from mail-lf1-f44.google.com (mail-lf1-f44.google.com [209.85.167.44]) by inbound-smtp.eu-central-1.amazonaws.com with SMTP id e0l3lk4ph70j3e6ommetbjm6ukabri9dpcvah5g1 for nicitaacom@nicitaa.com; Thu, 03 Apr 2025 10:26:19 +0000 (UTC)"
+            },
+            {
+              "name": "X-SES-Spam-Verdict",
+              "value": "PASS"
+            },
+            {
+              "name": "X-SES-Virus-Verdict",
+              "value": "PASS"
+            },
+            {
+              "name": "Received-SPF",
+              "value": "pass (spfCheck: domain of _spf.google.com designates 209.85.167.44 as permitted sender) client-ip=209.85.167.44; envelope-from=nicitaacom@gmail.com; helo=mail-lf1-f44.google.com;"
+            },
+            {
+              "name": "Authentication-Results",
+              "value": "amazonses.com; spf=pass (spfCheck: domain of _spf.google.com designates 209.85.167.44 as permitted sender) client-ip=209.85.167.44; envelope-from=nicitaacom@gmail.com; helo=mail-lf1-f44.google.com; dkim=fail header.i=@yandex.com; dmarc=pass header.from=gmail.com;"
+            },
+            {
+              "name": "X-SES-RECEIPT",
+              "value": "AEFBQUFBQUFBQUFIY0YzNzZDcVU1ZUhEM1hMQ3pjYjZmNFBXSzY4d1BUdDNpUzY5V2d4VzNjNzRNZm81amFidHJYNTkvTmU5VnZnZkF3cHZoMllBM3JkMURGTUdtMVNyWm5DOEpHWVg4Njd6MjN3djdsQ21haXpjT0xtY1VKZmhUZzRoYXhIN2t2NE9WcFdJMnI2NjdQUEpzTnFxYkJ5bGF0NEEvMzRlaFVzSDRTTXBHUHNIQTcvUWkwOGllSE55eitBYUVDWEhUNjk2STFvNEp0d045dHdlT3hwNi9SZ1JUdHo0OFUrQXlCcG9TL0QzU01sMDBJM0RtOSs1UlBpWjl2V3VuRThmblVCandXU3lWYUJOclF4UFp1U3dETGp4anJSczgrNkJULzJQTzVSa0ZKVktUQXc9PQ=="
+            },
+            {
+              "name": "X-SES-DKIM-SIGNATURE",
+              "value": "a=rsa-sha256; q=dns/txt; b=JJI1wPx3tRQgAmyvDNgplRACshZ/kPOZovheAxu2hAu/OSY4LNza7GKOtVyz7WCCJihTjq0vRuK4idwsxhviCbwTULKeVUL1i1xGsH2rcl0IvjfVhMOlnyxY/TOVuiOSfZF2dyvKKxW4sclIA7hx/hzr50g8aWGZwXSdqt/LCoE=; c=relaxed/simple; s=54ecsf3zk7z4mwxwwox7z7bg6e5gwjsz; d=amazonses.com; t=1743675980; v=1; bh=Bi1d675xM0atYkSldw5soH6x5MziVa7QymaEtaGx+tE=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;"
+            },
+            {
+              "name": "Received",
+              "value": "by mail-lf1-f44.google.com with SMTP id 2adb3069b0e04-5499659e669so781810e87.3 for nicitaacom@nicitaa.com; Thu, 03 Apr 2025 03:26:19 -0700 (PDT)"
+            },
+            {
+              "name": "X-Google-DKIM-Signature",
+              "value": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net; s=20230601; t=1743675978; x=1744280778; h=content-transfer-encoding:message-id:date:mime-version:subject :references:in-reply-to:to:from:dkim-signature:x-gm-message-state :from:to:cc:subject:date:message-id:reply-to; bh=jjnsnTyAqQIKop20PDxCwTB/IyO0i8W8gmCcggtQids=; b=KX4Gm3m1oi2b93WFgmQ6l+GzLA73GyNIE+W4xNkKnvZ9saD1O5I6qox0tIUShkzjYN D/duTbKDvw7XlwQ8CZqWzv7ZS99fm1v2JmT4Rx2+iqnONgE96urYq7uEW/AoEbJnsoys 8ZukIO+fWij8Hb+ZOmVUpQwUte4wjBFiZiXg4ssAnTSqn2diDRZDdkr1MvPAjSe9mLaT aeJX+6AjidbAi37ZKfo9zayoCfmJJL1FSKHaNOuLNEH1/zjCS9fsxtcnj1SZhHn7H80x CPMhKHp+ck+Qm4z3T7ceZ4Yi7MY4wnc12lX9IgjssBcJQ/11u6/Z1oigxPghi0EqQ7rP LwEg=="
+            },
+            {
+              "name": "X-Gm-Message-State",
+              "value": "AOJu0YwU/2SvnR26gnzXKyO+Yi/7a4fuT+PHdL0mKzyCGTfqwk21crNB p4GW2mIopPh/9GIeIwELr7mzSeFSVY0f/oeqAPAI3fQiMbyYBQvFjfu6CUga"
+            },
+            {
+              "name": "X-Gm-Gg",
+              "value": "ASbGncuo2nxCjSe77ISzD5SIODlHYb46l9Z0wrg6/TzWi4KfpCuyY5PObefHCIA/9r2 k4Qi7zFA9vGpyPKQ942ZZFLqvu1v1uSh75C9ao+2dlEOuCaWMiQfRxkvv7iS/dvfUo3leww8cIj CAQvf35oXnUNvHxBaTjxpccSxXjMatNZaZdX1cFr1i5wdAxW64dru3EEnm69vi/NGGsBCgvx2bp XkaZe89oGnklhdUVaCzMY5sfa07UjJA2O4CZsCrM/U+fnHuucnU/+0IWKasb/pv73/dKB6JF0vU 3soDLhw1ev2tPayDYs+PyQEAv4eknbtRy1LE05wDA+Wmag7PNqdCn7hak78mk9cfzGNh8IW1FQv DwfSEp9yDqr7pu9hxmH1GkaXC3q/0+EYSyYRLgK0Tbir1EYav3Gq2ZbSWKnd87a64+zu0+hZkEi aldSrFdtutehgcATvT"
+            },
+            {
+              "name": "X-Google-Smtp-Source",
+              "value": "AGHT+IEKzE3qJK1eNDLrA7fhnlF5mIGcBXGKnGe+b6goYDfHmnzrh T4f1pr2BzZ7HSSRPZIgaUnDWA=="
+            },
+            {
+              "name": "X-Received",
+              "value": "by 2002:a05:6512:1052:b0:545:2a69:b1f4 with SMTP id 2adb3069b0e04-54c1e363a97mr512838e87.29.1743675978180; Thu, 03 Apr 2025 03:26:18 -0700 (PDT)"
+            },
+            {
+              "name": "Return-Path",
+              "value": "nicitaacom@gmail.com"
+            },
+            {
+              "name": "Received",
+              "value": "from mail-collectors-ext-production-main-58.vla.yp-c.yandex.net (mail-collectors-ext-production-main-58.vla.yp-c.yandex.net. [2a02:6b8:c0f:4c8d:0:5e2b:3fbf:0]) by smtp.gmail.com with ESMTPSA id 2adb3069b0e04-54c1e67232bsm110971e87.235.2025.04.03.03.26.17 for nicitaacom@nicitaa.com (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256); Thu, 03 Apr 2025 03:26:17 -0700 (PDT)"
+            },
+            {
+              "name": "Received",
+              "value": "from mail.yandex.com (2a02:6b8:c0f:714:0:640:77c3:0 [2a02:6b8:c0f:714:0:640:77c3:0]) by mail-nwsmtp-mxback-production-main-11.vla.yp-c.yandex.net (mxback/Yandex) with HTTPS id EQVdBl0LuiE0-XsBv7dvB; Thu, 03 Apr 2025 13:26:16 +0300"
+            },
+            {
+              "name": "X-Yandex-Fwd",
+              "value": "1"
+            },
+            {
+              "name": "DKIM-Signature",
+              "value": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=yandex.com; s=mail; t=1743675976; bh=AR/nLCuax9I4yveDZARhgk+yMOgXKgehZQfGoeONSys=; h=Message-Id:References:Date:Subject:To:In-Reply-To:From; b=SmXvLLoi+YIXUHPbqZAh7/2rvE4tSQFYypufIDLQ9pVswt9Z3Lx3b+TwCTFwRdtkbI4CA0iWhSfe/aZx7B5gt81HlgbejKltn3cNb2d/gtVuDyqEAeGVTaXeZAZ4fqK5xaKmFP9MFjEeMSWe7Gh1ZuGeRTV32U1IMFHhPzP4oHw="
+            },
+            {
+              "name": "Authentication-Results",
+              "value": "mail-nwsmtp-mxback-production-main-11.vla.yp-c.yandex.net; dkim=pass header.i=@yandex.com"
+            },
+            {
+              "name": "Received",
+              "value": "by v2mnmizrpysrdqht.vla.yp-c.yandex.net with HTTP; Thu, 03 Apr 2025 13:26:16 +0300"
+            },
+            {
+              "name": "From",
+              "value": "from nicitaacom@gmail.com"
+            },
+            {
+              "name": "To",
+              "value": "\"nicitaacom@nicitaa.com\" nicitaacom@nicitaa.com"
+            },
+            {
+              "name": "In-Reply-To",
+              "value": "01070195fafd8a80-2224937a-a27e-4dd4-9d83-a87d9da6b1cb-000000@eu-central-1.amazonses.com"
+            },
+            {
+              "name": "References",
+              "value": "<01070195fafd8a80-2224937a-a27e-4dd4-9d83-a87d9da6b1cb-000000@eu-central-1.amazonses.com>"
+            },
+            {
+              "name": "Subject",
+              "value": "Re: did you see my CV at nicitaacom?"
+            },
+            {
+              "name": "MIME-Version",
+              "value": "1.0"
+            },
+            {
+              "name": "X-Mailer",
+              "value": "Yamail [ http://yandex.ru/ ] 5.0"
+            },
+            {
+              "name": "Date",
+              "value": "Thu, 03 Apr 2025 12:26:16 +0200"
+            },
+            {
+              "name": "Message-Id",
+              "value": "1056221743675968@mail.yandex.com"
+            },
+            {
+              "name": "Content-Transfer-Encoding",
+              "value": "7bit"
+            },
+            {
+              "name": "Content-Type",
+              "value": "text/html"
+            }
+          ],
+          "commonHeaders": {
+            "returnPath": "nicitaacom@gmail.com",
+            "from": [
+              "from nicitaacom@gmail.com"
+            ],
+            "date": "Thu, 03 Apr 2025 12:26:16 +0200",
+            "to": [
+              "\"nicitaacom@nicitaa.com\" nicitaacom@nicitaa.com"
+            ],
+            "messageId": "1056221743675968@mail.yandex.com",
+            "subject": "Re: did you see my CV at nicitaacom?"
+          }
+        },
+        "receipt": {
+          "timestamp": "2025-04-03T10:26:19.440Z",
+          "processingTimeMillis": 727,
+          "recipients": [
+            "nicitaacom@nicitaa.com"
+          ],
+          "spamVerdict": {
+            "status": "PASS"
+          },
+          "virusVerdict": {
+            "status": "PASS"
+          },
+          "spfVerdict": {
+            "status": "PASS"
+          },
+          "dkimVerdict": {
+            "status": "GRAY"
+          },
+          "dmarcVerdict": {
+            "status": "PASS"
+          },
+          "action": {
+            "type": "Lambda",
+            "functionArn": "arn:aws:lambda:eu-central-1:975050352152:function:VM-receiveEmails",
+            "invocationType": "Event"
+          }
+        }
+      }
+    }
+  ]
+}

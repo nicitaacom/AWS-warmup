@@ -431,7 +431,7 @@ $[OWNER_NAME]
 $[COMPANY_NAME]
 $[MEME-URL]
 
-Send me 20 json
+Send me 20 json separated with , (not array)
 reduce spam score of subject and body
 
 don't use ! in subject or body
