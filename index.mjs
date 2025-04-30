@@ -420,10 +420,18 @@ function checkScheduleUpdate(currentCron, daysElapsed, recipientCount, currentSt
     nextState = getNextDisableState(currentState, daysInState);
   }
 
-  const newCron = generateCronExpression(baseVolume, recipientCount);
+  // Apply the factor from current state to email volume
+  const currentStateFactor = DISABLE_STAGES.find(s => s.phase === currentState)?.factor || 1;
+  const actualVolume = Math.floor(baseVolume * currentStateFactor);
+  
+  // Generate cron based on actual scaled volume
+  const newCron = generateCronExpression(actualVolume, recipientCount);
+  
+  const currentParsedCron = JSON.stringify(currentCron);
+  const newParsedCron = JSON.stringify(parseCronExpression(newCron));
   
   return {
-    needsUpdate: JSON.stringify(currentCron) !== JSON.stringify(parseCronExpression(newCron)) || !!nextState,
+    needsUpdate: currentParsedCron !== newParsedCron || !!nextState,
     newCron,
     newEmails: baseVolume,
     nextState
@@ -446,8 +454,7 @@ function checkScheduleUpdate(currentCron, daysElapsed, recipientCount, currentSt
  */
 function scaleVolume(warmupState, warmup, timezone) {
   const stage = DISABLE_STAGES.find(s => s.phase === warmupState) || { factor: 1 }
-  const base = warmup.emailsPerDay || MAX_DAILY_EMAILS;
-  const newEmails = capEmailVolume(Math.floor(base * stage.factor));
+  const newEmails = capEmailVolume(Math.floor(MAX_DAILY_EMAILS * stage.factor));
 
   // Calculate natural completion window
   const disableDuration = DISABLE_STAGES.reduce((sum, s) => sum + s.duration, 0);
@@ -467,10 +474,13 @@ function scaleVolume(warmupState, warmup, timezone) {
       : 'forcibly disabled';
   }
 
+  // Create new cron expression based on scaled email volume
+  const newCron = generateCronExpression(newEmails, warmup.sendEmailsTo?.length || 1);
+
   return {
     ...warmup,
     emailsPerDay: newEmails,
-    cronParts: parseCronExpression(generateCronExpression(newEmails, warmup.sendEmailsTo?.length)),
+    cronParts: parseCronExpression(newCron),
     updated_at: moment().tz(timezone).toISOString(),
     warmupCompletion: completion
   }
@@ -560,25 +570,28 @@ export async function updateSchedule(
 
   // 5) apply if needed
   if (check.needsUpdate) {
-    // compute next state / volume
-    const nextState = check.nextState;
-    const newEmails = check.newEmails;
+    // Get the current or next state factor
+    const stateToUse = check.nextState || warmupState;
+    const stateFactor = DISABLE_STAGES.find(s => s.phase === stateToUse)?.factor || 1;
+    
+    // Apply factor to the base email volume
+    const scaledEmails = Math.floor(check.newEmails * stateFactor);
+    
+    // Generate proper cron expression with the scaled emails
+    const correctCron = generateCronExpression(scaledEmails, recipientCount);
+    
     const updatedConfig = {
       ...warmup,
-      // apply disabling stage factor if we just moved into a disabling phase
-      emailsPerDay: nextState
-        ? Math.floor(newEmails * (DISABLE_STAGES.find(s => s.phase === nextState)?.factor || 1))
-        : newEmails,
-      cronParts: parseCronExpression(check.newCron),
-      warmupState: nextState || warmup.warmupState,
-      updated_at: nextState
+      emailsPerDay: scaledEmails,
+      cronParts: parseCronExpression(correctCron),
+      warmupState: check.nextState || warmup.warmupState,
+      updated_at: check.nextState
         ? moment().tz(timezone).toISOString()
         : warmup.updated_at
     }
 
-    const updatedWarmups = warmups.map(w =>
-      w.domain === updatedConfig.domain ? updatedConfig : w
-    );
+    const updatedWarmups = warmups.map(w => w.domain === updatedConfig.domain ? updatedConfig : w)
+    
     await redis.set('warmups', JSON.stringify(updatedWarmups));
     await updateEventBridgeSchedule(scheduler, scheduleName, updatedConfig);
   }
@@ -787,7 +800,7 @@ export const handler = async (event) => {
     
     const response = await sendEmail(
       resend,
-      emailFrom,
+      `"warmup" <${emailFrom}>`,
       checkEmail,
       sendStats ? `stats for ${emailFrom} in ${niche} ${formattedTodayDate}` : checkEmailTemplate.subject,
       emailBody
@@ -804,7 +817,7 @@ export const handler = async (event) => {
     const recipientEmail = await getRandomEmail(niche);
     const sendEmailResp = await sendEmail(
       resend,
-      emailFrom,
+      `"warmup" <${emailFrom}>`,
       sendEmailsTo[i],
       recipientEmail.subject,
       renderedEmailWarmup(recipientEmail.body)
