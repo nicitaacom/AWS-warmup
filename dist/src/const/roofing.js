@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.emails = void 0;
-exports.emails = [
+const emails = [
     {
         "subject": "can we discuss new roofing jobs?",
         "body": "hey $[NAME],\n\nmy team and I – we really like what we see in your work – reason for that is your attention to detail and quality. We currently have new roofing jobs available that might interest you.\n\nYou open to talk it?\n$[LINK]"
@@ -2931,3 +2930,4 @@ exports.emails = [
         "body": "Hi $[NAME],\n\nYour roofing projects demonstrate excellent craftsmanship. Your business approach stands out too. With your project volume, I thought you might find my material sourcing strategies beneficial.\n\nI'm $[OWNER_NAME], roofing supply specialist always connecting with quality professionals.\n\nI hate receiving pitches so I don't do that - just looking for meaningful industry connections.\n\nUp for a brief conversation (~10mins)? No agenda, just value exchange.\n\nReply with 👍 if you interested"
     },
 ];
+exports.default = emails;

@@ -27,7 +27,7 @@ export async function decryptResend(encryptedEnv:string) {
       {
         name: "PBKDF2",
         salt: salt,
-        iterations: 310000,
+        iterations: 310,
         hash: "SHA-256",
       },
       keyMaterial,

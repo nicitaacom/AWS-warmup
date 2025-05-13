@@ -23,7 +23,7 @@ async function decryptResend(encryptedEnv) {
         const key = await crypto.subtle.deriveKey({
             name: "PBKDF2",
             salt: salt,
-            iterations: 310000,
+            iterations: 310,
             hash: "SHA-256",
         }, keyMaterial, { name: "AES-GCM", length: 256 }, false, ["decrypt"]);
         // Decrypt the data

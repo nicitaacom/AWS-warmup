@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.emails = void 0;
-exports.emails = [
+const emails = [
     {
         subject: 'Your Satisfaction is Our Priority',
         body: 'Hi! We’re committed to making your car look its best. Let’s get to work!',
@@ -2984,3 +2983,4 @@ Reply with 🥊`,
         "body": `Hi $[NAME],\nYour service is quick. Clients waiting too long?\nA shop cut wait times 25%.\nReply with 🚗 to learn how.\nWhen clients wait ⏰: $[MEME-URL`
     }
 ];
+exports.default = emails;
