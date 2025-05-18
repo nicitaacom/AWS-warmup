@@ -1,6 +1,6 @@
 {
    "scripts": {
-      "build":"tsc && zip -r warmup.zip node_modules dist"
+      "build": "tsc && zip -r warmup.zip freeEmailList.txt node_modules dist"
    },
    "dependencies": {
       "@aws-sdk/client-scheduler": "^3.734.0",
@@ -12,6 +12,6 @@
       "resend": "^3.5.0"
    },
    "devDependencies": {
-      "@types/node": "^22.15.17"
+      "@types/node": "^22.15.18"
    }
 }

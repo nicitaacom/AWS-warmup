@@ -1,20 +1,13 @@
+import { readFileSync } from "fs"
+import path from "path"
+
 // to determinate whether reply from @gmail.com or @domain.name is required
 // DEPENDS ON VM-receiveEmails and OT (freeEmailDomains)
-export const freeEmailDomains = [
-  "gmail.com",
-  "yahoo.com",
-  "yahoo.de",
-  "hotmail.com",
-  "hotmail.co.uk",
-  "outlook.com",
-  "web.de",
-  "email.de",
-  "t-online.de",
-  "live.de",
-  "gmx.de",
-  "aol.com",
-  "protonmail.com",
-  "yandex.ru",
-  "yandex.com",
-  "mail.ru",
-]
+  
+// 📁 Works because CommonJS has __dirname by default
+const filePath = path.resolve(__dirname, "../../../freeEmailList.txt")
+
+export const freeEmailDomains = readFileSync(filePath, "utf-8")
+      .split("\n")
+      .map(domain => domain.trim().toLowerCase())
+      .filter(Boolean) // remove empty lines

@@ -6,7 +6,8 @@ import { ChatCompletionMessageParam } from 'openai/resources/chat/completions'
 import moment from "moment-timezone"
 import { Resend } from "resend"
 import { join } from "path"
-import { pathToFileURL } from "url"
+
+
 
 import { CronParts, IWarmUp, Niche, TWarmupState } from '../interfaces/IWarmUp'
 import { freeEmailDomains } from '../const/freeEmailDomains'

@@ -62,9 +62,9 @@ export const handler = async (event:{warmupId:string}) => {
   if (!process.env.LINK.startsWith("https")) throw Error("should be https://your-appointment-booking.link (make sure it's https)")
 
 
-
-
+    
     // ------ 1. Create instances + variables ------ //
+
 
   // 1.1 [INSTANCE]: Create Redis SDK instance
   const redis = new Redis(process.env.UPSTASH_REDIS_URL)
