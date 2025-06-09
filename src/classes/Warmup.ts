@@ -271,11 +271,11 @@ public async getAllBS(warmup:IWarmUp) {
 
   const checkEmailTime = {
     startTime: currentTime.clone().startOf("day").add(9, "hours").add(59, "minutes"),
-    endTime: currentTime.clone().startOf("day").add(11, "hours"),
+    endTime: currentTime.clone().startOf("day").add(12, "hours").add(1, "minutes"),
   }
   const formattedTodayDate = `${moment().tz(warmup.userTimezone).format('DD.MM.YYYY [at] HH:mm')} ${warmup.userTimezone}`
-  const isCurrTimeBetween = currentTime.isBetween(checkEmailTime.startTime, checkEmailTime.endTime)
-  const isSendToCheckEmail = Math.random() < 0.2;
+  const isCurrTimeBetween = currentTime.isBetween(checkEmailTime.startTime, checkEmailTime.endTime) 
+  const isSendToCheckEmail = (crypto.getRandomValues(new Uint32Array(1))[0] / 0xffffffff) * 100 < 20 // random 20%
 
   const statsEmail = {
     from:`"warmup stats" <info@${warmup.domain}>`,
@@ -676,4 +676,5 @@ private htmlToCleanText(html:string) {
     .substring(0, 10000)              // Maintain your length limit
     .trim()
 }
+
 }
