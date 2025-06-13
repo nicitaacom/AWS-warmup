@@ -56,7 +56,6 @@ export class Warmup {
       {
         role: "user",
         content: randomBodyText,
-
       },
     ]
 
@@ -473,12 +472,15 @@ public async sendEmailAndInsertInDB(resend:Resend,name:string, email: {subject:s
     // DO NOT use this.resend here (because might be sent from other resend instance)
     const {data, error} = await resend.emails.send(email);
     if (error) return error.message
+    if (!data?.id) return "It's no data.id returned from resend"
 
     const cleanBody = this.htmlToCleanText(email.html)
   
+    const normalizeIdTag = (id:string) => id.startsWith("<") ? id : `<${id}>`
+
     // TODO - check how is that goes if I send from www.nicitaa.com
     const sentEmail = {
-      id: data?.id, // returned from resend.send response - https://i.imgur.com/McXYhoN.png
+      id: data.id, // returned from resend.send response - https://i.imgur.com/McXYhoN.png
       created_at: new Date().toISOString(),
       subject: email.subject,
       body_html: email.html,
@@ -488,6 +490,11 @@ public async sendEmailAndInsertInDB(resend:Resend,name:string, email: {subject:s
       metric_name: null,
       is_read: true, // emails I sent myself if readed - decided to don't implement is_read_by functionality to keep it simple (I see no reason) 
       attachments_count: 0, // it's no way to add attachment with SES (I tried) that's why I use <a> as attachment
+      
+      message_id: normalizeIdTag(data.id),
+      in_reply_to: null,
+      references: normalizeIdTag(data.id),
+      thread_id: normalizeIdTag(data.id)
     }
 
     // 6.1 Insert email record
