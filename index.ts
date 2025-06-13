@@ -115,11 +115,11 @@ export const handler = async (event:{warmupId:string}) => {
   // const isAIReply = true
   if (isAIReply) {
     const replyWithAIResp = await warmup.replyToWarumEmailWithAI(warmupToUpdate)
-    if (typeof replyWithAIResp === 'string') throw Error(`Error on line 121: ${replyWithAIResp}`,{cause:"replyWithAIResp"})
+    if (typeof replyWithAIResp === 'string') throw Error(`Error on line 118: ${replyWithAIResp}`,{cause:"replyWithAIResp"})
   }
   else {
     const updScheduleResp = await warmup.updateSchedule(warmups, warmupToUpdate)
-    if (typeof updScheduleResp === 'string') throw Error(`Error on line 125: ${updScheduleResp}`,{cause:"updScheduleResp"})
+    if (typeof updScheduleResp === 'string') throw Error(`Error on line 122: ${updScheduleResp}`,{cause:"updScheduleResp"})
   } 
 
 

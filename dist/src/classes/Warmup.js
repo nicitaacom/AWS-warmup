@@ -426,10 +426,13 @@ class Warmup {
         const { data, error } = await resend.emails.send(email);
         if (error)
             return error.message;
+        if (!data?.id)
+            return "It's no data.id returned from resend";
         const cleanBody = this.htmlToCleanText(email.html);
+        const normalizeIdTag = (id) => id.startsWith("<") ? id : `<${id}>`;
         // TODO - check how is that goes if I send from www.nicitaa.com
         const sentEmail = {
-            id: data?.id,
+            id: data.id,
             created_at: new Date().toISOString(),
             subject: email.subject,
             body_html: email.html,
@@ -438,7 +441,11 @@ class Warmup {
             sender_name_email: `"${name}" <${email.from}>`,
             metric_name: null,
             is_read: true,
-            attachments_count: 0, // it's no way to add attachment with SES (I tried) that's why I use <a> as attachment
+            attachments_count: 0,
+            message_id: normalizeIdTag(data.id),
+            in_reply_to: null,
+            references: normalizeIdTag(data.id),
+            thread_id: normalizeIdTag(data.id)
         };
         // 6.1 Insert email record
         const { error: insert_error } = await this.supabaseAdmin
