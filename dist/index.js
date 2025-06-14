@@ -85,22 +85,18 @@ const handler = async (event) => {
         // 1.7 [INSTANCE]: Initialize Supabase SDK instance
         const supabaseAdmin = (0, supabase_js_1.createClient)(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY);
         const warmup = new Warmup_1.Warmup(schedulerClient, redis, openai, supabaseAdmin);
-        // ------ 2. 20% ? AI reply : send warumup email (+manage up/down scale volume) ------ //
-        const isAIReply = Math.random() < 0.2;
-        // const isAIReply = true
+        // ------ 2. 20% && AI reply------ //
+        const updScheduleResp = await warmup.updateSchedule(warmups, warmupToUpdate);
+        if (typeof updScheduleResp === 'string')
+            throw Error(`Error on line 122: ${updScheduleResp}`, { cause: "updScheduleResp" });
+        // ------ 3. Send warmup email ------ //
+        // 3.1 Get all BS to don't spam with lines of code (my style)
+        const { isCurrTimeBetween, isSendToCheckEmail, statsEmail, isAIReply, warmupEmail } = await warmup.getAllBS(warmupToUpdate);
         if (isAIReply) {
             const replyWithAIResp = await warmup.replyToWarumEmailWithAI(warmupToUpdate);
             if (typeof replyWithAIResp === 'string')
-                throw Error(`Error on line 121: ${replyWithAIResp}`, { cause: "replyWithAIResp" });
+                throw Error(`Error on line 118: ${replyWithAIResp}`, { cause: "replyWithAIResp" });
         }
-        else {
-            const updScheduleResp = await warmup.updateSchedule(warmups, warmupToUpdate);
-            if (typeof updScheduleResp === 'string')
-                throw Error(`Error on line 125: ${updScheduleResp}`, { cause: "updScheduleResp" });
-        }
-        // ------ 3. Send warmup email ------ //
-        // 3.1 Get all BS to don't spam with lines of code (my style)
-        const { isCurrTimeBetween, isSendToCheckEmail, statsEmail, warmupEmail } = await warmup.getAllBS(warmupToUpdate);
         if (isSendToCheckEmail && isCurrTimeBetween) {
             const { error } = await resend.emails.send(statsEmail);
             if (error)

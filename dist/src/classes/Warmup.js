@@ -164,18 +164,22 @@ class Warmup {
    *      • build updatedWarmup (apply factor for disabling, reset updated_at if phase changed)
    *      • write Redis & EB
    * 6. Done.
+   *
+   * Note: it make no sense to detect anomany in warmupCompletion (e.g if disabled manually by user from EB)
+   * because if it's disabled from EB then this will not be executed (handleUpdateState handle warmupCompletion)
    */
     async updateSchedule(warmups, warmupToUpdate) {
-        // 1. Perform methods based on days elapsed (since created_at)
-        const daysSinceCreated = (0, moment_timezone_1.default)().tz(warmupToUpdate.userTimezone).diff(warmupToUpdate.created_at, 'days');
-        // 2. First things first - check if I need to change warmup state
+        // 1. First things first - check if I need to change warmup state
         const prevWarmupState = warmupToUpdate.warmupState;
         warmupToUpdate.warmupState = this.handleUpdateState(warmupToUpdate);
-        if (prevWarmupState !== warmupToUpdate.warmupState)
-            this.handleVolumeScale(warmupToUpdate);
-        // 3. Detect anomany in warmupCompletion (e.g if disabled manually by user from EB)
-        warmupToUpdate.warmupCompletion = this.detectForcedDisable(warmupToUpdate);
-        // 4. Update reids&EB
+        if (prevWarmupState === warmupToUpdate.warmupState)
+            return; // 🧠 early return
+        // 2. Scale volume if warmupState updated
+        warmupToUpdate = this.handleVolumeScale(warmupToUpdate);
+        // 3. Handle warmup completion
+        if (warmupToUpdate.warmupState === 'disabled')
+            warmupToUpdate.warmupCompletion = 'completed';
+        // 3. Update reids&EB
         const updatedWarmups = warmups.map(w => w.id === warmupToUpdate.id ? warmupToUpdate : w);
         await this.redis.set('warmups', JSON.stringify(updatedWarmups));
         await this.updateEventBridgeSchedule(`warmup-${warmupToUpdate.domain}`, warmupToUpdate);
@@ -271,7 +275,8 @@ class Warmup {
         };
         const formattedTodayDate = `${(0, moment_timezone_1.default)().tz(warmup.userTimezone).format('DD.MM.YYYY [at] HH:mm')} ${warmup.userTimezone}`;
         const isCurrTimeBetween = currentTime.isBetween(checkEmailTime.startTime, checkEmailTime.endTime);
-        const isSendToCheckEmail = (crypto.getRandomValues(new Uint32Array(1))[0] / 0xffffffff) * 100 < 20; // random 20%
+        const isSendToCheckEmail = (crypto.getRandomValues(new Uint32Array(1))[0] / 0xffffffff) * 100 < 10; // random 10%
+        const isAIReply = (crypto.getRandomValues(new Uint32Array(1))[0] / 0xffffffff) * 100 < 20; // random 20%
         const statsEmail = {
             from: `"warmup stats" <info@${warmup.domain}>`,
             to: warmup.checkEmail,
@@ -286,7 +291,7 @@ class Warmup {
                 html: this.renderWarmupEmail(randomWarmupEmail.body)
             };
         };
-        return { isCurrTimeBetween, isSendToCheckEmail, statsEmail, warmupEmail };
+        return { isCurrTimeBetween, isSendToCheckEmail, statsEmail, isAIReply, warmupEmail };
     }
     handleVolumeScale(warmupToUpdate) {
         const stageFactor = [...WARMUP_CONFIG_1.ENABLING_STAGES, ...WARMUP_CONFIG_1.DISABLING_STAGES].find(s => s.phase === warmupToUpdate.warmupState)?.factor || 1;
@@ -503,22 +508,12 @@ class Warmup {
         };
         return { cronString, cronParts };
     }
-    detectForcedDisable(warmup) {
-        if (warmup.warmupState !== "disabled")
-            return warmup.warmupCompletion || "not completed"; // if warmup completed it returns warmupCompletion
-        const created = (0, moment_timezone_1.default)(warmup.created_at);
-        const updated = (0, moment_timezone_1.default)(warmup.updated_at);
-        const expectedTotalDays = WARMUP_CONFIG_1.ENABLING_STAGES.reduce((sum, stage) => sum + stage.durationDays, 0) +
-            WARMUP_CONFIG_1.DISABLING_STAGES.reduce((sum, stage) => sum + stage.durationDays, 0);
-        const actualDays = updated.diff(created, "days");
-        return actualDays >= expectedTotalDays ? "completed" : "forcibly disabled";
-    }
     handleUpdateState(warmup) {
         const stages = [...WARMUP_CONFIG_1.ENABLING_STAGES, ...WARMUP_CONFIG_1.DISABLING_STAGES];
+        const daysSinceCreated = (0, moment_timezone_1.default)().tz(warmup.userTimezone).diff(warmup.created_at, 'days');
         let dayCounter = 0;
         for (const stage of stages) {
             dayCounter += stage.durationDays;
-            const daysSinceCreated = (0, moment_timezone_1.default)().tz(warmup.userTimezone).diff(warmup.created_at, 'days');
             if (daysSinceCreated < dayCounter) {
                 return stage.phase;
             }
@@ -533,6 +528,7 @@ class Warmup {
             GroupName: 'warmup-group',
             FlexibleTimeWindow: { Mode: "OFF" },
             ScheduleExpression: `cron(${cronString})`,
+            State: updatedWarmup.warmupState === 'disabled' ? 'DISABLED' : "ENABLED",
             ScheduleExpressionTimezone: existing.ScheduleExpressionTimezone,
             Target: {
                 ...existing.Target,

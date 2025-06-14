@@ -110,24 +110,24 @@ export const handler = async (event:{warmupId:string}) => {
 
 
 
-  // ------ 2. 20% ? AI reply : send warumup email (+manage up/down scale volume) ------ //
-  const isAIReply = Math.random() < 0.2;
-  // const isAIReply = true
-  if (isAIReply) {
-    const replyWithAIResp = await warmup.replyToWarumEmailWithAI(warmupToUpdate)
-    if (typeof replyWithAIResp === 'string') throw Error(`Error on line 118: ${replyWithAIResp}`,{cause:"replyWithAIResp"})
-  }
-  else {
-    const updScheduleResp = await warmup.updateSchedule(warmups, warmupToUpdate)
-    if (typeof updScheduleResp === 'string') throw Error(`Error on line 122: ${updScheduleResp}`,{cause:"updScheduleResp"})
-  } 
+  
+  
+   // ------ 2. 20% && AI reply------ //
+  const updScheduleResp = await warmup.updateSchedule(warmups, warmupToUpdate)
+  if (typeof updScheduleResp === 'string') throw Error(`Error on line 122: ${updScheduleResp}`,{cause:"updScheduleResp"})
+  
 
 
 
 
    // ------ 3. Send warmup email ------ //
    // 3.1 Get all BS to don't spam with lines of code (my style)
-   const {isCurrTimeBetween,isSendToCheckEmail,statsEmail,warmupEmail} = await warmup.getAllBS(warmupToUpdate)
+   const {isCurrTimeBetween,isSendToCheckEmail,statsEmail,isAIReply,warmupEmail} = await warmup.getAllBS(warmupToUpdate)
+   
+   if (isAIReply) {
+    const replyWithAIResp = await warmup.replyToWarumEmailWithAI(warmupToUpdate)
+    if (typeof replyWithAIResp === 'string') throw Error(`Error on line 118: ${replyWithAIResp}`,{cause:"replyWithAIResp"})
+  }
 
    if (isSendToCheckEmail && isCurrTimeBetween) {
     const { error } = await resend.emails.send(statsEmail);
@@ -141,7 +141,7 @@ export const handler = async (event:{warmupId:string}) => {
     for (const emailTo of warmupToUpdate.sendEmailsTo) {
       await warmup.sendEmailAndInsertInDB(resend,"warmup",warmupEmail(emailTo))
     }
-   } 
+  } 
    
 
   return {
