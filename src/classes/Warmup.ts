@@ -160,7 +160,8 @@ export class Warmup {
   // 1. First things first - check if I need to change warmup state
   const prevWarmupState = warmupToUpdate.warmupState
   warmupToUpdate.warmupState = this.handleUpdateState(warmupToUpdate)
-
+  console.log(163,'prevWarmupState - ',prevWarmupState)
+  console.log(164,'warmupToUpdate.warmupState - ',warmupToUpdate.warmupState)
   if (prevWarmupState === warmupToUpdate.warmupState) return  // 🧠 early return
     
   // 2. Scale volume if warmupState updated
@@ -318,14 +319,17 @@ private handleVolumeScale(warmupToUpdate:IWarmUp):IWarmUp {
 }
 
 private async selectDBSentEmails(domain:string) {
-    const foldersTable = `email-folders-${domain}`
+    const emailFoldersTable = `email-folders-${domain}`
     const emailsTable = `emails-${domain}`
 
     // 1️⃣ Get email IDs for the given folder
     const { data: folderRows, error: folderError } = await this.supabaseAdmin
-      .from(foldersTable)
+      .from(emailFoldersTable)
       .select("email_id")
       .eq("folder_name", 'sent')
+      .limit(10)
+      .order('updated_at', { ascending: false })
+
 
     if (folderError) return `Error fetching folder 'sent' emails - ${folderError.message}`
 
@@ -337,7 +341,7 @@ private async selectDBSentEmails(domain:string) {
     const { data: emails, error: emailError } = await this.supabaseAdmin
       .from(emailsTable)
       .select('body_text,subject,recipient_email,created_at,sender_name_email')
-      .in("id", emailIds)
+      .in("id", emailIds.slice(0, 10)) // to fix 414 Request-URI Too Large
       .ilike('sender_name_email', '%warmup%') // select sent warum emails only
       .order("updated_at", { ascending: false }) // from new to old
       .limit(10)
@@ -346,7 +350,7 @@ private async selectDBSentEmails(domain:string) {
     if (!emails?.length) return []
 
     return emails
-  }
+}
 
 private async sendGmail(ept:string,eprt:string,nameEmailFrom:string,emailTo:string,emailSubject:string,emailHtml:string) {
   const response = await fetch(`${process.env.NEXT_PUBLIC_PRODUCTION_AUTH_URL}api/sendGmail`, {
@@ -522,7 +526,7 @@ public async sendEmailAndInsertInDB(resend:Resend,name:string, email: {subject:s
   }
 
 
-  /**
+/**
  * Generates cron expression and parsed parts for EventBridge based on volume & recipient count
  * @param {number} emailsPerDay - Total emails to send per day
  * @param {number} recipientCount - Emails sent per execution
@@ -551,9 +555,10 @@ private generateCronExpression(emailsPerDay: number, recipientCount = 1): {
     minutes = `*/${interval}`
   } else {
     const hourlyInterval = Math.max(Math.floor(desiredInterval / 60), 1)
-    cronString = `0 */${hourlyInterval} * * ? *`
+    const validHours = Array.from({ length: 24 / hourlyInterval }, (_, i) => i * hourlyInterval)
+    cronString = `0 ${validHours.join(',')} * * ? *`
+    hours = validHours.join(',')
     minutes = "0"
-    hours = `*/${hourlyInterval}`
   }
 
   const cronParts: CronParts = {
@@ -601,7 +606,7 @@ private async updateEventBridgeSchedule(scheduleName:string,updatedWarmup:IWarmU
       ScheduleExpressionTimezone: existing.ScheduleExpressionTimezone,
       Target: {
         ...existing.Target,
-        Input:JSON.stringify( {warmupId:updatedWarmup.id}),
+        Input: JSON.stringify( {warmupId:updatedWarmup.id}),
         Arn: existing?.Target?.Arn,
         RoleArn: existing?.Target?.RoleArn
       }

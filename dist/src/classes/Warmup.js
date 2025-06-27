@@ -172,6 +172,8 @@ class Warmup {
         // 1. First things first - check if I need to change warmup state
         const prevWarmupState = warmupToUpdate.warmupState;
         warmupToUpdate.warmupState = this.handleUpdateState(warmupToUpdate);
+        console.log(163, 'prevWarmupState - ', prevWarmupState);
+        console.log(164, 'warmupToUpdate.warmupState - ', warmupToUpdate.warmupState);
         if (prevWarmupState === warmupToUpdate.warmupState)
             return; // 🧠 early return
         // 2. Scale volume if warmupState updated
@@ -307,13 +309,15 @@ class Warmup {
         };
     }
     async selectDBSentEmails(domain) {
-        const foldersTable = `email-folders-${domain}`;
+        const emailFoldersTable = `email-folders-${domain}`;
         const emailsTable = `emails-${domain}`;
         // 1️⃣ Get email IDs for the given folder
         const { data: folderRows, error: folderError } = await this.supabaseAdmin
-            .from(foldersTable)
+            .from(emailFoldersTable)
             .select("email_id")
-            .eq("folder_name", 'sent');
+            .eq("folder_name", 'sent')
+            .limit(10)
+            .order('updated_at', { ascending: false });
         if (folderError)
             return `Error fetching folder 'sent' emails - ${folderError.message}`;
         const emailIds = folderRows?.map(row => row.email_id) ?? [];
@@ -323,7 +327,7 @@ class Warmup {
         const { data: emails, error: emailError } = await this.supabaseAdmin
             .from(emailsTable)
             .select('body_text,subject,recipient_email,created_at,sender_name_email')
-            .in("id", emailIds)
+            .in("id", emailIds.slice(0, 10)) // to fix 414 Request-URI Too Large
             .ilike('sender_name_email', '%warmup%') // select sent warum emails only
             .order("updated_at", { ascending: false }) // from new to old
             .limit(10);
@@ -472,11 +476,11 @@ class Warmup {
             return insertError;
     }
     /**
-   * Generates cron expression and parsed parts for EventBridge based on volume & recipient count
-   * @param {number} emailsPerDay - Total emails to send per day
-   * @param {number} recipientCount - Emails sent per execution
-   * @returns {{cronString: string, cronParts: CronParts}} Cron string and parsed parts
-   */
+     * Generates cron expression and parsed parts for EventBridge based on volume & recipient count
+     * @param {number} emailsPerDay - Total emails to send per day
+     * @param {number} recipientCount - Emails sent per execution
+     * @returns {{cronString: string, cronParts: CronParts}} Cron string and parsed parts
+     */
     generateCronExpression(emailsPerDay, recipientCount = 1) {
         const minInterval = 1;
         const maxMinuteInterval = 59;
@@ -494,9 +498,10 @@ class Warmup {
         }
         else {
             const hourlyInterval = Math.max(Math.floor(desiredInterval / 60), 1);
-            cronString = `0 */${hourlyInterval} * * ? *`;
+            const validHours = Array.from({ length: 24 / hourlyInterval }, (_, i) => i * hourlyInterval);
+            cronString = `0 ${validHours.join(',')} * * ? *`;
+            hours = validHours.join(',');
             minutes = "0";
-            hours = `*/${hourlyInterval}`;
         }
         const cronParts = {
             minutes,

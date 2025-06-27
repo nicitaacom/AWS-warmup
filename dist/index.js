@@ -88,37 +88,38 @@ const handler = async (event) => {
         // ------ 2. 20% && AI reply------ //
         const updScheduleResp = await warmup.updateSchedule(warmups, warmupToUpdate);
         if (typeof updScheduleResp === 'string')
-            throw Error(`Error on line 122: ${updScheduleResp}`, { cause: "updScheduleResp" });
+            throw Error(`Error on line 117: ${updScheduleResp}`, { cause: "updScheduleResp" });
         // ------ 3. Send warmup email ------ //
         // 3.1 Get all BS to don't spam with lines of code (my style)
         const { isCurrTimeBetween, isSendToCheckEmail, statsEmail, isAIReply, warmupEmail } = await warmup.getAllBS(warmupToUpdate);
         if (isAIReply) {
             const replyWithAIResp = await warmup.replyToWarumEmailWithAI(warmupToUpdate);
             if (typeof replyWithAIResp === 'string')
-                throw Error(`Error on line 118: ${replyWithAIResp}`, { cause: "replyWithAIResp" });
+                throw Error(`Error on line 129: ${replyWithAIResp}`, { cause: "replyWithAIResp" });
         }
         if (isSendToCheckEmail && isCurrTimeBetween) {
             const { error } = await resend.emails.send(statsEmail);
             if (error)
-                throw Error(`Error sending stats email: ${error.message}`);
+                throw Error(`Error on sending stats email: ${error.message}\n line134`, { cause: "isSendToCheckEmail && isCurrTimeBetween" });
         }
         else if (isSendToCheckEmail) {
             const { error } = await resend.emails.send(warmupEmail(warmupToUpdate.checkEmail));
             if (error)
-                throw Error(`Error sending stats email: ${error.message}`);
+                throw Error(`Error sending stats email: ${error.message}\n line138`, { cause: "isSendToCheckEmail" });
         }
         else {
             for (const emailTo of warmupToUpdate.sendEmailsTo) {
-                await warmup.sendEmailAndInsertInDB(resend, "warmup", warmupEmail(emailTo));
+                const response = await warmup.sendEmailAndInsertInDB(resend, "warmup", warmupEmail(emailTo));
+                if (typeof response === 'string')
+                    throw Error("Error sending email and inserting it in DB", { cause: "sendEmailAndInsertInDB" });
             }
         }
         return {
             statusCode: 200,
             body: `${(isSendToCheckEmail && isCurrTimeBetween) ? "stats" : isSendToCheckEmail ? "check-warmup" : "warmup"} email sent to:\n
-      ${isSendToCheckEmail ? warmupToUpdate.checkEmail : warmupToUpdate.sendEmailsTo.map(email => email).join(', ')}\n\n
-      
-    Note: DO NOT click "Not spam" in ${warmupToUpdate.checkEmail}\n
-    For deliverability: DKIM SPF MX TXT (dmarc) MAIL FROM .com or .de or .co.uk etc domain and prefferably to send B2B emails e.g info@custom.domain`
+      ${isSendToCheckEmail ? warmupToUpdate.checkEmail : warmupToUpdate.sendEmailsTo.map(email => email).join(', ')}`,
+            line1: "Note: DO NOT click \"Not spam\" in ${warmupToUpdate.checkEmail}",
+            line2: "For deliverability: DKIM SPF MX TXT (dmarc) MAIL FROM .com or .de or .co.uk etc domain and prefferably to send B2B emails e.g info@custom.domain"
         };
     }
     catch (error) {
