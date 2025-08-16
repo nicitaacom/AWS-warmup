@@ -29,24 +29,25 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Warmup = void 0;
 const client_scheduler_1 = require("@aws-sdk/client-scheduler");
 const moment_timezone_1 = __importDefault(require("moment-timezone"));
-const resend_1 = require("resend");
 const path_1 = require("path");
 const freeEmailDomains_1 = require("../const/freeEmailDomains");
 const extractEmailFromNameEmail_1 = require("../utils/extractEmailFromNameEmail");
 const extractNameFromNameEmail_1 = require("../utils/extractNameFromNameEmail");
-const decryptResend_1 = require("../utils/decryptResend");
 const WARMUP_CONFIG_1 = require("../const/WARMUP_CONFIG");
 const randomNames_1 = require("../const/randomNames");
 const randomMemes_1 = require("../const/randomMemes");
+const client_ses_1 = require("@aws-sdk/client-ses");
 // this setup assuming that user enable warmup just 1 time and will not enable it in the future (cuz it make no sence)
 class Warmup {
     scheduler;
     redis;
+    sesClient;
     openai;
     supabaseAdmin;
-    constructor(scheduler, redis, openai, supabaseAdmin) {
+    constructor(scheduler, redis, sesClient, openai, supabaseAdmin) {
         this.scheduler = scheduler;
         this.redis = redis;
+        this.sesClient = sesClient;
         this.openai = openai;
         this.supabaseAdmin = supabaseAdmin;
     }
@@ -94,15 +95,7 @@ class Warmup {
             body: randomBodyText
         });
         if (!freeEmailDomains_1.freeEmailDomains.includes(recipientDomain)) {
-            const encryptedResend = await this.redis.get(`encryptedResend-lambda-${recipientDomain}`);
-            if (!encryptedResend)
-                return; // then seems like sent to not existing EA
-            const decypredResend = await (0, decryptResend_1.decryptResend)(encryptedResend);
-            if (typeof decypredResend === 'string')
-                return decypredResend;
-            // [INSTANCE]: Create Resend SDK instance
-            const resend = new resend_1.Resend(decypredResend.value);
-            const sentResp = await this.sendEmailAndInsertInDB(resend, 'info', // reply from info@domain.name
+            const sentResp = await this.sendEmailAndInsertInDB('info', // reply from info@domain.name
             {
                 from: randomRecipientEmail,
                 subject: randomSubject,
@@ -295,6 +288,26 @@ class Warmup {
         };
         return { isCurrTimeBetween, isSendToCheckEmail, statsEmail, isAIReply, warmupEmail };
     }
+    sendEmailWithSES = async (email) => {
+        try {
+            const response = await this.sesClient.send(new client_ses_1.SendEmailCommand({
+                Destination: { ToAddresses: [email.to] },
+                Message: {
+                    Subject: { Data: email.subject },
+                    Body: { Html: { Data: email.html } },
+                },
+                Source: email.from, // must be verified in SES
+            }));
+            if (!response.MessageId)
+                throw Error("It's no messageId returned from SES response");
+            return { messageId: response.MessageId };
+        }
+        catch (error) {
+            if (error instanceof Error)
+                return `error sending email: ${error.message}`;
+            return "error sending email: unknown";
+        }
+    };
     handleVolumeScale(warmupToUpdate) {
         const stageFactor = [...WARMUP_CONFIG_1.ENABLING_STAGES, ...WARMUP_CONFIG_1.DISABLING_STAGES].find(s => s.phase === warmupToUpdate.warmupState)?.factor || 1;
         // ⚠️ emailsPerDay is always ≥ 2 (up/down scale emails per day)
@@ -427,21 +440,17 @@ class Warmup {
                 return "";
         }
     };
-    // it's important to pass resend instance here because it might be other resend instance that initialized with different credentials (env)
-    async sendEmailAndInsertInDB(resend, name, email) {
+    async sendEmailAndInsertInDB(name, email) {
         let insertError = '';
         let sendError = '';
-        // DO NOT use this.resend here (because might be sent from other resend instance)
-        const { data, error } = await resend.emails.send(email);
-        if (error)
-            return error.message;
-        if (!data?.id)
-            return "It's no data.id returned from resend";
+        const sesResp = await this.sendEmailWithSES(email);
+        if (typeof sesResp === 'string')
+            return sesResp;
         const cleanBody = this.htmlToCleanText(email.html);
         const normalizeIdTag = (id) => id.startsWith("<") ? id : `<${id}>`;
         // TODO - check how is that goes if I send from www.nicitaa.com
         const sentEmail = {
-            id: data.id,
+            id: sesResp.messageId,
             created_at: new Date().toISOString(),
             subject: email.subject,
             body_html: email.html,
@@ -451,10 +460,10 @@ class Warmup {
             metric_name: null,
             is_read: true,
             attachments_count: 0,
-            message_id: normalizeIdTag(data.id),
+            message_id: normalizeIdTag(sesResp.messageId),
             in_reply_to: null,
-            references: normalizeIdTag(data.id),
-            thread_id: normalizeIdTag(data.id)
+            references: normalizeIdTag(sesResp.messageId),
+            thread_id: normalizeIdTag(sesResp.messageId)
         };
         // 6.1 Insert email record
         const { error: insert_error } = await this.supabaseAdmin

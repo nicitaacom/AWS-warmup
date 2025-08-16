@@ -4,7 +4,6 @@ import { GetScheduleCommand, SchedulerClient, UpdateScheduleCommand } from "@aws
 import OpenAI from "openai"
 import { ChatCompletionMessageParam } from 'openai/resources/chat/completions'
 import moment from "moment-timezone"
-import { Resend } from "resend"
 import { join } from "path"
 
 
@@ -13,10 +12,10 @@ import { CronParts, IWarmUp, Niche, TWarmupState } from '../interfaces/IWarmUp'
 import { freeEmailDomains } from '../const/freeEmailDomains'
 import { extractEmailFromNameEmail } from '../utils/extractEmailFromNameEmail'
 import { extractNameFromNameEmail } from '../utils/extractNameFromNameEmail'
-import { decryptResend } from "../utils/decryptResend"
 import { WARMUP_DURATION_DAYS,DISABLING_STAGES,ENABLING_STAGES } from "../const/WARMUP_CONFIG"
 import { randomNames } from "../const/randomNames"
 import { randomMemes } from "../const/randomMemes"
+import { SendEmailCommand, SESClient } from "@aws-sdk/client-ses"
 
 
 // this setup assuming that user enable warmup just 1 time and will not enable it in the future (cuz it make no sence)
@@ -25,6 +24,7 @@ export class Warmup {
   constructor(
     private scheduler: SchedulerClient,
     private redis: Redis,
+    private sesClient: SESClient,
     private openai:OpenAI,
     protected supabaseAdmin:SupabaseClient<any, "public", any>
   ) {}
@@ -79,16 +79,11 @@ export class Warmup {
 
 
       if (!freeEmailDomains.includes(recipientDomain)) {
-        const encryptedResend = await this.redis.get(`encryptedResend-lambda-${recipientDomain}`)
-        if (!encryptedResend) return // then seems like sent to not existing EA
-        const decypredResend = await decryptResend(encryptedResend)
-        if (typeof decypredResend === 'string') return decypredResend
+     
         
-        // [INSTANCE]: Create Resend SDK instance
-        const resend = new Resend(decypredResend.value)
+ 
         
         const sentResp = await this.sendEmailAndInsertInDB(
-          resend,
           'info', // reply from info@domain.name
           {
             from:randomRecipientEmail, // reply with AI from recipient email adress
@@ -299,6 +294,25 @@ public async getAllBS(warmup:IWarmUp) {
   return {isCurrTimeBetween, isSendToCheckEmail, statsEmail, isAIReply, warmupEmail}
 }
 
+public sendEmailWithSES = async (email: { from: string; to: string; subject: string; html: string }):Promise<{messageId:string} | string> => {
+  try {
+    const response = await this.sesClient.send(
+      new SendEmailCommand({
+        Destination: { ToAddresses: [email.to] },
+        Message: {
+          Subject: { Data: email.subject },
+          Body: { Html: { Data: email.html } },
+        },
+        Source: email.from, // must be verified in SES
+      })
+    )
+    if (!response.MessageId) throw Error("It's no messageId returned from SES response")
+  return {messageId:response.MessageId}
+  } catch (error: unknown) {
+    if (error instanceof Error) return `error sending email: ${error.message}`
+    return "error sending email: unknown"
+  }
+}
 
 
 private handleVolumeScale(warmupToUpdate:IWarmUp):IWarmUp {
@@ -472,15 +486,13 @@ private getBgColorClass = (warmupState:TWarmupState) => {
 
 
 
-// it's important to pass resend instance here because it might be other resend instance that initialized with different credentials (env)
-public async sendEmailAndInsertInDB(resend:Resend,name:string, email: {subject:string, from:string, to:string, html:string}) {
+public async sendEmailAndInsertInDB(name:string, email: {subject:string, from:string, to:string, html:string}) {
     let insertError = ''
     let sendError = ''
 
-    // DO NOT use this.resend here (because might be sent from other resend instance)
-    const {data, error} = await resend.emails.send(email);
-    if (error) return error.message
-    if (!data?.id) return "It's no data.id returned from resend"
+    
+    const sesResp = await this.sendEmailWithSES(email);
+    if (typeof sesResp === 'string') return sesResp
 
     const cleanBody = this.htmlToCleanText(email.html)
   
@@ -488,7 +500,7 @@ public async sendEmailAndInsertInDB(resend:Resend,name:string, email: {subject:s
 
     // TODO - check how is that goes if I send from www.nicitaa.com
     const sentEmail = {
-      id: data.id, // returned from resend.send response - https://i.imgur.com/McXYhoN.png
+      id: sesResp.messageId,
       created_at: new Date().toISOString(),
       subject: email.subject,
       body_html: email.html,
@@ -499,10 +511,10 @@ public async sendEmailAndInsertInDB(resend:Resend,name:string, email: {subject:s
       is_read: true, // emails I sent myself if readed - decided to don't implement is_read_by functionality to keep it simple (I see no reason) 
       attachments_count: 0, // it's no way to add attachment with SES (I tried) that's why I use <a> as attachment
       
-      message_id: normalizeIdTag(data.id),
+      message_id: normalizeIdTag(sesResp.messageId),
       in_reply_to: null,
-      references: normalizeIdTag(data.id),
-      thread_id: normalizeIdTag(data.id)
+      references: normalizeIdTag(sesResp.messageId),
+      thread_id: normalizeIdTag(sesResp.messageId)
     }
 
     // 6.1 Insert email record

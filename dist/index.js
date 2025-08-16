@@ -4,23 +4,21 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.handler = void 0;
-const resend_1 = require("resend");
 const ioredis_1 = require("ioredis");
 const openai_1 = __importDefault(require("openai"));
 const supabase_js_1 = require("@supabase/supabase-js");
 const client_scheduler_1 = require("@aws-sdk/client-scheduler");
-const decryptResend_1 = require("./src/utils/decryptResend");
 const Warmup_1 = require("./src/classes/Warmup");
+const client_ses_1 = require("@aws-sdk/client-ses");
 const handler = async (event) => {
     // created_at - it's ISO - to detect how much days smb warming up and to scale from 10 to 20 ... to 100 emails per day 
     // warmupState - e.g "enabling-1/4" or "disabled" or "disabling-3/4" - explanation - https://i.imgur.com/WwEXEPE.png - https://i.imgur.com/Ex0SVqc.png
     // domain - to select schedule name to update warmup in EventBridge because - https://i.imgur.com/eD4ssVz.png
-    // emailFrom - for resend so I send emails from email that needs to be warmed up
+    // emailFrom - for SES so I send emails from email that needs to be warmed up
     // niche - to send more realistic warmup emails
     // sendEmailsTo - to send warmup emails to someone (e.g myself) - note that this is array
     // checkEmail - to check if I'm in SPAM box or not (DO NOT user "Not spam" button on checkEmail)
     // cronParts - to update them for `warmup-${domain}` in EB event to show later on UI on OT AND to check should update EB or not
-    // encryptedResend - so I can initialize resend SDK to send warm up emails (ChatGPT recommends 50-100 per day so consider resend limits)
     // userTimezone - to send check email within timezone e.g 10:00 - so user understand whether CE on SPAM or not
     const { warmupId } = event;
     // WARNING! - event - DEPENDS ON Warmup (class) outreach-tool
@@ -62,17 +60,7 @@ const handler = async (event) => {
         let warmupToUpdate = warmups.find(w => w.id === warmupId);
         if (!warmupToUpdate)
             throw Error("It's no warmup to update", { cause: "warmup" });
-        // 1.3 [VARIABLE]: Decrypt resned
-        const key = `encryptedResend-lambda-${warmupToUpdate.domain}`;
-        const encryptedResend = await redis.get(key);
-        if (!encryptedResend)
-            throw Error(`It's no encryptedResend returned from redis: ${key}`, { cause: "encryptedResend" });
-        const decypredResend = await (0, decryptResend_1.decryptResend)(encryptedResend);
-        if (typeof decypredResend === 'string')
-            throw Error(decypredResend, { cause: "decypredResend" });
-        // 1.4 [INSTANCE]: Initialize Resend SDK instance
-        const resend = new resend_1.Resend(decypredResend.value);
-        // 1.5 [INSTANCE]: Initialize schedulerClient SDK instance (EventBridge)
+        // 1.3 [INSTANCE]: Initialize schedulerClient SDK instance (EventBridge)
         const schedulerClient = new client_scheduler_1.SchedulerClient({
             region: process.env.REGION,
             credentials: {
@@ -80,11 +68,19 @@ const handler = async (event) => {
                 secretAccessKey: process.env.SECRET_ACCESS_KEY,
             },
         });
-        // 1.6 [INSTANCE]: Initialize OpenAI SDK instance
+        // 1.4 [INSTANCE]: Initialize schedulerClient SDK instance (EventBridge)
+        const sesClient = new client_ses_1.SESClient({
+            region: process.env.NEXT_PUBLIC_AWS_REGION,
+            credentials: {
+                accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+                secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+            },
+        });
+        // 1.5 [INSTANCE]: Initialize OpenAI SDK instance
         const openai = new openai_1.default({ apiKey: process.env.OPENAI_KEY });
-        // 1.7 [INSTANCE]: Initialize Supabase SDK instance
+        // 1.6 [INSTANCE]: Initialize Supabase SDK instance
         const supabaseAdmin = (0, supabase_js_1.createClient)(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY);
-        const warmup = new Warmup_1.Warmup(schedulerClient, redis, openai, supabaseAdmin);
+        const warmup = new Warmup_1.Warmup(schedulerClient, redis, sesClient, openai, supabaseAdmin);
         // ------ 2. 20% && AI reply------ //
         const updScheduleResp = await warmup.updateSchedule(warmups, warmupToUpdate);
         if (typeof updScheduleResp === 'string')
@@ -98,18 +94,18 @@ const handler = async (event) => {
                 throw Error(`Error on line 129: ${replyWithAIResp}`, { cause: "replyWithAIResp" });
         }
         if (isSendToCheckEmail && isCurrTimeBetween) {
-            const { error } = await resend.emails.send(statsEmail);
-            if (error)
-                throw Error(`Error on sending stats email: ${error.message}\n line134`, { cause: "isSendToCheckEmail && isCurrTimeBetween" });
+            const sesResp = await warmup.sendEmailWithSES(statsEmail);
+            if (typeof sesResp === 'string')
+                throw Error(`Error on sending stats email: ${sesResp}\n line134`, { cause: "isSendToCheckEmail && isCurrTimeBetween" });
         }
         else if (isSendToCheckEmail) {
-            const { error } = await resend.emails.send(warmupEmail(warmupToUpdate.checkEmail));
-            if (error)
-                throw Error(`Error sending stats email: ${error.message}\n line138`, { cause: "isSendToCheckEmail" });
+            const sesResp = await warmup.sendEmailWithSES(warmupEmail(warmupToUpdate.checkEmail));
+            if (typeof sesResp === 'string')
+                throw Error(`Error sending stats email: ${sesResp}\n line138`, { cause: "isSendToCheckEmail" });
         }
         else {
             for (const emailTo of warmupToUpdate.sendEmailsTo) {
-                const response = await warmup.sendEmailAndInsertInDB(resend, "warmup", warmupEmail(emailTo));
+                const response = await warmup.sendEmailAndInsertInDB("warmup", warmupEmail(emailTo));
                 if (typeof response === 'string')
                     throw Error("Error sending email and inserting it in DB", { cause: "sendEmailAndInsertInDB" });
             }

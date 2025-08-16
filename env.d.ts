@@ -20,7 +20,11 @@ declare global {
       NEXT_PUBLIC_SUPABASE_URL: string
       SUPABASE_SERVICE_ROLE_KEY: string
 
-      DEBUG_RESEND: string
+      NEXT_PUBLIC_AWS_REGION:string
+      AWS_ACCESS_KEY_ID:string
+      AWS_SECRET_ACCESS_KEY:string
+      
+   
     }
   }
 }

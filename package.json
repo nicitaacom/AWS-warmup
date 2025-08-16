@@ -4,12 +4,12 @@
    },
    "dependencies": {
       "@aws-sdk/client-scheduler": "^3.734.0",
+      "@aws-sdk/client-ses": "^3.864.0",
       "@supabase/auth-helpers-nextjs": "^0.8.7",
       "@supabase/supabase-js": "^2.42.3",
       "ioredis": "^5.4.2",
       "moment-timezone": "^0.5.46",
-      "openai": "^4.98.0",
-      "resend": "^3.5.0"
+      "openai": "^4.98.0"
    },
    "devDependencies": {
       "@types/node": "^22.15.18"
