@@ -72,13 +72,13 @@ const handler = async (event) => {
             { key: process.env.NEXT_PUBLIC_PRODUCTION_URL, name: "NEXT_PUBLIC_PRODUCTION_URL", env: true },
             { key: process.env.NEXT_PUBLIC_SUPABASE_URL, name: "NEXT_PUBLIC_SUPABASE_URL", env: true },
             { key: process.env.SUPABASE_SERVICE_ROLE_KEY, name: "SUPABASE_SERVICE_ROLE_KEY", env: true },
-            { key: process.env.LINK, name: "LINK", env: true },
-            { key: process.env.OWNER_NAME, name: "OWNER_NAME", env: true },
-            { key: process.env.COMPANY_NAME, name: "COMPANY_NAME", env: true },
             { key: process.env.ACCESS_KEY_ID, name: "ACCESS_KEY_ID", env: true },
             { key: process.env.SECRET_ACCESS_KEY, name: "SECRET_ACCESS_KEY", env: true },
             { key: process.env.REGION, name: "REGION", env: true },
             { key: process.env.WARMUP_KEY, name: "WARMUP_KEY", env: true },
+            { key: process.env.LINK, name: "LINK", env: true },
+            { key: process.env.OWNER_NAME, name: "OWNER_NAME", env: true },
+            { key: process.env.COMPANY_NAME, name: "COMPANY_NAME", env: true },
             { key: process.env.OPENAI_KEY, name: "OPENAI_KEY", env: true },
         ];
         const ctaEnvs = `Check your envs in AWS Lambda warmup -> Configuration -> Environment variables`;
@@ -87,7 +87,7 @@ const handler = async (event) => {
             if (!key) {
                 const cta = env ? ctaEnvs : ctaEvent;
                 const errorMsg = `${name} missing - ${cta}`;
-                console.log(124, errorMsg);
+                console.log(125, errorMsg);
                 throw Error(errorMsg);
             }
         }
@@ -95,9 +95,8 @@ const handler = async (event) => {
             throw Error("should be https://your-appointment-booking.link (make sure it's https)");
         // ------ 1. Create instances + variables ------ //
         // 1.1 [INSTANCE]: Create Redis SDK instance
-        const redis = new ioredis_1.Redis(process.env.UPSTASH_REDIS_URL);
         // 1.2 [VARIABLE]: Get warmup to update
-        const warmups = JSON.parse(await redis.get('warmups') || '[]');
+        const warmups = JSON.parse(await userRedis.get('warmups') || '[]');
         let warmupToUpdate = warmups.find(w => w.id === warmupId);
         if (!warmupToUpdate)
             throw Error("It's no warmup to update", { cause: "warmup" });
@@ -121,7 +120,7 @@ const handler = async (event) => {
         const openai = new openai_1.default({ apiKey: process.env.OPENAI_KEY });
         // 1.6 [INSTANCE]: Initialize Supabase SDK instance
         const supabaseAdmin = (0, supabase_js_1.createClient)(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY);
-        const warmup = new Warmup_1.Warmup(schedulerClient, redis, sesClient, openai, supabaseAdmin);
+        const warmup = new Warmup_1.Warmup(schedulerClient, userRedis, sesClient, openai, supabaseAdmin);
         // ------ 2. 20% && AI reply------ //
         const updScheduleResp = await warmup.updateSchedule(warmups, warmupToUpdate);
         if (typeof updScheduleResp === 'string')
