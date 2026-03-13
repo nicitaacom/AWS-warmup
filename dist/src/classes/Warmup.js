@@ -555,9 +555,8 @@ class Warmup {
     async getRandomEmail(niche) {
         // keep .js because anyway it's going to be compiles TS to JS so it will use .js
         // const emailTemplates:{subject:string,body:string}[] = await import(`../const/${niche}.js`).then(module => module.default);
-        var _a;
         const absolutePath = (0, path_1.join)(__dirname, "..", "const", `${niche}.js`); // ⬅️ real path
-        const emailTemplates = await (_a = absolutePath, Promise.resolve().then(() => __importStar(require(_a)))).then(m => m.default); // ⬅️ no file://
+        const emailTemplates = await Promise.resolve(`${absolutePath}`).then(s => __importStar(require(s))).then(m => m.default); // ⬅️ no file://
         const emailTemplatesArray = Object.values(emailTemplates).flat();
         // Select a random email template from the array
         const template = emailTemplatesArray[Math.floor(Math.random() * emailTemplatesArray.length)];
